@@ -1,0 +1,2457 @@
+<html>
+<head>
+<title>Load Test Results: HighFreqAND (2013-07-27 19:29:48)</title>
+<link rel="stylesheet" type="text/css" href="../../style.css">
+<script src="../../javascript.js"></script>
+</head>
+<body>
+
+<h1> HighFreqAND  <a href="../day-view.html">(2013-07-27 19:29:48)</a> </h1>
+
+<a href="../../dashboard-view.html">back to dashboard</a>
+
+<pre>
+<b>MontySolr version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35
+<b>MontySolr commit:</b> --
+<b>Java:</b> 23.7-b01
+<b>System:</b> Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux
+
+<b>Java command line:</b> -Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr
+-Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data
+-Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg
+-Xmx20480m
+-Dmontysolr.max_workers=4
+-Dmontysolr.max_threads=400
+-Dsolr.cache.size=0
+-Dsolr.cache.initial=0
+-DstoreAll=true
+-Dmontysolr.enable.write=false
+-Dmontysolr.enable.warming=true
+-Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties
+-Dmontysolr.locktype=native
+
+ +---------------+------------------------+---------+-------------------------+---------------------------+----------------------+----------------------+-------------------------+-----------------------+----------------------------+-------------------------+
+ | sampler_label | aggregate_report_count | average | aggregate_report_median | aggregate_report_90%_line | aggregate_report_min | aggregate_report_max | aggregate_report_error% | aggregate_report_rate | aggregate_report_bandwidth | aggregate_report_stddev |
+ +---------------+------------------------+---------+-------------------------+---------------------------+----------------------+----------------------+-------------------------+-----------------------+----------------------------+-------------------------+
+ |  HTTP Request |                   8046 |      13 |                       8 |                        33 |                    1 |                  209 |     0.03281133482475764 |      134.238713337115 |         10909.699544346866 |      17.270201306289614 |
+ |         TOTAL |                   8046 |      13 |                       8 |                        33 |                    1 |                  209 |     0.03281133482475764 |      134.238713337115 |         10909.699544346866 |      17.270201306289614 |
+ +---------------+------------------------+---------+-------------------------+---------------------------+----------------------+----------------------+-------------------------+-----------------------+----------------------------+-------------------------+
+
+<b>Lucene impl version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35
+<b>Lucene spec version:</b> 4.0-SNAPSHOT
+<b>Solr impl version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44
+<b>Solr spec version:</b> 4.0.0.2013.07.23.21.05.44
+</pre>
+
+<p>
+<a href="../runtime-env.json">Runtime environment</a>. 
+
+Solr Env before test <a href="before-test.json">download</a> <a href="javascript:change('before_test')">show/hide</a>
+<pre class="page_details" id="before_test">
+{'cacheDocumentClass': 'org.apache.solr.search.LRUCache',
+ 'cacheDocumentCumulativeEvictions': 2660148,
+ 'cacheDocumentCumulativeHitRatio': '0.00',
+ 'cacheDocumentCumulativeHits': 0,
+ 'cacheDocumentCumulativeInserts': 2660148,
+ 'cacheDocumentCumulativeLookups': 2660148,
+ 'cacheDocumentDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheDocumentEvictions': 2660148,
+ 'cacheDocumentHitRatio': '0.00',
+ 'cacheDocumentHits': 0,
+ 'cacheDocumentLookups': 2660148,
+ 'cacheDocumentSize': 0,
+ 'cacheDocumentVersion': '1.0',
+ 'cacheDocumentWarmupTime': 0,
+ 'cacheFieldClass': 'org.apache.solr.search.SolrFieldCacheMBean',
+ 'cacheFieldDescription': 'Provides introspection of the Lucene FieldCache, this is **NOT** a cache that is managed by Solr.',
+ 'cacheFieldEntriesCount': 82,
+ 'cacheFieldValueClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFieldValueCumulativeEvictions': 0,
+ 'cacheFieldValueCumulativeHitRatio': '0.00',
+ 'cacheFieldValueCumulativeHits': 0,
+ 'cacheFieldValueCumulativeInserts': 0,
+ 'cacheFieldValueCumulativeLookups': 0,
+ 'cacheFieldValueDescription': 'Concurrent LRU Cache(maxSize=10000, initialSize=10, minSize=9000, acceptableSize=9500, cleanupThread=false)',
+ 'cacheFieldValueEvictions': 0,
+ 'cacheFieldValueHitRatio': '0.00',
+ 'cacheFieldValueHits': 0,
+ 'cacheFieldValueLookups': 0,
+ 'cacheFieldValueSize': 0,
+ 'cacheFieldValueVersion': '1.0',
+ 'cacheFieldValueWarmupTime': 0,
+ 'cacheFieldVersion': '1.0',
+ 'cacheFilterClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFilterCumulativeEvictions': 0,
+ 'cacheFilterCumulativeHitRatio': '0.00',
+ 'cacheFilterCumulativeHits': 0,
+ 'cacheFilterCumulativeInserts': 0,
+ 'cacheFilterCumulativeLookups': 0,
+ 'cacheFilterDescription': 'Concurrent LRU Cache(maxSize=2, initialSize=0, minSize=1, acceptableSize=1, cleanupThread=false)',
+ 'cacheFilterEvictions': 0,
+ 'cacheFilterHitRatio': '0.00',
+ 'cacheFilterHits': 0,
+ 'cacheFilterLookups': 0,
+ 'cacheFilterSize': 0,
+ 'cacheFilterVersion': '1.0',
+ 'cacheFilterWarmupTime': 0,
+ 'cacheQueryClass': 'org.apache.solr.search.LRUCache',
+ 'cacheQueryCumulativeEvictions': 508915,
+ 'cacheQueryCumulativeHitRatio': '0.00',
+ 'cacheQueryCumulativeHits': 0,
+ 'cacheQueryCumulativeInserts': 508912,
+ 'cacheQueryCumulativeLookups': 512652,
+ 'cacheQueryDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheQueryEvictions': 508915,
+ 'cacheQueryHitRatio': '0.00',
+ 'cacheQueryHits': 0,
+ 'cacheQueryLookups': 512652,
+ 'cacheQuerySize': 0,
+ 'cacheQueryVersion': '1.0',
+ 'cacheQueryWarmupTime': 0,
+ 'coreRefCount': 2,
+ 'dataDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data/',
+ 'host': 'adsate',
+ 'indexCurrent': True,
+ 'indexDirectory': 'org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/proj.adsate/rchyla/perpetuum/live-9001_40.1.1.4_data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@bfa41a4; maxCacheMB=48.0 maxMergeSizeMB=4.0)',
+ 'indexHasDeletions': True,
+ 'indexLstModified': '2013-07-08T21:39:29.732Z',
+ 'indexMaxDoc': 12488625,
+ 'indexNumDocs': 9688981,
+ 'indexSegmentCount': 80,
+ 'indexSize': '312.66 GB',
+ 'indexSizeInBytes': 335715483241,
+ 'indexVersion': 20102,
+ 'instanceDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/collection1/',
+ 'jvmCommandLineArgs': '-Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr -Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data -Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg -Xmx20480m -Dmontysolr.max_workers=4 -Dmontysolr.max_threads=400 -Dsolr.cache.size=0 -Dsolr.cache.initial=0 -DstoreAll=true -Dmontysolr.enable.write=false -Dmontysolr.enable.warming=true -Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties -Dmontysolr.locktype=native',
+ 'jvmFree': '3.5 GB',
+ 'jvmMax': '17.8 GB',
+ 'jvmName': 'OpenJDK 64-Bit Server VM',
+ 'jvmProcessors': 8,
+ 'jvmTotal': '7.8 GB',
+ 'jvmUsed': '4.4 GB (%24.5)',
+ 'jvmUsedRaw': 4680909536,
+ 'jvmVersion': '23.7-b01',
+ 'luceneImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35',
+ 'luceneSpecVersion': '4.0-SNAPSHOT',
+ 'now': '2013-07-27T23:32:54.811Z',
+ 'searcherCaching': True,
+ 'searcherClass': 'org.apache.solr.search.SolrIndexSearcher',
+ 'searcherOpenedAt': '2013-07-26T15:47:44.107Z',
+ 'searcherReader': 'StandardDirectoryReader(segments_ru:20102 _ae(4.0.0.2):C426156/109458 _4na(4.0.0.2):C319124/56890 _7w(4.0.0.2):C317517/107217 _5c(4.0.0.2):C299479/97402 _qy(4.0.0.2):C372621/111841 _mg(4.0.0.2):C417277/116156 _ec(4.0.0.2):C396901/111410 _6pd(4.0.0.2):C78016/35625 _gk(4.0.0.2):C406534/114341 _jn(4.0.0.2):C403772/108255 _zx(4.0.0.2):C309202/85254 _1a0(4.0.0.2):C259133/82588 _t6(4.0.0.2):C350099/94869 _12f(4.0.0.2):C285281/85175 _wk(4.0.0.2):C356272/103533 _7jo(4.0.0.2):C145951/4595 _177(4.0.0.2):C253819/80882 _4k2(4.0.0.2):C256791/109377 _59y(4.0.0.2):C168926/36552 _4jl(4.0.0.2):C273782/83096 _4wl(4.0.0.2):C330690/39593 _7ez(4.0.0.2):C114282/3484 _4oy(4.0.0.2):C169928/102189 _5dw(4.0.0.2):C166757/49164 _4rk(4.0.0.2):C211921/115167 _4po(4.0.0.2):C325417/113425 _7cb(4.0.0.2):C123854/5864 _4vf(4.0.0.2):C260154/141036 _4ti(4.0.0.2):C226733/37166 _4u1(4.0.0.2):C349197/75763 _5ez(4.0.0.2):C208203/66419 _5lj(4.0.0.2):C234534/51004 _5g3(4.0.0.2):C189111/71289 _4zb(4.0.0.2):C290026/72705 _63q(4.0.0.2):C148430/52872 _5ka(4.0.0.2):C183134/37369 _7jg(4.0.0.2):C95063/18449 _54w(4.0.0.2):C173195/111 _52f(4.0.0.2):C72776/1 _59g(4.0.0.2):C368393/36 _5tn(4.0.0.2):C155874/100 _5vw(4.0.0.2):C129195/4 _5ol(4.0.0.2):C185607/5 _6d2(4.0.0.2):C87770/1 _5y4(4.0.0.2):C104834/10 _5sj(4.0.0.2):C112061/31 _66s(4.0.0.2):C147689/53 _61r(4.0.0.2):C57792/103 _6lh(4.0.0.2):C45479 _69m(4.0.0.2):C117427/62 _6g5(4.0.0.2):C48826 _6sr(4.0.0.2):C48858/14 _6si(4.0.0.2):C40131/2 _6z6(4.0.0.2):C111423/163 _6x8(4.0.0.2):C63663/20 _7dl(4.0.0.2):C113208/109 _73y(4.0.0.2):C69752/115 _71q(4.0.0.2):C111034/841 _79s(4.0.0.2):C123163/181 _76s(4.0.0.2):C79676/1 _7j4(4.0.0.2):C10525/7 _7ih(4.0.0.2):C6847/64 _7ld(4.0.0.2):C77511/2005 _7i2(4.0.0.2):C76382/8066 _7ln(4.0.0.2):C3776/22 _7lo(4.0.0.2):C219/1 _7mg(4.0.0.2):C7615 _7m5(4.0.0.2):C3709/36 _7lv(4.0.0.2):C339/6 _7m6(4.0.0.2):C851 _7m7(4.0.0.2):C1567 _7m9(4.0.0.2):C771 _7mc(4.0.0.2):C841 _7md(4.0.0.2):C194 _7mh(4.0.0.2):C154 _7mi(4.0.0.2):C1075 _7mj(4.0.0.2):C1305 _7mk(4.0.0.2):C954 _7ml(4.0.0.2):C1565 _7mm(4.0.0.2):C512)',
+ 'searcherRegisteredAt': '2013-07-26T15:54:58.6Z',
+ 'searcherWarmupTime': 0,
+ 'selectAvgRequestsPerSecond': 4.693078,
+ 'selectAvgTimePerRequest': 12.533182,
+ 'selectClass': 'org.apache.solr.handler.component.SearchHandler',
+ 'selectDescription': 'Search using components: org.apache.solr.handler.component.QueryComponent,org.apache.solr.handler.component.FacetComponent,org.apache.solr.handler.component.MoreLikeThisComponent,org.apache.solr.handler.component.HighlightComponent,org.apache.solr.handler.component.StatsComponent,org.apache.solr.handler.component.DebugComponent,',
+ 'selectErrors': 28385,
+ 'selectRequests': 536473,
+ 'selectTimeouts': 0,
+ 'selectTotalTime': 6723714,
+ 'selectVersion': '4.0.0.2013.07.23.21.05.44',
+ 'solrImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44',
+ 'solrSpecVersion': '4.0.0.2013.07.23.21.05.44',
+ 'start': '2013-07-26T15:47:43.134Z',
+ 'startTime': '2013-07-26T15:47:43.134Z',
+ 'systemArch': 'amd64',
+ 'systemCommittedVirtualMemorySize': 360324415488,
+ 'systemFreePhysicalMemorySize': 21028618240,
+ 'systemFreeSwapSpaceSize': 67108855808,
+ 'systemLoadAverage': 1.1,
+ 'systemMaxFileDescriptorCount': 1024,
+ 'systemName': 'Linux',
+ 'systemOpenFileDescriptorCount': 105,
+ 'systemProcessCpuTime': 8153990000000,
+ 'systemTotalPhysicalMemorySize': 66767228928,
+ 'systemTotalSwapSpaceSize': 67108855808,
+ 'systemUname': 'Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux\n',
+ 'systemUptime': ' 19:32:54 up 16 days, 22:32,  4 users,  load average: 1.10, 1.23, 0.90\n',
+ 'systemVersion': '2.6.32-71.el6.x86_64',
+ 'uptime': 114311709}
+</pre>
+Solr Env after test <a href="after-test.json">download</a> <a href="javascript:change('after_test')">show/hide</a>
+<pre class="page_details" id="after_test">
+{'cacheDocumentClass': 'org.apache.solr.search.LRUCache',
+ 'cacheDocumentCumulativeEvictions': '<b>2692098</b>',
+ 'cacheDocumentCumulativeHitRatio': '0.00',
+ 'cacheDocumentCumulativeHits': 0,
+ 'cacheDocumentCumulativeInserts': '<b>2692098</b>',
+ 'cacheDocumentCumulativeLookups': '<b>2692098</b>',
+ 'cacheDocumentDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheDocumentEvictions': '<b>2692098</b>',
+ 'cacheDocumentHitRatio': '0.00',
+ 'cacheDocumentHits': 0,
+ 'cacheDocumentLookups': '<b>2692098</b>',
+ 'cacheDocumentSize': 0,
+ 'cacheDocumentVersion': '1.0',
+ 'cacheDocumentWarmupTime': 0,
+ 'cacheFieldClass': 'org.apache.solr.search.SolrFieldCacheMBean',
+ 'cacheFieldDescription': 'Provides introspection of the Lucene FieldCache, this is **NOT** a cache that is managed by Solr.',
+ 'cacheFieldEntriesCount': 82,
+ 'cacheFieldValueClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFieldValueCumulativeEvictions': 0,
+ 'cacheFieldValueCumulativeHitRatio': '0.00',
+ 'cacheFieldValueCumulativeHits': 0,
+ 'cacheFieldValueCumulativeInserts': 0,
+ 'cacheFieldValueCumulativeLookups': 0,
+ 'cacheFieldValueDescription': 'Concurrent LRU Cache(maxSize=10000, initialSize=10, minSize=9000, acceptableSize=9500, cleanupThread=false)',
+ 'cacheFieldValueEvictions': 0,
+ 'cacheFieldValueHitRatio': '0.00',
+ 'cacheFieldValueHits': 0,
+ 'cacheFieldValueLookups': 0,
+ 'cacheFieldValueSize': 0,
+ 'cacheFieldValueVersion': '1.0',
+ 'cacheFieldValueWarmupTime': 0,
+ 'cacheFieldVersion': '1.0',
+ 'cacheFilterClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFilterCumulativeEvictions': 0,
+ 'cacheFilterCumulativeHitRatio': '0.00',
+ 'cacheFilterCumulativeHits': 0,
+ 'cacheFilterCumulativeInserts': 0,
+ 'cacheFilterCumulativeLookups': 0,
+ 'cacheFilterDescription': 'Concurrent LRU Cache(maxSize=2, initialSize=0, minSize=1, acceptableSize=1, cleanupThread=false)',
+ 'cacheFilterEvictions': 0,
+ 'cacheFilterHitRatio': '0.00',
+ 'cacheFilterHits': 0,
+ 'cacheFilterLookups': 0,
+ 'cacheFilterSize': 0,
+ 'cacheFilterVersion': '1.0',
+ 'cacheFilterWarmupTime': 0,
+ 'cacheQueryClass': 'org.apache.solr.search.LRUCache',
+ 'cacheQueryCumulativeEvictions': '<b>516697</b>',
+ 'cacheQueryCumulativeHitRatio': '0.00',
+ 'cacheQueryCumulativeHits': 0,
+ 'cacheQueryCumulativeInserts': '<b>516694</b>',
+ 'cacheQueryCumulativeLookups': '<b>520434</b>',
+ 'cacheQueryDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheQueryEvictions': '<b>516697</b>',
+ 'cacheQueryHitRatio': '0.00',
+ 'cacheQueryHits': 0,
+ 'cacheQueryLookups': '<b>520434</b>',
+ 'cacheQuerySize': 0,
+ 'cacheQueryVersion': '1.0',
+ 'cacheQueryWarmupTime': 0,
+ 'coreRefCount': 2,
+ 'dataDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data/',
+ 'host': 'adsate',
+ 'indexCurrent': True,
+ 'indexDirectory': 'org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/proj.adsate/rchyla/perpetuum/live-9001_40.1.1.4_data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@bfa41a4; maxCacheMB=48.0 maxMergeSizeMB=4.0)',
+ 'indexHasDeletions': True,
+ 'indexLstModified': '2013-07-08T21:39:29.732Z',
+ 'indexMaxDoc': 12488625,
+ 'indexNumDocs': 9688981,
+ 'indexSegmentCount': 80,
+ 'indexSize': '312.66 GB',
+ 'indexSizeInBytes': 335715483241,
+ 'indexVersion': 20102,
+ 'instanceDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/collection1/',
+ 'jvmCommandLineArgs': '-Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr -Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data -Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg -Xmx20480m -Dmontysolr.max_workers=4 -Dmontysolr.max_threads=400 -Dsolr.cache.size=0 -Dsolr.cache.initial=0 -DstoreAll=true -Dmontysolr.enable.write=false -Dmontysolr.enable.warming=true -Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties -Dmontysolr.locktype=native',
+ 'jvmFree': '<b>2.4 GB</b>',
+ 'jvmMax': '17.8 GB',
+ 'jvmName': 'OpenJDK 64-Bit Server VM',
+ 'jvmProcessors': 8,
+ 'jvmTotal': '7.8 GB',
+ 'jvmUsed': '<b>5.4 GB (%30.6)</b>',
+ 'jvmUsedRaw': '<b>5834647136</b>',
+ 'jvmVersion': '23.7-b01',
+ 'luceneImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35',
+ 'luceneSpecVersion': '4.0-SNAPSHOT',
+ 'now': '<b>2013-07-27T23:33:55.964Z</b>',
+ 'searcherCaching': True,
+ 'searcherClass': 'org.apache.solr.search.SolrIndexSearcher',
+ 'searcherOpenedAt': '2013-07-26T15:47:44.107Z',
+ 'searcherReader': 'StandardDirectoryReader(segments_ru:20102 _ae(4.0.0.2):C426156/109458 _4na(4.0.0.2):C319124/56890 _7w(4.0.0.2):C317517/107217 _5c(4.0.0.2):C299479/97402 _qy(4.0.0.2):C372621/111841 _mg(4.0.0.2):C417277/116156 _ec(4.0.0.2):C396901/111410 _6pd(4.0.0.2):C78016/35625 _gk(4.0.0.2):C406534/114341 _jn(4.0.0.2):C403772/108255 _zx(4.0.0.2):C309202/85254 _1a0(4.0.0.2):C259133/82588 _t6(4.0.0.2):C350099/94869 _12f(4.0.0.2):C285281/85175 _wk(4.0.0.2):C356272/103533 _7jo(4.0.0.2):C145951/4595 _177(4.0.0.2):C253819/80882 _4k2(4.0.0.2):C256791/109377 _59y(4.0.0.2):C168926/36552 _4jl(4.0.0.2):C273782/83096 _4wl(4.0.0.2):C330690/39593 _7ez(4.0.0.2):C114282/3484 _4oy(4.0.0.2):C169928/102189 _5dw(4.0.0.2):C166757/49164 _4rk(4.0.0.2):C211921/115167 _4po(4.0.0.2):C325417/113425 _7cb(4.0.0.2):C123854/5864 _4vf(4.0.0.2):C260154/141036 _4ti(4.0.0.2):C226733/37166 _4u1(4.0.0.2):C349197/75763 _5ez(4.0.0.2):C208203/66419 _5lj(4.0.0.2):C234534/51004 _5g3(4.0.0.2):C189111/71289 _4zb(4.0.0.2):C290026/72705 _63q(4.0.0.2):C148430/52872 _5ka(4.0.0.2):C183134/37369 _7jg(4.0.0.2):C95063/18449 _54w(4.0.0.2):C173195/111 _52f(4.0.0.2):C72776/1 _59g(4.0.0.2):C368393/36 _5tn(4.0.0.2):C155874/100 _5vw(4.0.0.2):C129195/4 _5ol(4.0.0.2):C185607/5 _6d2(4.0.0.2):C87770/1 _5y4(4.0.0.2):C104834/10 _5sj(4.0.0.2):C112061/31 _66s(4.0.0.2):C147689/53 _61r(4.0.0.2):C57792/103 _6lh(4.0.0.2):C45479 _69m(4.0.0.2):C117427/62 _6g5(4.0.0.2):C48826 _6sr(4.0.0.2):C48858/14 _6si(4.0.0.2):C40131/2 _6z6(4.0.0.2):C111423/163 _6x8(4.0.0.2):C63663/20 _7dl(4.0.0.2):C113208/109 _73y(4.0.0.2):C69752/115 _71q(4.0.0.2):C111034/841 _79s(4.0.0.2):C123163/181 _76s(4.0.0.2):C79676/1 _7j4(4.0.0.2):C10525/7 _7ih(4.0.0.2):C6847/64 _7ld(4.0.0.2):C77511/2005 _7i2(4.0.0.2):C76382/8066 _7ln(4.0.0.2):C3776/22 _7lo(4.0.0.2):C219/1 _7mg(4.0.0.2):C7615 _7m5(4.0.0.2):C3709/36 _7lv(4.0.0.2):C339/6 _7m6(4.0.0.2):C851 _7m7(4.0.0.2):C1567 _7m9(4.0.0.2):C771 _7mc(4.0.0.2):C841 _7md(4.0.0.2):C194 _7mh(4.0.0.2):C154 _7mi(4.0.0.2):C1075 _7mj(4.0.0.2):C1305 _7mk(4.0.0.2):C954 _7ml(4.0.0.2):C1565 _7mm(4.0.0.2):C512)',
+ 'searcherRegisteredAt': '2013-07-26T15:54:58.6Z',
+ 'searcherWarmupTime': 0,
+ 'selectAvgRequestsPerSecond': '<b>4.760811</b>',
+ 'selectAvgTimePerRequest': '<b>12.4468155</b>',
+ 'selectClass': 'org.apache.solr.handler.component.SearchHandler',
+ 'selectDescription': 'Search using components: org.apache.solr.handler.component.QueryComponent,org.apache.solr.handler.component.FacetComponent,org.apache.solr.handler.component.MoreLikeThisComponent,org.apache.solr.handler.component.HighlightComponent,org.apache.solr.handler.component.StatsComponent,org.apache.solr.handler.component.DebugComponent,',
+ 'selectErrors': '<b>28649</b>',
+ 'selectRequests': '<b>544507</b>',
+ 'selectTimeouts': 0,
+ 'selectTotalTime': '<b>6777378</b>',
+ 'selectVersion': '4.0.0.2013.07.23.21.05.44',
+ 'solrImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44',
+ 'solrSpecVersion': '4.0.0.2013.07.23.21.05.44',
+ 'start': '2013-07-26T15:47:43.134Z',
+ 'startTime': '2013-07-26T15:47:43.134Z',
+ 'systemArch': 'amd64',
+ 'systemCommittedVirtualMemorySize': 360324415488,
+ 'systemFreePhysicalMemorySize': '<b>21087170560</b>',
+ 'systemFreeSwapSpaceSize': 67108855808,
+ 'systemLoadAverage': '<b>1.16</b>',
+ 'systemMaxFileDescriptorCount': 1024,
+ 'systemName': 'Linux',
+ 'systemOpenFileDescriptorCount': 105,
+ 'systemProcessCpuTime': '<b>8222350000000</b>',
+ 'systemTotalPhysicalMemorySize': 66767228928,
+ 'systemTotalSwapSpaceSize': 67108855808,
+ 'systemUname': 'Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux\n',
+ 'systemUptime': '<b> 19:33:55 up 16 days, 22:33,  4 users,  load average: 1.16, 1.21, 0.91\n</b>',
+ 'systemVersion': '2.6.32-71.el6.x86_64',
+ 'uptime': '<b>114372909</b>'}
+</pre>
+</p>
+
+
+
+
+<table>
+<tr align="center">
+  <td>
+    <b>Number of transactions/sec</b>
+    <img src="transactions-per-sec.png" title="Responses that were rejected as invalid + HTTP error codes (ideally, you will see only successess)"/>  
+    <p><a href="transactions-per-sec.csv">download</a> <a href="javascript:change('transactions_per_sec')">show/hide</a><br/>
+	<pre class="page_details" id="transactions_per_sec">
+ +--------------+------------------------+------------------------+
+ | Elapsed time | HTTP Request (failure) | HTTP Request (success) |
+ +--------------+------------------------+------------------------+
+ |   19:29:49.0 |                        |                    1.0 |
+ |   19:29:50.0 |                    4.0 |                   40.0 |
+ |   19:29:51.0 |                        |                    8.0 |
+ |   19:29:52.0 |                        |                   32.0 |
+ |   19:29:53.0 |                        |                   27.0 |
+ |   19:29:54.0 |                        |                   32.0 |
+ |   19:29:55.0 |                        |                   88.0 |
+ |   19:29:56.0 |                    6.0 |                   68.0 |
+ |   19:29:57.0 |                    4.0 |                   93.0 |
+ |   19:29:58.0 |                        |                   61.0 |
+ |   19:29:59.0 |                        |                   99.0 |
+ |   19:30:00.0 |                   10.0 |                  131.0 |
+ |   19:30:01.0 |                        |                  112.0 |
+ |   19:30:02.0 |                   10.0 |                  140.0 |
+ |   19:30:03.0 |                        |                  100.0 |
+ |   19:30:04.0 |                    6.0 |                  125.0 |
+ |   19:30:05.0 |                    4.0 |                  146.0 |
+ |   19:30:06.0 |                    3.0 |                  132.0 |
+ |   19:30:07.0 |                    7.0 |                  151.0 |
+ |   19:30:08.0 |                        |                  130.0 |
+ |   19:30:09.0 |                   10.0 |                   99.0 |
+ |   19:30:10.0 |                        |                  115.0 |
+ |   19:30:11.0 |                   10.0 |                  175.0 |
+ |   19:30:12.0 |                        |                  143.0 |
+ |   19:30:13.0 |                   10.0 |                  152.0 |
+ |   19:30:14.0 |                        |                   97.0 |
+ |   19:30:15.0 |                    6.0 |                  145.0 |
+ |   19:30:16.0 |                    4.0 |                  149.0 |
+ |   19:30:17.0 |                    6.0 |                  168.0 |
+ |   19:30:18.0 |                    4.0 |                  126.0 |
+ |   19:30:19.0 |                    6.0 |                  162.0 |
+ |   19:30:20.0 |                    4.0 |                  145.0 |
+ |   19:30:21.0 |                    6.0 |                  151.0 |
+ |   19:30:22.0 |                    4.0 |                  116.0 |
+ |   19:30:23.0 |                    6.0 |                  136.0 |
+ |   19:30:24.0 |                    4.0 |                  166.0 |
+ |   19:30:25.0 |                    6.0 |                  140.0 |
+ |   19:30:26.0 |                    4.0 |                  163.0 |
+ |   19:30:27.0 |                    6.0 |                  169.0 |
+ |   19:30:28.0 |                    4.0 |                  166.0 |
+ |   19:30:29.0 |                   10.0 |                  170.0 |
+ |   19:30:30.0 |                        |                  170.0 |
+ |   19:30:31.0 |                   10.0 |                  156.0 |
+ |   19:30:32.0 |                        |                  146.0 |
+ |   19:30:33.0 |                    6.0 |                   98.0 |
+ |   19:30:34.0 |                    4.0 |                  137.0 |
+ |   19:30:35.0 |                   10.0 |                  171.0 |
+ |   19:30:36.0 |                        |                  139.0 |
+ |   19:30:37.0 |                   10.0 |                  161.0 |
+ |   19:30:38.0 |                        |                  158.0 |
+ |   19:30:39.0 |                   10.0 |                  169.0 |
+ |   19:30:40.0 |                        |                  149.0 |
+ |   19:30:41.0 |                   10.0 |                  154.0 |
+ |   19:30:42.0 |                        |                  160.0 |
+ |   19:30:43.0 |                   10.0 |                  161.0 |
+ |   19:30:44.0 |                    2.0 |                  142.0 |
+ |   19:30:45.0 |                    8.0 |                  128.0 |
+ |   19:30:46.0 |                        |                  156.0 |
+ |   19:30:47.0 |                   10.0 |                  157.0 |
+ |   19:30:48.0 |                    3.0 |                  149.0 |
+ |   19:30:49.0 |                    7.0 |                  152.0 |
+ +--------------+------------------------+------------------------+
+	</pre>
+    </p>
+  </td>
+  <td>
+    <b>Number of HTTP responses/sec</b>
+    <img src="response-codes-per-sec.png" title="This graph shows HTTP codes only"/>
+    <p><a href="response-codes-per-sec.csv">download</a> <a href="javascript:change('response_codes_per_sec')">show/hide</a><br/>
+	<pre class="page_details" id="response_codes_per_sec">
+ +--------------+-------+------+
+ | Elapsed time |   200 |  400 |
+ +--------------+-------+------+
+ |   19:29:49.0 |   1.0 |      |
+ |   19:29:50.0 |  40.0 |  4.0 |
+ |   19:29:51.0 |   8.0 |      |
+ |   19:29:52.0 |  32.0 |      |
+ |   19:29:53.0 |  27.0 |      |
+ |   19:29:54.0 |  32.0 |      |
+ |   19:29:55.0 |  88.0 |      |
+ |   19:29:56.0 |  68.0 |  6.0 |
+ |   19:29:57.0 |  93.0 |  4.0 |
+ |   19:29:58.0 |  61.0 |      |
+ |   19:29:59.0 |  99.0 |      |
+ |   19:30:00.0 | 131.0 | 10.0 |
+ |   19:30:01.0 | 112.0 |      |
+ |   19:30:02.0 | 140.0 | 10.0 |
+ |   19:30:03.0 | 100.0 |      |
+ |   19:30:04.0 | 125.0 |  6.0 |
+ |   19:30:05.0 | 146.0 |  4.0 |
+ |   19:30:06.0 | 132.0 |  3.0 |
+ |   19:30:07.0 | 151.0 |  7.0 |
+ |   19:30:08.0 | 130.0 |      |
+ |   19:30:09.0 |  99.0 | 10.0 |
+ |   19:30:10.0 | 115.0 |      |
+ |   19:30:11.0 | 175.0 | 10.0 |
+ |   19:30:12.0 | 143.0 |      |
+ |   19:30:13.0 | 152.0 | 10.0 |
+ |   19:30:14.0 |  97.0 |      |
+ |   19:30:15.0 | 145.0 |  6.0 |
+ |   19:30:16.0 | 149.0 |  4.0 |
+ |   19:30:17.0 | 168.0 |  6.0 |
+ |   19:30:18.0 | 126.0 |  4.0 |
+ |   19:30:19.0 | 162.0 |  6.0 |
+ |   19:30:20.0 | 145.0 |  4.0 |
+ |   19:30:21.0 | 151.0 |  6.0 |
+ |   19:30:22.0 | 116.0 |  4.0 |
+ |   19:30:23.0 | 136.0 |  6.0 |
+ |   19:30:24.0 | 166.0 |  4.0 |
+ |   19:30:25.0 | 140.0 |  6.0 |
+ |   19:30:26.0 | 163.0 |  4.0 |
+ |   19:30:27.0 | 169.0 |  6.0 |
+ |   19:30:28.0 | 166.0 |  4.0 |
+ |   19:30:29.0 | 170.0 | 10.0 |
+ |   19:30:30.0 | 170.0 |      |
+ |   19:30:31.0 | 156.0 | 10.0 |
+ |   19:30:32.0 | 146.0 |      |
+ |   19:30:33.0 |  98.0 |  6.0 |
+ |   19:30:34.0 | 137.0 |  4.0 |
+ |   19:30:35.0 | 171.0 | 10.0 |
+ |   19:30:36.0 | 139.0 |      |
+ |   19:30:37.0 | 161.0 | 10.0 |
+ |   19:30:38.0 | 158.0 |      |
+ |   19:30:39.0 | 169.0 | 10.0 |
+ |   19:30:40.0 | 149.0 |      |
+ |   19:30:41.0 | 154.0 | 10.0 |
+ |   19:30:42.0 | 160.0 |      |
+ |   19:30:43.0 | 161.0 | 10.0 |
+ |   19:30:44.0 | 142.0 |  2.0 |
+ |   19:30:45.0 | 128.0 |  8.0 |
+ |   19:30:46.0 | 156.0 |      |
+ |   19:30:47.0 | 157.0 | 10.0 |
+ |   19:30:48.0 | 149.0 |  3.0 |
+ |   19:30:49.0 | 152.0 |  7.0 |
+ +--------------+-------+------+
+	</pre>
+    </p>
+  </td>
+</tr>
+<tr align="center">
+  <td>
+    <b>Bytes received and sent</b>
+    <img src="bytes-throughput-over-time.png"/>  
+    <p><a href="bytes-throughput-over-time.csv">download</a> <a href="javascript:change('bytes_throughput_over_time')">show/hide</a><br/>
+	<pre class="page_details" id="bytes_throughput_over_time">
+ +--------------+---------------------------+-----------------------+
+ | Elapsed time | Bytes Received per Second | Bytes Sent per Second |
+ +--------------+---------------------------+-----------------------+
+ |   19:29:49.0 |                     465.0 |                   0.0 |
+ |   19:29:50.0 |                  736692.0 |                   0.0 |
+ |   19:29:51.0 |                 1835487.0 |                   0.0 |
+ |   19:29:52.0 |                 2541670.0 |                   0.0 |
+ |   19:29:53.0 |                 2679101.0 |                   0.0 |
+ |   19:29:54.0 |                 5788959.0 |                   0.0 |
+ |   19:29:55.0 |                 1264090.0 |                   0.0 |
+ |   19:29:56.0 |               1.0588738E7 |                   0.0 |
+ |   19:29:57.0 |                 6811167.0 |                   0.0 |
+ |   19:29:58.0 |                 6898240.0 |                   0.0 |
+ |   19:29:59.0 |                 9410162.0 |                   0.0 |
+ |   19:30:00.0 |                 8572729.0 |                   0.0 |
+ |   19:30:01.0 |                 8576824.0 |                   0.0 |
+ |   19:30:02.0 |               1.2604428E7 |                   0.0 |
+ |   19:30:03.0 |               1.1642488E7 |                   0.0 |
+ |   19:30:04.0 |               1.1465115E7 |                   0.0 |
+ |   19:30:05.0 |               1.1763575E7 |                   0.0 |
+ |   19:30:06.0 |               1.2082013E7 |                   0.0 |
+ |   19:30:07.0 |               1.0028754E7 |                   0.0 |
+ |   19:30:08.0 |                 9642019.0 |                   0.0 |
+ |   19:30:09.0 |                 8976192.0 |                   0.0 |
+ |   19:30:10.0 |               1.2466029E7 |                   0.0 |
+ |   19:30:11.0 |               1.1689384E7 |                   0.0 |
+ |   19:30:12.0 |               1.3919626E7 |                   0.0 |
+ |   19:30:13.0 |               1.1515109E7 |                   0.0 |
+ |   19:30:14.0 |               1.3559967E7 |                   0.0 |
+ |   19:30:15.0 |                1.184819E7 |                   0.0 |
+ |   19:30:16.0 |               1.3586132E7 |                   0.0 |
+ |   19:30:17.0 |                1.185821E7 |                   0.0 |
+ |   19:30:18.0 |               1.3576091E7 |                   0.0 |
+ |   19:30:19.0 |               1.1855399E7 |                   0.0 |
+ |   19:30:20.0 |               1.3640421E7 |                   0.0 |
+ |   19:30:21.0 |               1.1794779E7 |                   0.0 |
+ |   19:30:22.0 |                 9215673.0 |                   0.0 |
+ |   19:30:23.0 |               1.4308572E7 |                   0.0 |
+ |   19:30:24.0 |               1.2732869E7 |                   0.0 |
+ |   19:30:25.0 |               1.3671487E7 |                   0.0 |
+ |   19:30:26.0 |               1.4495178E7 |                   0.0 |
+ |   19:30:27.0 |                1.188277E7 |                   0.0 |
+ |   19:30:28.0 |               1.3852835E7 |                   0.0 |
+ |   19:30:29.0 |               1.4026114E7 |                   0.0 |
+ |   19:30:30.0 |                1.239444E7 |                   0.0 |
+ |   19:30:31.0 |               1.5002726E7 |                   0.0 |
+ |   19:30:32.0 |               1.0435191E7 |                   0.0 |
+ |   19:30:33.0 |                1.060231E7 |                   0.0 |
+ |   19:30:34.0 |               1.3839878E7 |                   0.0 |
+ |   19:30:35.0 |               1.1692051E7 |                   0.0 |
+ |   19:30:36.0 |               1.3769985E7 |                   0.0 |
+ |   19:30:37.0 |                  1.3559E7 |                   0.0 |
+ |   19:30:38.0 |               1.2831625E7 |                   0.0 |
+ |   19:30:39.0 |               1.5008496E7 |                   0.0 |
+ |   19:30:40.0 |                1.043653E7 |                   0.0 |
+ |   19:30:41.0 |               1.6376566E7 |                   0.0 |
+ |   19:30:42.0 |               1.3434065E7 |                   0.0 |
+ |   19:30:43.0 |               1.4545111E7 |                   0.0 |
+ |   19:30:44.0 |               1.5189419E7 |                   0.0 |
+ |   19:30:45.0 |                 7599243.0 |                   0.0 |
+ |   19:30:46.0 |                1.267529E7 |                   0.0 |
+ |   19:30:47.0 |               1.4782025E7 |                   0.0 |
+ |   19:30:48.0 |               1.5813787E7 |                   0.0 |
+ |   19:30:49.0 |               1.0207824E7 |                   0.0 |
+ +--------------+---------------------------+-----------------------+
+	</pre>
+    </p>    
+  </td>
+  <td>
+    <b>Latencies over time (how long we were waiting)</b>
+    <img src="latencies-over-time.png" title="This will depend on number of threads running"/>
+    <p><a href="latencies-over-time.csv">download</a> <a href="javascript:change('latencies_over_time')">show/hide</a><br/>
+	<pre class="page_details" id="latencies_over_time">
+ +--------------+--------------------+
+ | Elapsed time |       HTTP Request |
+ +--------------+--------------------+
+ | 19:29:49.500 |               75.0 |
+ |   19:29:50.0 |               2.65 |
+ | 19:29:50.500 |                3.0 |
+ |   19:29:51.0 |               10.0 |
+ | 19:29:51.500 |               20.2 |
+ |   19:29:52.0 |              8.125 |
+ | 19:29:52.500 |                4.0 |
+ |   19:29:53.0 |                7.0 |
+ | 19:29:53.500 | 22.923076923076923 |
+ |   19:29:54.0 |               25.4 |
+ | 19:29:54.500 |  5.681818181818182 |
+ |   19:29:55.0 | 10.860465116279068 |
+ | 19:29:55.500 |   9.11111111111111 |
+ |   19:29:56.0 |  5.423076923076922 |
+ | 19:29:56.500 | 7.7708333333333295 |
+ |   19:29:57.0 |  5.381818181818182 |
+ | 19:29:57.500 |  6.071428571428571 |
+ |   19:29:58.0 | 22.384615384615383 |
+ | 19:29:58.500 |               10.6 |
+ |   19:29:59.0 |  9.705882352941176 |
+ | 19:29:59.500 | 3.8541666666666665 |
+ |   19:30:00.0 |  6.481012658227847 |
+ | 19:30:00.500 |  7.032258064516129 |
+ |   19:30:01.0 | 16.095238095238095 |
+ | 19:30:01.500 | 11.257142857142858 |
+ |   19:30:02.0 |  4.451612903225806 |
+ | 19:30:02.500 |   5.60227272727273 |
+ |   19:30:03.0 | 10.372881355932204 |
+ | 19:30:03.500 | 15.292682926829269 |
+ |   19:30:04.0 |  7.738095238095238 |
+ | 19:30:04.500 |  8.595744680851062 |
+ |   19:30:05.0 | 6.2988505747126435 |
+ | 19:30:05.500 |  12.53968253968254 |
+ |   19:30:06.0 | 10.855072463768114 |
+ | 19:30:06.500 |  5.833333333333333 |
+ |   19:30:07.0 |   6.06382978723404 |
+ | 19:30:07.500 | 12.500000000000004 |
+ |   19:30:08.0 | 13.346153846153847 |
+ | 19:30:08.500 |  8.397435897435898 |
+ |   19:30:09.0 |  9.552631578947366 |
+ | 19:30:09.500 |  14.12676056338028 |
+ |   19:30:10.0 | 19.018181818181827 |
+ | 19:30:10.500 | 16.249999999999996 |
+ |   19:30:11.0 |  7.191011235955058 |
+ | 19:30:11.500 |  5.697916666666667 |
+ |   19:30:12.0 | 12.285714285714288 |
+ | 19:30:12.500 | 11.397260273972602 |
+ |   19:30:13.0 |  8.823529411764707 |
+ | 19:30:13.500 |  6.404255319148936 |
+ |   19:30:14.0 |  9.338983050847462 |
+ | 19:30:14.500 |  19.55263157894737 |
+ |   19:30:15.0 |  9.445544554455441 |
+ | 19:30:15.500 |              10.06 |
+ |   19:30:16.0 |  6.122641509433962 |
+ | 19:30:16.500 | 16.680851063829788 |
+ |   19:30:17.0 |  8.822429906542052 |
+ | 19:30:17.500 |  8.014925373134332 |
+ |   19:30:18.0 |               6.75 |
+ | 19:30:18.500 | 16.547619047619044 |
+ |   19:30:19.0 |  9.456310679611647 |
+ | 19:30:19.500 |  8.523076923076927 |
+ |   19:30:20.0 |  6.577319587628866 |
+ | 19:30:20.500 | 17.307692307692307 |
+ |   19:30:21.0 |  8.711340206185568 |
+ | 19:30:21.500 |  9.150000000000002 |
+ |   19:30:22.0 |  44.06122448979592 |
+ | 19:30:22.500 | 14.605633802816902 |
+ |   19:30:23.0 | 11.194805194805195 |
+ | 19:30:23.500 |  7.723076923076923 |
+ |   19:30:24.0 |  7.510204081632651 |
+ | 19:30:24.500 | 12.652777777777779 |
+ |   19:30:25.0 | 11.860759493670885 |
+ | 19:30:25.500 |  5.925373134328358 |
+ |   19:30:26.0 |   6.04424778761062 |
+ | 19:30:26.500 |  14.37037037037037 |
+ |   19:30:27.0 |  9.135922330097083 |
+ | 19:30:27.500 |  7.597222222222222 |
+ |   19:30:28.0 |  6.302083333333333 |
+ | 19:30:28.500 | 14.121621621621628 |
+ |   19:30:29.0 |  7.734177215189872 |
+ | 19:30:29.500 |  6.465346534653471 |
+ |   19:30:30.0 | 12.649350649350644 |
+ | 19:30:30.500 | 10.193548387096776 |
+ |   19:30:31.0 |  7.968253968253968 |
+ | 19:30:31.500 |  6.485436893203883 |
+ |   19:30:32.0 | 16.568627450980387 |
+ | 19:30:32.500 |  9.715789473684213 |
+ |   19:30:33.0 |  8.139999999999999 |
+ | 19:30:33.500 |  39.22222222222223 |
+ |   19:30:34.0 |  7.746666666666667 |
+ | 19:30:34.500 | 15.469696969696964 |
+ |   19:30:35.0 |  7.678571428571429 |
+ | 19:30:35.500 |  6.443298969072165 |
+ |   19:30:36.0 |  12.20588235294118 |
+ | 19:30:36.500 |  11.43661971830986 |
+ |   19:30:37.0 |  7.797297297297297 |
+ | 19:30:37.500 |  7.288659793814431 |
+ |   19:30:38.0 | 13.746268656716419 |
+ | 19:30:38.500 | 10.659340659340657 |
+ |   19:30:39.0 |  6.378787878787879 |
+ | 19:30:39.500 |  6.407079646017699 |
+ |   19:30:40.0 | 14.400000000000002 |
+ | 19:30:40.500 | 13.595744680851066 |
+ |   19:30:41.0 |  8.836363636363636 |
+ | 19:30:41.500 |  5.752293577981653 |
+ |   19:30:42.0 | 15.178571428571425 |
+ | 19:30:42.500 |  8.221153846153843 |
+ |   19:30:43.0 |  6.158415841584155 |
+ | 19:30:43.500 | 13.271428571428572 |
+ |   19:30:44.0 | 11.121621621621621 |
+ | 19:30:44.500 |                6.8 |
+ |   19:30:45.0 | 28.406779661016948 |
+ | 19:30:45.500 |  14.25974025974026 |
+ |   19:30:46.0 |              16.58 |
+ | 19:30:46.500 |  8.726415094339622 |
+ |   19:30:47.0 |  6.487804878048777 |
+ | 19:30:47.500 |   9.52941176470588 |
+ |   19:30:48.0 | 12.513157894736846 |
+ | 19:30:48.500 |  8.000000000000004 |
+ |   19:30:49.0 | 7.1818181818181825 |
+ | 19:30:49.500 |  12.89795918367347 |
+ +--------------+--------------------+
+	</pre>
+    </p>
+  </td>
+</tr>
+<tr align="center">
+  <td>
+    <b>Histograms of response times</b>
+   <img src="response-times-distribution-10.png" title="Detailed view"/>  
+    <p><a href="response-times-distribution-10.csv">download</a> <a href="javascript:change('response_times_distribution_10')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_distribution_10">
+ +----------------------+--------------+
+ | Response times in ms | HTTP Request |
+ +----------------------+--------------+
+ |                    0 |       4430.0 |
+ |                   10 |       1653.0 |
+ |                   20 |        903.0 |
+ |                   30 |        525.0 |
+ |                   40 |        294.0 |
+ |                   50 |        113.0 |
+ |                   60 |         64.0 |
+ |                   70 |         20.0 |
+ |                   80 |          3.0 |
+ |                   90 |          3.0 |
+ |                  100 |          2.0 |
+ |                  110 |          7.0 |
+ |                  120 |          2.0 |
+ |                  140 |          3.0 |
+ |                  160 |          1.0 |
+ |                  170 |          3.0 |
+ |                  180 |          6.0 |
+ |                  190 |          9.0 |
+ |                  200 |          5.0 |
+ +----------------------+--------------+
+	</pre>
+    </p>
+   <img src="response-times-distribution-100.png" title="Zooming out"/>  
+    <p><a href="response-times-distribution-100.csv">download</a> <a href="javascript:change('response_times_distribution_100')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_distribution_100">
+ +----------------------+--------------+
+ | Response times in ms | HTTP Request |
+ +----------------------+--------------+
+ |                    0 |       8008.0 |
+ |                  100 |         33.0 |
+ |                  200 |          5.0 |
+ +----------------------+--------------+
+	</pre>
+    </p>
+   <img src="response-times-distribution-1000.png" title="Everything should be in the first column, if not, we are slow"/>  
+    <p><a href="response-times-distribution-1000.csv">download</a> <a href="javascript:change('response_times_distribution_1000')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_distribution_1000">
+ +----------------------+--------------+
+ | Response times in ms | HTTP Request |
+ +----------------------+--------------+
+ |                    0 |       8046.0 |
+ +----------------------+--------------+
+	</pre>
+    </p>
+  </td>
+  <td>
+    <b>View of how the search performed over time</b>
+   <img src="response-times-over-time-10.png" />
+    <p><a href="response-times-over-time-10.csv">download</a> <a href="javascript:change('response_times_over_time_10')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_over_time_10">
+ +--------------+--------------------+
+ | Elapsed time |       HTTP Request |
+ +--------------+--------------------+
+ | 19:29:49.900 |               75.0 |
+ | 19:29:50.100 |                4.0 |
+ | 19:29:50.200 |                2.5 |
+ | 19:29:50.300 |                2.5 |
+ | 19:29:50.400 |                2.5 |
+ | 19:29:50.500 | 3.6666666666666665 |
+ | 19:29:50.600 |               2.25 |
+ | 19:29:50.700 | 2.8333333333333335 |
+ | 19:29:50.800 |                2.0 |
+ | 19:29:50.900 |               14.0 |
+ | 19:29:51.200 |               16.0 |
+ | 19:29:51.300 |               14.0 |
+ | 19:29:51.400 |               18.0 |
+ | 19:29:51.500 |               14.0 |
+ | 19:29:51.700 |               25.0 |
+ | 19:29:51.800 |               22.0 |
+ | 19:29:51.900 |               45.0 |
+ |   19:29:52.0 |               13.5 |
+ | 19:29:52.100 | 11.333333333333334 |
+ | 19:29:52.200 |               18.5 |
+ | 19:29:52.300 |              15.75 |
+ | 19:29:52.400 |                4.4 |
+ | 19:29:52.500 |                3.5 |
+ | 19:29:52.600 | 3.6666666666666665 |
+ | 19:29:52.700 |               10.0 |
+ |   19:29:53.0 |               14.0 |
+ | 19:29:53.100 |                7.0 |
+ | 19:29:53.200 |               13.0 |
+ | 19:29:53.300 |                8.4 |
+ | 19:29:53.400 |               12.0 |
+ | 19:29:53.500 |                7.8 |
+ | 19:29:53.600 |               43.0 |
+ | 19:29:53.700 |               38.0 |
+ | 19:29:53.800 |               28.0 |
+ | 19:29:53.900 |               31.0 |
+ |   19:29:54.0 |               32.0 |
+ | 19:29:54.100 | 34.333333333333336 |
+ | 19:29:54.200 |               28.5 |
+ | 19:29:54.300 |               25.0 |
+ | 19:29:54.400 |               36.0 |
+ | 19:29:54.500 |               12.5 |
+ | 19:29:54.700 |                5.8 |
+ | 19:29:54.800 |               13.6 |
+ | 19:29:54.900 |              9.625 |
+ |   19:29:55.0 |               24.0 |
+ | 19:29:55.100 | 16.571428571428573 |
+ | 19:29:55.200 |  7.818181818181818 |
+ | 19:29:55.300 |  4.076923076923077 |
+ | 19:29:55.400 | 14.428571428571429 |
+ | 19:29:55.500 |               17.6 |
+ | 19:29:55.600 |               25.8 |
+ | 19:29:55.700 | 10.444444444444445 |
+ | 19:29:55.800 |  4.416666666666667 |
+ | 19:29:55.900 |  4.714285714285714 |
+ |   19:29:56.0 |              6.625 |
+ | 19:29:56.100 |               19.0 |
+ | 19:29:56.200 |              12.75 |
+ | 19:29:56.300 | 14.333333333333334 |
+ | 19:29:56.400 |               17.0 |
+ | 19:29:56.500 |  8.090909090909092 |
+ | 19:29:56.600 |               12.0 |
+ | 19:29:56.700 | 17.333333333333332 |
+ | 19:29:56.800 |  8.181818181818182 |
+ | 19:29:56.900 |  4.571428571428572 |
+ |   19:29:57.0 | 3.6153846153846154 |
+ | 19:29:57.100 |                2.4 |
+ | 19:29:57.200 |  5.916666666666667 |
+ | 19:29:57.300 |               16.0 |
+ | 19:29:57.400 |               26.0 |
+ | 19:29:57.500 |               15.8 |
+ | 19:29:57.600 |  5.923076923076923 |
+ | 19:29:57.700 |                7.0 |
+ | 19:29:57.800 | 12.166666666666666 |
+ | 19:29:57.900 |               10.0 |
+ |   19:29:58.0 |                8.0 |
+ | 19:29:58.100 |               36.0 |
+ | 19:29:58.200 |               32.5 |
+ | 19:29:58.300 |               34.0 |
+ | 19:29:58.400 | 22.333333333333332 |
+ | 19:29:58.500 |               12.5 |
+ | 19:29:58.600 |                7.0 |
+ | 19:29:58.700 |              9.125 |
+ | 19:29:58.800 | 21.833333333333332 |
+ | 19:29:58.900 | 14.666666666666666 |
+ |   19:29:59.0 | 7.7272727272727275 |
+ | 19:29:59.100 |  4.636363636363637 |
+ | 19:29:59.200 |  15.11111111111111 |
+ | 19:29:59.300 |               19.5 |
+ | 19:29:59.400 |  8.428571428571429 |
+ | 19:29:59.500 |               2.85 |
+ | 19:29:59.600 | 5.7272727272727275 |
+ | 19:29:59.700 | 10.833333333333334 |
+ | 19:29:59.800 | 12.571428571428571 |
+ | 19:29:59.900 |               29.5 |
+ |   19:30:00.0 |              10.75 |
+ | 19:30:00.100 | 13.555555555555555 |
+ | 19:30:00.200 |  13.23076923076923 |
+ | 19:30:00.300 |  4.449999999999999 |
+ | 19:30:00.400 |               2.72 |
+ | 19:30:00.500 |                6.6 |
+ | 19:30:00.600 | 25.428571428571427 |
+ | 19:30:00.700 |               15.0 |
+ | 19:30:00.800 |  4.565217391304348 |
+ | 19:30:00.900 |               10.1 |
+ |   19:30:01.0 |                9.7 |
+ | 19:30:01.100 |               36.0 |
+ | 19:30:01.200 | 32.333333333333336 |
+ | 19:30:01.300 |               18.0 |
+ | 19:30:01.400 |  7.777777777777778 |
+ | 19:30:01.500 |               12.7 |
+ | 19:30:01.600 | 20.181818181818183 |
+ | 19:30:01.700 |  4.739130434782608 |
+ | 19:30:01.800 |               15.0 |
+ | 19:30:01.900 | 14.428571428571429 |
+ |   19:30:02.0 |                3.2 |
+ | 19:30:02.100 |                7.5 |
+ | 19:30:02.200 |               16.5 |
+ | 19:30:02.300 | 15.428571428571429 |
+ | 19:30:02.400 |                8.8 |
+ | 19:30:02.500 | 13.928571428571429 |
+ | 19:30:02.600 |              6.625 |
+ | 19:30:02.700 | 3.2083333333333335 |
+ | 19:30:02.800 | 2.5555555555555554 |
+ | 19:30:02.900 | 14.428571428571429 |
+ |   19:30:03.0 | 19.818181818181817 |
+ | 19:30:03.100 |  4.136363636363637 |
+ | 19:30:03.200 |              13.25 |
+ | 19:30:03.300 |  8.636363636363637 |
+ | 19:30:03.400 | 31.428571428571427 |
+ | 19:30:03.500 |               33.0 |
+ | 19:30:03.600 |              24.25 |
+ | 19:30:03.700 |               10.2 |
+ | 19:30:03.800 |  9.363636363636363 |
+ | 19:30:03.900 | 19.545454545454547 |
+ |   19:30:04.0 |  7.684210526315789 |
+ | 19:30:04.100 |  6.176470588235294 |
+ | 19:30:04.200 |  21.88888888888889 |
+ | 19:30:04.300 |  7.473684210526316 |
+ | 19:30:04.400 |                4.4 |
+ | 19:30:04.500 | 10.444444444444445 |
+ | 19:30:04.600 | 15.857142857142858 |
+ | 19:30:04.700 |               18.0 |
+ | 19:30:04.800 | 10.416666666666666 |
+ | 19:30:04.900 |  16.46153846153846 |
+ |   19:30:05.0 |               6.25 |
+ | 19:30:05.100 | 2.9642857142857144 |
+ | 19:30:05.200 |  4.647058823529412 |
+ | 19:30:05.300 | 22.333333333333332 |
+ | 19:30:05.400 | 18.833333333333332 |
+ | 19:30:05.500 |  5.130434782608695 |
+ | 19:30:05.600 | 13.363636363636363 |
+ | 19:30:05.700 |               22.2 |
+ | 19:30:05.800 |             32.625 |
+ | 19:30:05.900 | 22.727272727272727 |
+ |   19:30:06.0 | 11.714285714285714 |
+ | 19:30:06.100 |                9.5 |
+ | 19:30:06.200 | 18.923076923076927 |
+ | 19:30:06.300 |  5.846153846153846 |
+ | 19:30:06.400 | 17.133333333333333 |
+ | 19:30:06.500 |  7.130434782608695 |
+ | 19:30:06.600 |  4.217391304347826 |
+ | 19:30:06.700 |               23.5 |
+ | 19:30:06.800 | 23.571428571428573 |
+ | 19:30:06.900 | 21.428571428571427 |
+ |   19:30:07.0 | 12.166666666666666 |
+ | 19:30:07.100 | 12.294117647058824 |
+ | 19:30:07.200 | 3.2666666666666666 |
+ | 19:30:07.300 |  2.857142857142857 |
+ | 19:30:07.400 |               22.0 |
+ | 19:30:07.500 |               20.0 |
+ | 19:30:07.600 |  4.478260869565218 |
+ | 19:30:07.700 |               16.4 |
+ | 19:30:07.800 |               19.0 |
+ | 19:30:07.900 | 30.571428571428573 |
+ |   19:30:08.0 |               27.5 |
+ | 19:30:08.100 | 14.571428571428571 |
+ | 19:30:08.200 |               10.2 |
+ | 19:30:08.300 |               12.8 |
+ | 19:30:08.400 |               14.0 |
+ | 19:30:08.500 |  6.823529411764706 |
+ | 19:30:08.600 | 21.333333333333332 |
+ | 19:30:08.700 |  8.090909090909092 |
+ | 19:30:08.800 |  4.782608695652174 |
+ | 19:30:08.900 |               26.0 |
+ |   19:30:09.0 | 16.333333333333332 |
+ | 19:30:09.100 |               17.2 |
+ | 19:30:09.200 | 16.666666666666668 |
+ | 19:30:09.300 | 10.533333333333333 |
+ | 19:30:09.400 | 16.666666666666668 |
+ | 19:30:09.500 |  6.217391304347826 |
+ | 19:30:09.600 |                3.4 |
+ | 19:30:09.700 | 3.2222222222222223 |
+ | 19:30:09.900 |              191.2 |
+ | 19:30:10.100 | 130.16666666666666 |
+ | 19:30:10.200 |            12.1875 |
+ | 19:30:10.300 |  6.052631578947368 |
+ | 19:30:10.400 | 13.071428571428571 |
+ | 19:30:10.500 |               34.7 |
+ | 19:30:10.600 |  24.88888888888889 |
+ | 19:30:10.700 |               14.5 |
+ | 19:30:10.800 | 13.444444444444445 |
+ | 19:30:10.900 |               14.0 |
+ |   19:30:11.0 |  7.958333333333333 |
+ | 19:30:11.100 | 16.210526315789473 |
+ | 19:30:11.200 |  3.103448275862069 |
+ | 19:30:11.300 |               19.3 |
+ | 19:30:11.400 | 23.714285714285715 |
+ | 19:30:11.500 |             21.125 |
+ | 19:30:11.600 | 13.066666666666666 |
+ | 19:30:11.700 | 12.210526315789474 |
+ | 19:30:11.800 | 3.5185185185185186 |
+ | 19:30:11.900 |  2.296296296296296 |
+ |   19:30:12.0 |               19.5 |
+ | 19:30:12.100 | 12.894736842105264 |
+ | 19:30:12.200 |  9.263157894736842 |
+ | 19:30:12.300 |               11.8 |
+ | 19:30:12.400 |               34.8 |
+ | 19:30:12.500 | 24.166666666666668 |
+ | 19:30:12.600 |               16.5 |
+ | 19:30:12.700 |              14.25 |
+ | 19:30:12.800 | 20.705882352941178 |
+ | 19:30:12.900 |  6.166666666666669 |
+ |   19:30:13.0 |            19.1875 |
+ | 19:30:13.100 |  6.000000000000001 |
+ | 19:30:13.200 |  9.933333333333334 |
+ | 19:30:13.300 |               11.5 |
+ | 19:30:13.400 | 24.833333333333332 |
+ | 19:30:13.500 | 23.833333333333332 |
+ | 19:30:13.600 | 15.083333333333334 |
+ | 19:30:13.700 | 18.571428571428573 |
+ | 19:30:13.800 |                3.7 |
+ | 19:30:13.900 |               2.75 |
+ |   19:30:14.0 |  17.88888888888889 |
+ | 19:30:14.100 |               22.3 |
+ | 19:30:14.200 |  4.571428571428571 |
+ | 19:30:14.300 |               14.8 |
+ | 19:30:14.400 |  9.666666666666666 |
+ | 19:30:14.500 | 31.818181818181817 |
+ | 19:30:14.600 | 25.666666666666668 |
+ | 19:30:14.700 |             15.125 |
+ | 19:30:14.800 | 16.714285714285715 |
+ | 19:30:14.900 | 26.666666666666668 |
+ |   19:30:15.0 | 17.166666666666668 |
+ | 19:30:15.100 |  7.227272727272728 |
+ | 19:30:15.200 |               17.0 |
+ | 19:30:15.300 |               6.88 |
+ | 19:30:15.400 |               5.45 |
+ | 19:30:15.500 | 31.333333333333332 |
+ | 19:30:15.600 |               19.0 |
+ | 19:30:15.700 |               23.0 |
+ | 19:30:15.800 | 12.916666666666666 |
+ | 19:30:15.900 |  13.88888888888889 |
+ |   19:30:16.0 |  3.514285714285715 |
+ | 19:30:16.100 |              3.625 |
+ | 19:30:16.200 | 26.416666666666668 |
+ | 19:30:16.300 | 14.538461538461538 |
+ | 19:30:16.400 |  7.909090909090909 |
+ | 19:30:16.500 | 13.444444444444445 |
+ | 19:30:16.600 |              31.75 |
+ | 19:30:16.700 | 32.357142857142854 |
+ | 19:30:16.800 | 13.333333333333334 |
+ | 19:30:16.900 |              21.25 |
+ |   19:30:17.0 |            18.1875 |
+ | 19:30:17.100 |  6.222222222222222 |
+ | 19:30:17.200 |               20.5 |
+ | 19:30:17.300 | 3.3793103448275863 |
+ | 19:30:17.400 | 15.647058823529411 |
+ | 19:30:17.500 |               24.0 |
+ | 19:30:17.600 | 30.166666666666668 |
+ | 19:30:17.700 | 15.571428571428571 |
+ | 19:30:17.800 | 15.666666666666666 |
+ | 19:30:17.900 |  4.538461538461538 |
+ |   19:30:18.0 |  2.727272727272727 |
+ | 19:30:18.100 |               24.5 |
+ | 19:30:18.200 |               19.0 |
+ | 19:30:18.300 |  7.578947368421052 |
+ | 19:30:18.400 |               15.0 |
+ | 19:30:18.500 | 16.714285714285715 |
+ | 19:30:18.600 | 36.416666666666664 |
+ | 19:30:18.700 | 24.083333333333332 |
+ | 19:30:18.800 |             17.375 |
+ | 19:30:18.900 | 12.666666666666666 |
+ |   19:30:19.0 | 13.272727272727273 |
+ | 19:30:19.100 | 14.909090909090908 |
+ | 19:30:19.200 | 11.857142857142858 |
+ | 19:30:19.300 | 10.041666666666666 |
+ | 19:30:19.400 |                3.6 |
+ | 19:30:19.500 |               29.0 |
+ | 19:30:19.600 | 24.333333333333332 |
+ | 19:30:19.700 |               18.5 |
+ | 19:30:19.800 | 15.933333333333334 |
+ | 19:30:19.900 |   9.07407407407407 |
+ |   19:30:20.0 |            2.59375 |
+ | 19:30:20.100 |               12.0 |
+ | 19:30:20.200 | 20.692307692307693 |
+ | 19:30:20.300 |  7.999999999999998 |
+ | 19:30:20.400 | 16.666666666666668 |
+ | 19:30:20.500 |               22.8 |
+ | 19:30:20.600 |  35.23076923076923 |
+ | 19:30:20.700 |               13.9 |
+ | 19:30:20.800 | 26.166666666666668 |
+ | 19:30:20.900 | 15.461538461538462 |
+ |   19:30:21.0 |  8.862068965517237 |
+ | 19:30:21.100 | 17.933333333333334 |
+ | 19:30:21.200 |  8.516129032258064 |
+ | 19:30:21.300 |  8.352941176470589 |
+ | 19:30:21.400 |               28.6 |
+ | 19:30:21.500 | 24.833333333333332 |
+ | 19:30:21.600 | 17.727272727272727 |
+ | 19:30:21.700 |  19.53846153846154 |
+ | 19:30:21.800 |  9.826086956521738 |
+ | 19:30:21.900 |  5.571428571428571 |
+ | 19:30:22.100 |              190.5 |
+ | 19:30:22.200 |   32.8421052631579 |
+ | 19:30:22.300 |             5.0625 |
+ | 19:30:22.400 |             60.875 |
+ | 19:30:22.500 | 22.866666666666667 |
+ | 19:30:22.600 |  6.363636363636363 |
+ | 19:30:22.700 | 17.846153846153847 |
+ | 19:30:22.800 | 34.888888888888886 |
+ | 19:30:22.900 |              31.75 |
+ |   19:30:23.0 | 23.454545454545453 |
+ | 19:30:23.100 |               23.5 |
+ | 19:30:23.200 | 13.357142857142858 |
+ | 19:30:23.300 |  8.785714285714283 |
+ | 19:30:23.400 |              18.65 |
+ | 19:30:23.500 |  7.730769230769231 |
+ | 19:30:23.600 | 10.894736842105264 |
+ | 19:30:23.700 |              35.75 |
+ | 19:30:23.800 | 39.285714285714285 |
+ | 19:30:23.900 | 26.555555555555557 |
+ |   19:30:24.0 | 18.846153846153847 |
+ | 19:30:24.100 | 10.043478260869565 |
+ | 19:30:24.200 |  2.914285714285714 |
+ | 19:30:24.300 | 11.210526315789474 |
+ | 19:30:24.400 |             32.375 |
+ | 19:30:24.500 |  9.909090909090908 |
+ | 19:30:24.600 | 14.533333333333333 |
+ | 19:30:24.700 | 13.666666666666666 |
+ | 19:30:24.800 |  38.69230769230769 |
+ | 19:30:24.900 |               18.0 |
+ |   19:30:25.0 |             27.125 |
+ | 19:30:25.100 | 13.666666666666666 |
+ | 19:30:25.200 |  17.58823529411765 |
+ | 19:30:25.300 |               7.96 |
+ | 19:30:25.400 | 15.608695652173916 |
+ | 19:30:25.500 | 2.9310344827586206 |
+ | 19:30:25.600 |  26.77777777777778 |
+ | 19:30:25.700 | 26.428571428571427 |
+ | 19:30:25.800 |             24.875 |
+ | 19:30:25.900 | 15.071428571428571 |
+ |   19:30:26.0 | 11.333333333333334 |
+ | 19:30:26.100 | 2.9411764705882355 |
+ | 19:30:26.200 |  7.086956521739131 |
+ | 19:30:26.300 |               25.3 |
+ | 19:30:26.400 |               7.16 |
+ | 19:30:26.500 | 15.727272727272727 |
+ | 19:30:26.600 | 17.545454545454547 |
+ | 19:30:26.700 |  38.18181818181818 |
+ | 19:30:26.800 |               21.0 |
+ | 19:30:26.900 |              21.25 |
+ |   19:30:27.0 |             14.375 |
+ | 19:30:27.100 |              12.08 |
+ | 19:30:27.200 | 10.727272727272727 |
+ | 19:30:27.300 |              10.88 |
+ | 19:30:27.400 | 3.6956521739130435 |
+ | 19:30:27.500 | 41.285714285714285 |
+ | 19:30:27.600 |               28.0 |
+ | 19:30:27.700 | 15.625000000000002 |
+ | 19:30:27.800 | 17.333333333333332 |
+ | 19:30:27.900 |  5.451612903225806 |
+ |   19:30:28.0 | 2.3823529411764715 |
+ | 19:30:28.100 |               21.9 |
+ | 19:30:28.200 | 15.631578947368421 |
+ | 19:30:28.300 |  9.347826086956522 |
+ | 19:30:28.400 |               14.6 |
+ | 19:30:28.500 | 36.916666666666664 |
+ | 19:30:28.600 | 23.666666666666668 |
+ | 19:30:28.700 | 17.428571428571427 |
+ | 19:30:28.800 |               13.2 |
+ | 19:30:28.900 |  9.966666666666667 |
+ |   19:30:29.0 | 15.952380952380953 |
+ | 19:30:29.100 |                5.0 |
+ | 19:30:29.200 | 17.733333333333334 |
+ | 19:30:29.300 |               26.0 |
+ | 19:30:29.400 | 37.714285714285715 |
+ | 19:30:29.500 | 14.428571428571429 |
+ | 19:30:29.600 | 14.714285714285714 |
+ | 19:30:29.700 |                3.4 |
+ | 19:30:29.800 | 2.2307692307692313 |
+ | 19:30:29.900 |               21.2 |
+ |   19:30:30.0 |               14.3 |
+ | 19:30:30.100 |              10.25 |
+ | 19:30:30.200 |               15.0 |
+ | 19:30:30.300 |  35.90909090909091 |
+ | 19:30:30.400 | 19.466666666666665 |
+ | 19:30:30.500 |              19.25 |
+ | 19:30:30.600 | 11.090909090909092 |
+ | 19:30:30.700 | 14.545454545454545 |
+ | 19:30:30.800 | 12.826086956521738 |
+ | 19:30:30.900 |  7.758620689655173 |
+ |   19:30:31.0 |                6.8 |
+ | 19:30:31.100 |               29.5 |
+ | 19:30:31.200 |             36.375 |
+ | 19:30:31.300 | 15.153846153846153 |
+ | 19:30:31.400 |            17.6875 |
+ | 19:30:31.500 |  4.677419354838709 |
+ | 19:30:31.600 | 2.4193548387096775 |
+ | 19:30:31.700 |              28.75 |
+ | 19:30:31.800 | 30.444444444444443 |
+ | 19:30:31.900 |  8.916666666666668 |
+ |   19:30:32.0 | 21.416666666666668 |
+ | 19:30:32.100 |             14.625 |
+ | 19:30:32.200 |             39.375 |
+ | 19:30:32.300 | 27.615384615384617 |
+ | 19:30:32.400 |               26.6 |
+ | 19:30:32.500 | 13.166666666666666 |
+ | 19:30:32.600 | 13.307692307692308 |
+ | 19:30:32.700 |   8.76923076923077 |
+ | 19:30:32.800 |              18.15 |
+ | 19:30:32.900 |                6.0 |
+ |   19:30:33.0 |            13.5625 |
+ | 19:30:33.100 |              33.25 |
+ | 19:30:33.200 |               37.0 |
+ | 19:30:33.300 |               12.5 |
+ | 19:30:33.400 |               18.4 |
+ | 19:30:33.500 | 18.333333333333332 |
+ | 19:30:33.700 | 169.28571428571428 |
+ | 19:30:33.800 |              86.75 |
+ | 19:30:33.900 |  3.433333333333333 |
+ |   19:30:34.0 |  9.904761904761905 |
+ | 19:30:34.100 | 27.666666666666668 |
+ | 19:30:34.200 | 11.210526315789474 |
+ | 19:30:34.300 | 15.235294117647058 |
+ | 19:30:34.400 |  13.11111111111111 |
+ | 19:30:34.500 | 37.916666666666664 |
+ | 19:30:34.600 | 27.857142857142858 |
+ | 19:30:34.700 |             15.875 |
+ | 19:30:34.800 | 12.777777777777779 |
+ | 19:30:34.900 | 12.826086956521737 |
+ |   19:30:35.0 |  8.526315789473685 |
+ | 19:30:35.100 | 13.720000000000004 |
+ | 19:30:35.200 | 3.6923076923076925 |
+ | 19:30:35.300 |               35.0 |
+ | 19:30:35.400 | 32.166666666666664 |
+ | 19:30:35.500 | 32.833333333333336 |
+ | 19:30:35.600 |            15.4375 |
+ | 19:30:35.700 |  10.95833333333333 |
+ | 19:30:35.800 |  4.444444444444445 |
+ | 19:30:35.900 |              4.125 |
+ |   19:30:36.0 |               33.6 |
+ | 19:30:36.100 |               12.0 |
+ | 19:30:36.200 | 12.947368421052632 |
+ | 19:30:36.300 | 12.333333333333334 |
+ | 19:30:36.400 |               36.2 |
+ | 19:30:36.500 |               29.4 |
+ | 19:30:36.600 | 23.166666666666668 |
+ | 19:30:36.700 | 27.714285714285715 |
+ | 19:30:36.800 |  16.36842105263158 |
+ | 19:30:36.900 |  6.434782608695652 |
+ |   19:30:37.0 |  18.19047619047619 |
+ | 19:30:37.100 |            3.09375 |
+ | 19:30:37.200 |  30.77777777777778 |
+ | 19:30:37.300 |               28.4 |
+ | 19:30:37.400 | 43.714285714285715 |
+ | 19:30:37.500 | 14.454545454545455 |
+ | 19:30:37.600 |               19.8 |
+ | 19:30:37.700 |  5.384615384615385 |
+ | 19:30:37.800 |  5.035714285714286 |
+ | 19:30:37.900 | 13.058823529411764 |
+ |   19:30:38.0 | 24.181818181818183 |
+ | 19:30:38.100 |  9.176470588235293 |
+ | 19:30:38.200 | 14.529411764705882 |
+ | 19:30:38.300 | 13.222222222222221 |
+ | 19:30:38.400 |  38.69230769230769 |
+ | 19:30:38.500 |               21.6 |
+ | 19:30:38.600 |               24.0 |
+ | 19:30:38.700 | 13.615384615384615 |
+ | 19:30:38.800 |  9.093750000000002 |
+ | 19:30:38.900 | 15.079999999999995 |
+ |   19:30:39.0 |                2.9 |
+ | 19:30:39.100 |             30.625 |
+ | 19:30:39.200 |              27.25 |
+ | 19:30:39.300 |             39.625 |
+ | 19:30:39.400 |             15.375 |
+ | 19:30:39.500 | 13.894736842105264 |
+ | 19:30:39.600 | 2.9459459459459465 |
+ | 19:30:39.700 |  6.043478260869565 |
+ | 19:30:39.800 |               27.9 |
+ | 19:30:39.900 |  8.416666666666668 |
+ |   19:30:40.0 |               15.5 |
+ | 19:30:40.100 |               17.0 |
+ | 19:30:40.200 |  36.23076923076923 |
+ | 19:30:40.300 |               20.0 |
+ | 19:30:40.400 | 32.833333333333336 |
+ | 19:30:40.500 |                9.0 |
+ | 19:30:40.600 |  74.14285714285714 |
+ | 19:30:40.700 |  8.966666666666669 |
+ | 19:30:40.800 |              16.15 |
+ | 19:30:40.900 |            5.40625 |
+ |   19:30:41.0 | 17.466666666666665 |
+ | 19:30:41.100 |               15.0 |
+ | 19:30:41.200 |              28.75 |
+ | 19:30:41.300 | 14.428571428571429 |
+ | 19:30:41.400 |            16.4375 |
+ | 19:30:41.500 |  4.031249999999999 |
+ | 19:30:41.600 | 2.6333333333333333 |
+ | 19:30:41.700 |               30.3 |
+ | 19:30:41.800 |               13.8 |
+ | 19:30:41.900 |  9.181818181818182 |
+ |   19:30:42.0 |               15.0 |
+ | 19:30:42.100 |               33.7 |
+ | 19:30:42.200 |               26.5 |
+ | 19:30:42.300 |  21.77777777777778 |
+ | 19:30:42.400 |  11.11111111111111 |
+ | 19:30:42.500 | 10.032258064516132 |
+ | 19:30:42.600 | 16.833333333333332 |
+ | 19:30:42.700 |  5.323529411764706 |
+ | 19:30:42.800 | 15.941176470588236 |
+ | 19:30:42.900 |              19.25 |
+ |   19:30:43.0 | 29.285714285714285 |
+ | 19:30:43.100 | 11.785714285714286 |
+ | 19:30:43.200 |              12.52 |
+ | 19:30:43.300 |  3.064516129032258 |
+ | 19:30:43.400 |  5.083333333333333 |
+ | 19:30:43.500 | 31.333333333333332 |
+ | 19:30:43.600 |               9.85 |
+ | 19:30:43.700 | 11.105263157894736 |
+ | 19:30:43.800 | 13.333333333333334 |
+ | 19:30:43.900 |  37.23076923076923 |
+ |   19:30:44.0 |               26.5 |
+ | 19:30:44.100 | 26.571428571428573 |
+ | 19:30:44.200 |             10.875 |
+ | 19:30:44.300 | 12.416666666666666 |
+ | 19:30:44.400 |  9.333333333333334 |
+ | 19:30:44.500 |  11.95833333333333 |
+ | 19:30:44.600 |  3.423076923076923 |
+ | 19:30:44.700 |               35.0 |
+ | 19:30:44.800 | 30.714285714285715 |
+ | 19:30:44.900 |               30.0 |
+ |   19:30:45.0 | 12.941176470588236 |
+ | 19:30:45.100 |                9.5 |
+ | 19:30:45.200 | 3.7777777777777777 |
+ | 19:30:45.400 | 141.66666666666666 |
+ | 19:30:45.500 | 26.000000000000007 |
+ | 19:30:45.600 |               12.8 |
+ | 19:30:45.700 |  33.18181818181818 |
+ | 19:30:45.800 | 13.142857142857142 |
+ | 19:30:45.900 |  9.894736842105264 |
+ |   19:30:46.0 |               17.0 |
+ | 19:30:46.100 |             33.625 |
+ | 19:30:46.200 |               28.4 |
+ | 19:30:46.300 | 23.818181818181817 |
+ | 19:30:46.400 | 21.166666666666668 |
+ | 19:30:46.500 |            17.9375 |
+ | 19:30:46.600 |  6.620689655172414 |
+ | 19:30:46.700 | 15.909090909090908 |
+ | 19:30:46.800 | 2.8333333333333335 |
+ | 19:30:46.900 |               34.0 |
+ |   19:30:47.0 |               37.2 |
+ | 19:30:47.100 | 19.272727272727273 |
+ | 19:30:47.200 |  14.76923076923077 |
+ | 19:30:47.300 | 13.777777777777779 |
+ | 19:30:47.400 |  3.085714285714286 |
+ | 19:30:47.500 |  5.173913043478261 |
+ | 19:30:47.600 | 26.727272727272727 |
+ | 19:30:47.700 |               7.96 |
+ | 19:30:47.800 | 16.416666666666668 |
+ | 19:30:47.900 | 24.071428571428573 |
+ |   19:30:48.0 |               33.1 |
+ | 19:30:48.100 |            21.9375 |
+ | 19:30:48.200 |               18.4 |
+ | 19:30:48.300 | 21.666666666666668 |
+ | 19:30:48.400 |                5.5 |
+ | 19:30:48.500 | 15.199999999999996 |
+ | 19:30:48.600 | 2.7857142857142856 |
+ | 19:30:48.700 |              29.25 |
+ | 19:30:48.800 | 31.571428571428573 |
+ | 19:30:48.900 |               20.5 |
+ |   19:30:49.0 | 13.647058823529411 |
+ | 19:30:49.100 |  9.115384615384615 |
+ | 19:30:49.200 |             2.5625 |
+ | 19:30:49.300 | 10.631578947368421 |
+ | 19:30:49.400 |            18.9375 |
+ | 19:30:49.500 |  9.565217391304348 |
+ | 19:30:49.600 | 12.642857142857142 |
+ | 19:30:49.700 |  36.54545454545455 |
+ | 19:30:49.800 |               49.0 |
+ +--------------+--------------------+
+	</pre>
+    </p>
+   <img src="response-times-over-time-100.png" />  
+    <p><a href="response-times-over-time-100.csv">download</a> <a href="javascript:change('response_times_over_time_100')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_over_time_100">
+ +--------------+--------------------+
+ | Elapsed time |       HTTP Request |
+ +--------------+--------------------+
+ |   19:29:49.0 |               75.0 |
+ |   19:29:50.0 |  3.636363636363636 |
+ |   19:29:51.0 |             24.875 |
+ |   19:29:52.0 |  8.312499999999996 |
+ |   19:29:53.0 | 17.000000000000004 |
+ |   19:29:54.0 |            16.6875 |
+ |   19:29:55.0 | 10.295454545454549 |
+ |   19:29:56.0 | 10.175675675675675 |
+ |   19:29:57.0 |  7.721649484536083 |
+ |   19:29:58.0 | 18.131147540983605 |
+ |   19:29:59.0 |  9.070707070707073 |
+ |   19:30:00.0 |  8.283687943262409 |
+ |   19:30:01.0 |  14.74107142857143 |
+ |   19:30:02.0 | 6.9733333333333345 |
+ |   19:30:03.0 |              14.91 |
+ |   19:30:04.0 | 10.152671755725187 |
+ |   19:30:05.0 | 11.133333333333331 |
+ |   19:30:06.0 | 11.333333333333336 |
+ |   19:30:07.0 | 10.354430379746834 |
+ |   19:30:08.0 | 12.307692307692305 |
+ |   19:30:09.0 | 16.366972477064213 |
+ |   19:30:10.0 | 21.034782608695654 |
+ |   19:30:11.0 |  9.199999999999996 |
+ |   19:30:12.0 | 15.174825174825175 |
+ |   19:30:13.0 |  9.851851851851851 |
+ |   19:30:14.0 | 16.639175257731964 |
+ |   19:30:15.0 | 12.662251655629134 |
+ |   19:30:16.0 | 12.830065359477125 |
+ |   19:30:17.0 |  11.85632183908046 |
+ |   19:30:18.0 | 14.930769230769231 |
+ |   19:30:19.0 | 12.333333333333334 |
+ |   19:30:20.0 | 14.422818791946309 |
+ |   19:30:21.0 | 12.343949044585989 |
+ |   19:30:22.0 |  31.20833333333332 |
+ |   19:30:23.0 | 15.654929577464788 |
+ |   19:30:24.0 |               13.8 |
+ |   19:30:25.0 | 14.226027397260275 |
+ |   19:30:26.0 | 12.946107784431133 |
+ |   19:30:27.0 | 12.165714285714284 |
+ |   19:30:28.0 |  13.58235294117647 |
+ |   19:30:29.0 |  11.06111111111111 |
+ |   19:30:30.0 | 14.464705882352941 |
+ |   19:30:31.0 | 12.180722891566264 |
+ |   19:30:32.0 | 16.006849315068493 |
+ |   19:30:33.0 | 30.115384615384606 |
+ |   19:30:34.0 | 17.226950354609944 |
+ |   19:30:35.0 | 11.049723756906074 |
+ |   19:30:36.0 |   18.1294964028777 |
+ |   19:30:37.0 | 12.660818713450292 |
+ |   19:30:38.0 | 16.481012658227844 |
+ |   19:30:39.0 | 11.156424581005586 |
+ |   19:30:40.0 | 17.671140939597315 |
+ |   19:30:41.0 |  11.62804878048781 |
+ |   19:30:42.0 |  14.87500000000001 |
+ |   19:30:43.0 | 12.830409356725143 |
+ |   19:30:44.0 | 14.958333333333334 |
+ |   19:30:45.0 | 23.191176470588236 |
+ |   19:30:46.0 |  15.85897435897437 |
+ |   19:30:47.0 | 12.526946107784436 |
+ |   19:30:48.0 | 15.401315789473678 |
+ |   19:30:49.0 | 11.974842767295602 |
+ +--------------+--------------------+
+	</pre>
+    </p>
+   <img src="response-times-over-time-1000.png" />    
+    <p><a href="response-times-over-time-1000.csv">download</a> <a href="javascript:change('response_times_over_time_1000')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_over_time_1000">
+ +--------------+--------------------+
+ | Elapsed time |       HTTP Request |
+ +--------------+--------------------+
+ |   19:29:40.0 |               75.0 |
+ |   19:29:50.0 |  10.72953736654804 |
+ |   19:30:00.0 | 11.326747720364747 |
+ |   19:30:10.0 | 13.161028416779427 |
+ |   19:30:20.0 |  14.63769035532995 |
+ |   19:30:30.0 | 15.218649517684904 |
+ |   19:30:40.0 | 14.912066752246465 |
+ +--------------+--------------------+
+	</pre>
+    </p>
+  </td>
+</tr>
+<tr align="center">
+  <td>
+    <b>Query response percentiles</b>
+   <img src="response-times-percentiles.png" title="Ratio of queries served under (x) miliseconds"/>  
+    <p><a href="response-times-percentiles.csv">download</a> <a href="javascript:change('response_times_percentiles')">show/hide</a><br/>
+	<pre class="page_details" id="response_times_percentiles">
+ +-------------+--------------+
+ | Percentiles | HTTP Request |
+ +-------------+--------------+
+ |         0.1 |          1.0 |
+ |         0.2 |          1.0 |
+ |         0.3 |          2.0 |
+ |         0.4 |          2.0 |
+ |         0.5 |          2.0 |
+ |         0.6 |          2.0 |
+ |         0.7 |          2.0 |
+ |         0.8 |          2.0 |
+ |         0.9 |          2.0 |
+ |         1.0 |          2.0 |
+ |         1.1 |          2.0 |
+ |         1.2 |          2.0 |
+ |         1.3 |          2.0 |
+ |         1.4 |          2.0 |
+ |         1.5 |          2.0 |
+ |         1.6 |          2.0 |
+ |         1.7 |          2.0 |
+ |         1.8 |          2.0 |
+ |         1.9 |          2.0 |
+ |         2.0 |          2.0 |
+ |         2.1 |          2.0 |
+ |         2.2 |          2.0 |
+ |         2.3 |          2.0 |
+ |         2.4 |          2.0 |
+ |         2.5 |          2.0 |
+ |         2.6 |          2.0 |
+ |         2.7 |          2.0 |
+ |         2.8 |          2.0 |
+ |         2.9 |          2.0 |
+ |         3.0 |          2.0 |
+ |         3.1 |          2.0 |
+ |         3.2 |          2.0 |
+ |         3.3 |          2.0 |
+ |         3.4 |          2.0 |
+ |         3.5 |          2.0 |
+ |         3.6 |          2.0 |
+ |         3.7 |          2.0 |
+ |         3.8 |          2.0 |
+ |         3.9 |          2.0 |
+ |         4.0 |          2.0 |
+ |         4.1 |          2.0 |
+ |         4.2 |          2.0 |
+ |         4.3 |          2.0 |
+ |         4.4 |          2.0 |
+ |         4.5 |          2.0 |
+ |         4.6 |          2.0 |
+ |         4.7 |          2.0 |
+ |         4.8 |          2.0 |
+ |         4.9 |          2.0 |
+ |         5.0 |          2.0 |
+ |         5.1 |          2.0 |
+ |         5.2 |          2.0 |
+ |         5.3 |          2.0 |
+ |         5.4 |          2.0 |
+ |         5.5 |          2.0 |
+ |         5.6 |          2.0 |
+ |         5.7 |          2.0 |
+ |         5.8 |          2.0 |
+ |         5.9 |          2.0 |
+ |         6.0 |          2.0 |
+ |         6.1 |          2.0 |
+ |         6.2 |          2.0 |
+ |         6.3 |          2.0 |
+ |         6.4 |          2.0 |
+ |         6.5 |          2.0 |
+ |         6.6 |          2.0 |
+ |         6.7 |          2.0 |
+ |         6.8 |          2.0 |
+ |         6.9 |          2.0 |
+ |         7.0 |          2.0 |
+ |         7.1 |          2.0 |
+ |         7.2 |          2.0 |
+ |         7.3 |          2.0 |
+ |         7.4 |          2.0 |
+ |         7.5 |          2.0 |
+ |         7.6 |          2.0 |
+ |         7.7 |          2.0 |
+ |         7.8 |          2.0 |
+ |         7.9 |          2.0 |
+ |         8.0 |          2.0 |
+ |         8.1 |          2.0 |
+ |         8.2 |          2.0 |
+ |         8.3 |          2.0 |
+ |         8.4 |          2.0 |
+ |         8.5 |          2.0 |
+ |         8.6 |          2.0 |
+ |         8.7 |          2.0 |
+ |         8.8 |          2.0 |
+ |         8.9 |          2.0 |
+ |         9.0 |          2.0 |
+ |         9.1 |          2.0 |
+ |         9.2 |          2.0 |
+ |         9.3 |          2.0 |
+ |         9.4 |          2.0 |
+ |         9.5 |          2.0 |
+ |         9.6 |          2.0 |
+ |         9.7 |          2.0 |
+ |         9.8 |          2.0 |
+ |         9.9 |          2.0 |
+ |        10.0 |          2.0 |
+ |        10.1 |          2.0 |
+ |        10.2 |          2.0 |
+ |        10.3 |          2.0 |
+ |        10.4 |          2.0 |
+ |        10.5 |          2.0 |
+ |        10.6 |          2.0 |
+ |        10.7 |          2.0 |
+ |        10.8 |          2.0 |
+ |        10.9 |          2.0 |
+ |        11.0 |          2.0 |
+ |        11.1 |          2.0 |
+ |        11.2 |          2.0 |
+ |        11.3 |          2.0 |
+ |        11.4 |          2.0 |
+ |        11.5 |          2.0 |
+ |        11.6 |          2.0 |
+ |        11.7 |          2.0 |
+ |        11.8 |          2.0 |
+ |        11.9 |          2.0 |
+ |        12.0 |          2.0 |
+ |        12.1 |          2.0 |
+ |        12.2 |          2.0 |
+ |        12.3 |          2.0 |
+ |        12.4 |          2.0 |
+ |        12.5 |          2.0 |
+ |        12.6 |          2.0 |
+ |        12.7 |          2.0 |
+ |        12.8 |          2.0 |
+ |        12.9 |          2.0 |
+ |        13.0 |          2.0 |
+ |        13.1 |          2.0 |
+ |        13.2 |          2.0 |
+ |        13.3 |          2.0 |
+ |        13.4 |          2.0 |
+ |        13.5 |          2.0 |
+ |        13.6 |          2.0 |
+ |        13.7 |          2.0 |
+ |        13.8 |          2.0 |
+ |        13.9 |          2.0 |
+ |        14.0 |          2.0 |
+ |        14.1 |          2.0 |
+ |        14.2 |          2.0 |
+ |        14.3 |          2.0 |
+ |        14.4 |          2.0 |
+ |        14.5 |          2.0 |
+ |        14.6 |          2.0 |
+ |        14.7 |          3.0 |
+ |        14.8 |          3.0 |
+ |        14.9 |          3.0 |
+ |        15.0 |          3.0 |
+ |        15.1 |          3.0 |
+ |        15.2 |          3.0 |
+ |        15.3 |          3.0 |
+ |        15.4 |          3.0 |
+ |        15.5 |          3.0 |
+ |        15.6 |          3.0 |
+ |        15.7 |          3.0 |
+ |        15.8 |          3.0 |
+ |        15.9 |          3.0 |
+ |        16.0 |          3.0 |
+ |        16.1 |          3.0 |
+ |        16.2 |          3.0 |
+ |        16.3 |          3.0 |
+ |        16.4 |          3.0 |
+ |        16.5 |          3.0 |
+ |        16.6 |          3.0 |
+ |        16.7 |          3.0 |
+ |        16.8 |          3.0 |
+ |        16.9 |          3.0 |
+ |        17.0 |          3.0 |
+ |        17.1 |          3.0 |
+ |        17.2 |          3.0 |
+ |        17.3 |          3.0 |
+ |        17.4 |          3.0 |
+ |        17.5 |          3.0 |
+ |        17.6 |          3.0 |
+ |        17.7 |          3.0 |
+ |        17.8 |          3.0 |
+ |        17.9 |          3.0 |
+ |        18.0 |          3.0 |
+ |        18.1 |          3.0 |
+ |        18.2 |          3.0 |
+ |        18.3 |          3.0 |
+ |        18.4 |          3.0 |
+ |        18.5 |          3.0 |
+ |        18.6 |          3.0 |
+ |        18.7 |          3.0 |
+ |        18.8 |          3.0 |
+ |        18.9 |          3.0 |
+ |        19.0 |          3.0 |
+ |        19.1 |          3.0 |
+ |        19.2 |          3.0 |
+ |        19.3 |          3.0 |
+ |        19.4 |          3.0 |
+ |        19.5 |          3.0 |
+ |        19.6 |          3.0 |
+ |        19.7 |          3.0 |
+ |        19.8 |          3.0 |
+ |        19.9 |          3.0 |
+ |        20.0 |          3.0 |
+ |        20.1 |          3.0 |
+ |        20.2 |          3.0 |
+ |        20.3 |          3.0 |
+ |        20.4 |          3.0 |
+ |        20.5 |          3.0 |
+ |        20.6 |          3.0 |
+ |        20.7 |          3.0 |
+ |        20.8 |          3.0 |
+ |        20.9 |          3.0 |
+ |        21.0 |          3.0 |
+ |        21.1 |          3.0 |
+ |        21.2 |          3.0 |
+ |        21.3 |          3.0 |
+ |        21.4 |          3.0 |
+ |        21.5 |          3.0 |
+ |        21.6 |          3.0 |
+ |        21.7 |          3.0 |
+ |        21.8 |          3.0 |
+ |        21.9 |          3.0 |
+ |        22.0 |          3.0 |
+ |        22.1 |          3.0 |
+ |        22.2 |          3.0 |
+ |        22.3 |          3.0 |
+ |        22.4 |          3.0 |
+ |        22.5 |          3.0 |
+ |        22.6 |          3.0 |
+ |        22.7 |          3.0 |
+ |        22.8 |          3.0 |
+ |        22.9 |          3.0 |
+ |        23.0 |          3.0 |
+ |        23.1 |          3.0 |
+ |        23.2 |          3.0 |
+ |        23.3 |          3.0 |
+ |        23.4 |          3.0 |
+ |        23.5 |          3.0 |
+ |        23.6 |          3.0 |
+ |        23.7 |          3.0 |
+ |        23.8 |          3.0 |
+ |        23.9 |          3.0 |
+ |        24.0 |          3.0 |
+ |        24.1 |          3.0 |
+ |        24.2 |          3.0 |
+ |        24.3 |          3.0 |
+ |        24.4 |          3.0 |
+ |        24.5 |          3.0 |
+ |        24.6 |          3.0 |
+ |        24.7 |          3.0 |
+ |        24.8 |          3.0 |
+ |        24.9 |          3.0 |
+ |        25.0 |          3.0 |
+ |        25.1 |          3.0 |
+ |        25.2 |          3.0 |
+ |        25.3 |          3.0 |
+ |        25.4 |          3.0 |
+ |        25.5 |          3.0 |
+ |        25.6 |          3.0 |
+ |        25.7 |          3.0 |
+ |        25.8 |          3.0 |
+ |        25.9 |          3.0 |
+ |        26.0 |          3.0 |
+ |        26.1 |          3.0 |
+ |        26.2 |          3.0 |
+ |        26.3 |          3.0 |
+ |        26.4 |          3.0 |
+ |        26.5 |          3.0 |
+ |        26.6 |          3.0 |
+ |        26.7 |          3.0 |
+ |        26.8 |          3.0 |
+ |        26.9 |          3.0 |
+ |        27.0 |          3.0 |
+ |        27.1 |          3.0 |
+ |        27.2 |          3.0 |
+ |        27.3 |          3.0 |
+ |        27.4 |          3.0 |
+ |        27.5 |          3.0 |
+ |        27.6 |          3.0 |
+ |        27.7 |          3.0 |
+ |        27.8 |          3.0 |
+ |        27.9 |          3.0 |
+ |        28.0 |          3.0 |
+ |        28.1 |          3.0 |
+ |        28.2 |          3.0 |
+ |        28.3 |          3.0 |
+ |        28.4 |          3.0 |
+ |        28.5 |          3.0 |
+ |        28.6 |          3.0 |
+ |        28.7 |          3.0 |
+ |        28.8 |          3.0 |
+ |        28.9 |          3.0 |
+ |        29.0 |          3.0 |
+ |        29.1 |          3.0 |
+ |        29.2 |          3.0 |
+ |        29.3 |          3.0 |
+ |        29.4 |          3.0 |
+ |        29.5 |          3.0 |
+ |        29.6 |          3.0 |
+ |        29.7 |          4.0 |
+ |        29.8 |          4.0 |
+ |        29.9 |          4.0 |
+ |        30.0 |          4.0 |
+ |        30.1 |          4.0 |
+ |        30.2 |          4.0 |
+ |        30.3 |          4.0 |
+ |        30.4 |          4.0 |
+ |        30.5 |          4.0 |
+ |        30.6 |          4.0 |
+ |        30.7 |          4.0 |
+ |        30.8 |          4.0 |
+ |        30.9 |          4.0 |
+ |        31.0 |          4.0 |
+ |        31.1 |          4.0 |
+ |        31.2 |          4.0 |
+ |        31.3 |          4.0 |
+ |        31.4 |          4.0 |
+ |        31.5 |          4.0 |
+ |        31.6 |          4.0 |
+ |        31.7 |          4.0 |
+ |        31.8 |          4.0 |
+ |        31.9 |          4.0 |
+ |        32.0 |          4.0 |
+ |        32.1 |          4.0 |
+ |        32.2 |          4.0 |
+ |        32.3 |          4.0 |
+ |        32.4 |          4.0 |
+ |        32.5 |          4.0 |
+ |        32.6 |          4.0 |
+ |        32.7 |          4.0 |
+ |        32.8 |          4.0 |
+ |        32.9 |          4.0 |
+ |        33.0 |          4.0 |
+ |        33.1 |          4.0 |
+ |        33.2 |          4.0 |
+ |        33.3 |          4.0 |
+ |        33.4 |          4.0 |
+ |        33.5 |          4.0 |
+ |        33.6 |          4.0 |
+ |        33.7 |          4.0 |
+ |        33.8 |          4.0 |
+ |        33.9 |          4.0 |
+ |        34.0 |          4.0 |
+ |        34.1 |          4.0 |
+ |        34.2 |          4.0 |
+ |        34.3 |          4.0 |
+ |        34.4 |          4.0 |
+ |        34.5 |          4.0 |
+ |        34.6 |          4.0 |
+ |        34.7 |          4.0 |
+ |        34.8 |          4.0 |
+ |        34.9 |          4.0 |
+ |        35.0 |          4.0 |
+ |        35.1 |          4.0 |
+ |        35.2 |          4.0 |
+ |        35.3 |          4.0 |
+ |        35.4 |          4.0 |
+ |        35.5 |          4.0 |
+ |        35.6 |          4.0 |
+ |        35.7 |          4.0 |
+ |        35.8 |          4.0 |
+ |        35.9 |          4.0 |
+ |        36.0 |          4.0 |
+ |        36.1 |          4.0 |
+ |        36.2 |          4.0 |
+ |        36.3 |          4.0 |
+ |        36.4 |          4.0 |
+ |        36.5 |          4.0 |
+ |        36.6 |          4.0 |
+ |        36.7 |          4.0 |
+ |        36.8 |          4.0 |
+ |        36.9 |          4.0 |
+ |        37.0 |          4.0 |
+ |        37.1 |          4.0 |
+ |        37.2 |          4.0 |
+ |        37.3 |          4.0 |
+ |        37.4 |          4.0 |
+ |        37.5 |          4.0 |
+ |        37.6 |          4.0 |
+ |        37.7 |          4.0 |
+ |        37.8 |          4.0 |
+ |        37.9 |          4.0 |
+ |        38.0 |          4.0 |
+ |        38.1 |          4.0 |
+ |        38.2 |          4.0 |
+ |        38.3 |          4.0 |
+ |        38.4 |          4.0 |
+ |        38.5 |          4.0 |
+ |        38.6 |          4.0 |
+ |        38.7 |          4.0 |
+ |        38.8 |          4.0 |
+ |        38.9 |          4.0 |
+ |        39.0 |          4.0 |
+ |        39.1 |          5.0 |
+ |        39.2 |          5.0 |
+ |        39.3 |          5.0 |
+ |        39.4 |          5.0 |
+ |        39.5 |          5.0 |
+ |        39.6 |          5.0 |
+ |        39.7 |          5.0 |
+ |        39.8 |          5.0 |
+ |        39.9 |          5.0 |
+ |        40.0 |          5.0 |
+ |        40.1 |          5.0 |
+ |        40.2 |          5.0 |
+ |        40.3 |          5.0 |
+ |        40.4 |          5.0 |
+ |        40.5 |          5.0 |
+ |        40.6 |          5.0 |
+ |        40.7 |          5.0 |
+ |        40.8 |          5.0 |
+ |        40.9 |          5.0 |
+ |        41.0 |          5.0 |
+ |        41.1 |          5.0 |
+ |        41.2 |          5.0 |
+ |        41.3 |          5.0 |
+ |        41.4 |          5.0 |
+ |        41.5 |          5.0 |
+ |        41.6 |          5.0 |
+ |        41.7 |          5.0 |
+ |        41.8 |          5.0 |
+ |        41.9 |          5.0 |
+ |        42.0 |          5.0 |
+ |        42.1 |          5.0 |
+ |        42.2 |          5.0 |
+ |        42.3 |          5.0 |
+ |        42.4 |          5.0 |
+ |        42.5 |          5.0 |
+ |        42.6 |          5.0 |
+ |        42.7 |          5.0 |
+ |        42.8 |          5.0 |
+ |        42.9 |          5.0 |
+ |        43.0 |          5.0 |
+ |        43.1 |          5.0 |
+ |        43.2 |          5.0 |
+ |        43.3 |          5.0 |
+ |        43.4 |          5.0 |
+ |        43.5 |          5.0 |
+ |        43.6 |          5.0 |
+ |        43.7 |          5.0 |
+ |        43.8 |          5.0 |
+ |        43.9 |          5.0 |
+ |        44.0 |          6.0 |
+ |        44.1 |          6.0 |
+ |        44.2 |          6.0 |
+ |        44.3 |          6.0 |
+ |        44.4 |          6.0 |
+ |        44.5 |          6.0 |
+ |        44.6 |          6.0 |
+ |        44.7 |          6.0 |
+ |        44.8 |          6.0 |
+ |        44.9 |          6.0 |
+ |        45.0 |          6.0 |
+ |        45.1 |          6.0 |
+ |        45.2 |          6.0 |
+ |        45.3 |          6.0 |
+ |        45.4 |          6.0 |
+ |        45.5 |          6.0 |
+ |        45.6 |          6.0 |
+ |        45.7 |          6.0 |
+ |        45.8 |          6.0 |
+ |        45.9 |          6.0 |
+ |        46.0 |          6.0 |
+ |        46.1 |          6.0 |
+ |        46.2 |          6.0 |
+ |        46.3 |          6.0 |
+ |        46.4 |          6.0 |
+ |        46.5 |          6.0 |
+ |        46.6 |          6.0 |
+ |        46.7 |          6.0 |
+ |        46.8 |          6.0 |
+ |        46.9 |          6.0 |
+ |        47.0 |          6.0 |
+ |        47.1 |          6.0 |
+ |        47.2 |          7.0 |
+ |        47.3 |          7.0 |
+ |        47.4 |          7.0 |
+ |        47.5 |          7.0 |
+ |        47.6 |          7.0 |
+ |        47.7 |          7.0 |
+ |        47.8 |          7.0 |
+ |        47.9 |          7.0 |
+ |        48.0 |          7.0 |
+ |        48.1 |          7.0 |
+ |        48.2 |          7.0 |
+ |        48.3 |          7.0 |
+ |        48.4 |          7.0 |
+ |        48.5 |          7.0 |
+ |        48.6 |          7.0 |
+ |        48.7 |          7.0 |
+ |        48.8 |          7.0 |
+ |        48.9 |          7.0 |
+ |        49.0 |          7.0 |
+ |        49.1 |          7.0 |
+ |        49.2 |          7.0 |
+ |        49.3 |          7.0 |
+ |        49.4 |          7.0 |
+ |        49.5 |          7.0 |
+ |        49.6 |          7.0 |
+ |        49.7 |          7.0 |
+ |        49.8 |          8.0 |
+ |        49.9 |          8.0 |
+ |        50.0 |          8.0 |
+ |        50.1 |          8.0 |
+ |        50.2 |          8.0 |
+ |        50.3 |          8.0 |
+ |        50.4 |          8.0 |
+ |        50.5 |          8.0 |
+ |        50.6 |          8.0 |
+ |        50.7 |          8.0 |
+ |        50.8 |          8.0 |
+ |        50.9 |          8.0 |
+ |        51.0 |          8.0 |
+ |        51.1 |          8.0 |
+ |        51.2 |          8.0 |
+ |        51.3 |          8.0 |
+ |        51.4 |          8.0 |
+ |        51.5 |          8.0 |
+ |        51.6 |          8.0 |
+ |        51.7 |          8.0 |
+ |        51.8 |          8.0 |
+ |        51.9 |          8.0 |
+ |        52.0 |          8.0 |
+ |        52.1 |          8.0 |
+ |        52.2 |          8.0 |
+ |        52.3 |          8.0 |
+ |        52.4 |          9.0 |
+ |        52.5 |          9.0 |
+ |        52.6 |          9.0 |
+ |        52.7 |          9.0 |
+ |        52.8 |          9.0 |
+ |        52.9 |          9.0 |
+ |        53.0 |          9.0 |
+ |        53.1 |          9.0 |
+ |        53.2 |          9.0 |
+ |        53.3 |          9.0 |
+ |        53.4 |          9.0 |
+ |        53.5 |          9.0 |
+ |        53.6 |          9.0 |
+ |        53.7 |          9.0 |
+ |        53.8 |          9.0 |
+ |        53.9 |          9.0 |
+ |        54.0 |          9.0 |
+ |        54.1 |          9.0 |
+ |        54.2 |          9.0 |
+ |        54.3 |          9.0 |
+ |        54.4 |          9.0 |
+ |        54.5 |          9.0 |
+ |        54.6 |          9.0 |
+ |        54.7 |          9.0 |
+ |        54.8 |          9.0 |
+ |        54.9 |          9.0 |
+ |        55.0 |          9.0 |
+ |        55.1 |         10.0 |
+ |        55.2 |         10.0 |
+ |        55.3 |         10.0 |
+ |        55.4 |         10.0 |
+ |        55.5 |         10.0 |
+ |        55.6 |         10.0 |
+ |        55.7 |         10.0 |
+ |        55.8 |         10.0 |
+ |        55.9 |         10.0 |
+ |        56.0 |         10.0 |
+ |        56.1 |         10.0 |
+ |        56.2 |         10.0 |
+ |        56.3 |         10.0 |
+ |        56.4 |         10.0 |
+ |        56.5 |         10.0 |
+ |        56.6 |         10.0 |
+ |        56.7 |         10.0 |
+ |        56.8 |         10.0 |
+ |        56.9 |         10.0 |
+ |        57.0 |         10.0 |
+ |        57.1 |         10.0 |
+ |        57.2 |         10.0 |
+ |        57.3 |         10.0 |
+ |        57.4 |         10.0 |
+ |        57.5 |         10.0 |
+ |        57.6 |         10.0 |
+ |        57.7 |         10.0 |
+ |        57.8 |         10.0 |
+ |        57.9 |         10.0 |
+ |        58.0 |         10.0 |
+ |        58.1 |         10.0 |
+ |        58.2 |         10.0 |
+ |        58.3 |         10.0 |
+ |        58.4 |         11.0 |
+ |        58.5 |         11.0 |
+ |        58.6 |         11.0 |
+ |        58.7 |         11.0 |
+ |        58.8 |         11.0 |
+ |        58.9 |         11.0 |
+ |        59.0 |         11.0 |
+ |        59.1 |         11.0 |
+ |        59.2 |         11.0 |
+ |        59.3 |         11.0 |
+ |        59.4 |         11.0 |
+ |        59.5 |         11.0 |
+ |        59.6 |         11.0 |
+ |        59.7 |         11.0 |
+ |        59.8 |         11.0 |
+ |        59.9 |         11.0 |
+ |        60.0 |         11.0 |
+ |        60.1 |         11.0 |
+ |        60.2 |         11.0 |
+ |        60.3 |         11.0 |
+ |        60.4 |         11.0 |
+ |        60.5 |         11.0 |
+ |        60.6 |         11.0 |
+ |        60.7 |         11.0 |
+ |        60.8 |         11.0 |
+ |        60.9 |         11.0 |
+ |        61.0 |         11.0 |
+ |        61.1 |         11.0 |
+ |        61.2 |         11.0 |
+ |        61.3 |         12.0 |
+ |        61.4 |         12.0 |
+ |        61.5 |         12.0 |
+ |        61.6 |         12.0 |
+ |        61.7 |         12.0 |
+ |        61.8 |         12.0 |
+ |        61.9 |         12.0 |
+ |        62.0 |         12.0 |
+ |        62.1 |         12.0 |
+ |        62.2 |         12.0 |
+ |        62.3 |         12.0 |
+ |        62.4 |         12.0 |
+ |        62.5 |         12.0 |
+ |        62.6 |         12.0 |
+ |        62.7 |         12.0 |
+ |        62.8 |         12.0 |
+ |        62.9 |         12.0 |
+ |        63.0 |         12.0 |
+ |        63.1 |         12.0 |
+ |        63.2 |         12.0 |
+ |        63.3 |         12.0 |
+ |        63.4 |         12.0 |
+ |        63.5 |         12.0 |
+ |        63.6 |         12.0 |
+ |        63.7 |         12.0 |
+ |        63.8 |         12.0 |
+ |        63.9 |         12.0 |
+ |        64.0 |         12.0 |
+ |        64.1 |         12.0 |
+ |        64.2 |         12.0 |
+ |        64.3 |         12.0 |
+ |        64.4 |         12.0 |
+ |        64.5 |         13.0 |
+ |        64.6 |         13.0 |
+ |        64.7 |         13.0 |
+ |        64.8 |         13.0 |
+ |        64.9 |         13.0 |
+ |        65.0 |         13.0 |
+ |        65.1 |         13.0 |
+ |        65.2 |         13.0 |
+ |        65.3 |         13.0 |
+ |        65.4 |         13.0 |
+ |        65.5 |         13.0 |
+ |        65.6 |         13.0 |
+ |        65.7 |         13.0 |
+ |        65.8 |         13.0 |
+ |        65.9 |         13.0 |
+ |        66.0 |         13.0 |
+ |        66.1 |         13.0 |
+ |        66.2 |         13.0 |
+ |        66.3 |         13.0 |
+ |        66.4 |         13.0 |
+ |        66.5 |         13.0 |
+ |        66.6 |         14.0 |
+ |        66.7 |         14.0 |
+ |        66.8 |         14.0 |
+ |        66.9 |         14.0 |
+ |        67.0 |         14.0 |
+ |        67.1 |         14.0 |
+ |        67.2 |         14.0 |
+ |        67.3 |         14.0 |
+ |        67.4 |         14.0 |
+ |        67.5 |         14.0 |
+ |        67.6 |         14.0 |
+ |        67.7 |         14.0 |
+ |        67.8 |         14.0 |
+ |        67.9 |         14.0 |
+ |        68.0 |         14.0 |
+ |        68.1 |         14.0 |
+ |        68.2 |         14.0 |
+ |        68.3 |         14.0 |
+ |        68.4 |         15.0 |
+ |        68.5 |         15.0 |
+ |        68.6 |         15.0 |
+ |        68.7 |         15.0 |
+ |        68.8 |         15.0 |
+ |        68.9 |         15.0 |
+ |        69.0 |         15.0 |
+ |        69.1 |         15.0 |
+ |        69.2 |         15.0 |
+ |        69.3 |         15.0 |
+ |        69.4 |         15.0 |
+ |        69.5 |         15.0 |
+ |        69.6 |         15.0 |
+ |        69.7 |         15.0 |
+ |        69.8 |         15.0 |
+ |        69.9 |         16.0 |
+ |        70.0 |         16.0 |
+ |        70.1 |         16.0 |
+ |        70.2 |         16.0 |
+ |        70.3 |         16.0 |
+ |        70.4 |         16.0 |
+ |        70.5 |         16.0 |
+ |        70.6 |         16.0 |
+ |        70.7 |         16.0 |
+ |        70.8 |         16.0 |
+ |        70.9 |         16.0 |
+ |        71.0 |         16.0 |
+ |        71.1 |         16.0 |
+ |        71.2 |         16.0 |
+ |        71.3 |         16.0 |
+ |        71.4 |         16.0 |
+ |        71.5 |         17.0 |
+ |        71.6 |         17.0 |
+ |        71.7 |         17.0 |
+ |        71.8 |         17.0 |
+ |        71.9 |         17.0 |
+ |        72.0 |         17.0 |
+ |        72.1 |         17.0 |
+ |        72.2 |         17.0 |
+ |        72.3 |         17.0 |
+ |        72.4 |         17.0 |
+ |        72.5 |         17.0 |
+ |        72.6 |         17.0 |
+ |        72.7 |         17.0 |
+ |        72.8 |         17.0 |
+ |        72.9 |         17.0 |
+ |        73.0 |         17.0 |
+ |        73.1 |         18.0 |
+ |        73.2 |         18.0 |
+ |        73.3 |         18.0 |
+ |        73.4 |         18.0 |
+ |        73.5 |         18.0 |
+ |        73.6 |         18.0 |
+ |        73.7 |         18.0 |
+ |        73.8 |         18.0 |
+ |        73.9 |         18.0 |
+ |        74.0 |         18.0 |
+ |        74.1 |         18.0 |
+ |        74.2 |         18.0 |
+ |        74.3 |         19.0 |
+ |        74.4 |         19.0 |
+ |        74.5 |         19.0 |
+ |        74.6 |         19.0 |
+ |        74.7 |         19.0 |
+ |        74.8 |         19.0 |
+ |        74.9 |         19.0 |
+ |        75.0 |         19.0 |
+ |        75.1 |         19.0 |
+ |        75.2 |         19.0 |
+ |        75.3 |         19.0 |
+ |        75.4 |         19.0 |
+ |        75.5 |         19.0 |
+ |        75.6 |         19.0 |
+ |        75.7 |         20.0 |
+ |        75.8 |         20.0 |
+ |        75.9 |         20.0 |
+ |        76.0 |         20.0 |
+ |        76.1 |         20.0 |
+ |        76.2 |         20.0 |
+ |        76.3 |         20.0 |
+ |        76.4 |         20.0 |
+ |        76.5 |         20.0 |
+ |        76.6 |         20.0 |
+ |        76.7 |         20.0 |
+ |        76.8 |         20.0 |
+ |        76.9 |         20.0 |
+ |        77.0 |         20.0 |
+ |        77.1 |         20.0 |
+ |        77.2 |         20.0 |
+ |        77.3 |         20.0 |
+ |        77.4 |         20.0 |
+ |        77.5 |         21.0 |
+ |        77.6 |         21.0 |
+ |        77.7 |         21.0 |
+ |        77.8 |         21.0 |
+ |        77.9 |         21.0 |
+ |        78.0 |         21.0 |
+ |        78.1 |         21.0 |
+ |        78.2 |         21.0 |
+ |        78.3 |         21.0 |
+ |        78.4 |         21.0 |
+ |        78.5 |         21.0 |
+ |        78.6 |         21.0 |
+ |        78.7 |         21.0 |
+ |        78.8 |         21.0 |
+ |        78.9 |         21.0 |
+ |        79.0 |         22.0 |
+ |        79.1 |         22.0 |
+ |        79.2 |         22.0 |
+ |        79.3 |         22.0 |
+ |        79.4 |         22.0 |
+ |        79.5 |         22.0 |
+ |        79.6 |         22.0 |
+ |        79.7 |         22.0 |
+ |        79.8 |         22.0 |
+ |        79.9 |         22.0 |
+ |        80.0 |         22.0 |
+ |        80.1 |         22.0 |
+ |        80.2 |         23.0 |
+ |        80.3 |         23.0 |
+ |        80.4 |         23.0 |
+ |        80.5 |         23.0 |
+ |        80.6 |         23.0 |
+ |        80.7 |         23.0 |
+ |        80.8 |         23.0 |
+ |        80.9 |         23.0 |
+ |        81.0 |         23.0 |
+ |        81.1 |         23.0 |
+ |        81.2 |         23.0 |
+ |        81.3 |         24.0 |
+ |        81.4 |         24.0 |
+ |        81.5 |         24.0 |
+ |        81.6 |         24.0 |
+ |        81.7 |         24.0 |
+ |        81.8 |         24.0 |
+ |        81.9 |         24.0 |
+ |        82.0 |         24.0 |
+ |        82.1 |         24.0 |
+ |        82.2 |         24.0 |
+ |        82.3 |         24.0 |
+ |        82.4 |         25.0 |
+ |        82.5 |         25.0 |
+ |        82.6 |         25.0 |
+ |        82.7 |         25.0 |
+ |        82.8 |         25.0 |
+ |        82.9 |         25.0 |
+ |        83.0 |         25.0 |
+ |        83.1 |         25.0 |
+ |        83.2 |         26.0 |
+ |        83.3 |         26.0 |
+ |        83.4 |         26.0 |
+ |        83.5 |         26.0 |
+ |        83.6 |         26.0 |
+ |        83.7 |         26.0 |
+ |        83.8 |         26.0 |
+ |        83.9 |         26.0 |
+ |        84.0 |         26.0 |
+ |        84.1 |         27.0 |
+ |        84.2 |         27.0 |
+ |        84.3 |         27.0 |
+ |        84.4 |         27.0 |
+ |        84.5 |         27.0 |
+ |        84.6 |         27.0 |
+ |        84.7 |         27.0 |
+ |        84.8 |         27.0 |
+ |        84.9 |         27.0 |
+ |        85.0 |         27.0 |
+ |        85.1 |         27.0 |
+ |        85.2 |         28.0 |
+ |        85.3 |         28.0 |
+ |        85.4 |         28.0 |
+ |        85.5 |         28.0 |
+ |        85.6 |         28.0 |
+ |        85.7 |         28.0 |
+ |        85.8 |         28.0 |
+ |        85.9 |         28.0 |
+ |        86.0 |         29.0 |
+ |        86.1 |         29.0 |
+ |        86.2 |         29.0 |
+ |        86.3 |         29.0 |
+ |        86.4 |         29.0 |
+ |        86.5 |         29.0 |
+ |        86.6 |         29.0 |
+ |        86.7 |         29.0 |
+ |        86.8 |         29.0 |
+ |        86.9 |         30.0 |
+ |        87.0 |         30.0 |
+ |        87.1 |         30.0 |
+ |        87.2 |         30.0 |
+ |        87.3 |         30.0 |
+ |        87.4 |         30.0 |
+ |        87.5 |         30.0 |
+ |        87.6 |         30.0 |
+ |        87.7 |         30.0 |
+ |        87.8 |         31.0 |
+ |        87.9 |         31.0 |
+ |        88.0 |         31.0 |
+ |        88.1 |         31.0 |
+ |        88.2 |         31.0 |
+ |        88.3 |         31.0 |
+ |        88.4 |         31.0 |
+ |        88.5 |         31.0 |
+ |        88.6 |         31.0 |
+ |        88.7 |         31.0 |
+ |        88.8 |         32.0 |
+ |        88.9 |         32.0 |
+ |        89.0 |         32.0 |
+ |        89.1 |         32.0 |
+ |        89.2 |         32.0 |
+ |        89.3 |         32.0 |
+ |        89.4 |         32.0 |
+ |        89.5 |         33.0 |
+ |        89.6 |         33.0 |
+ |        89.7 |         33.0 |
+ |        89.8 |         33.0 |
+ |        89.9 |         33.0 |
+ |        90.0 |         33.0 |
+ |        90.1 |         33.0 |
+ |        90.2 |         33.0 |
+ |        90.3 |         33.0 |
+ |        90.4 |         33.0 |
+ |        90.5 |         34.0 |
+ |        90.6 |         34.0 |
+ |        90.7 |         34.0 |
+ |        90.8 |         34.0 |
+ |        90.9 |         34.0 |
+ |        91.0 |         34.0 |
+ |        91.1 |         34.0 |
+ |        91.2 |         34.0 |
+ |        91.3 |         35.0 |
+ |        91.4 |         35.0 |
+ |        91.5 |         35.0 |
+ |        91.6 |         35.0 |
+ |        91.7 |         35.0 |
+ |        91.8 |         35.0 |
+ |        91.9 |         36.0 |
+ |        92.0 |         36.0 |
+ |        92.1 |         36.0 |
+ |        92.2 |         36.0 |
+ |        92.3 |         36.0 |
+ |        92.4 |         37.0 |
+ |        92.5 |         37.0 |
+ |        92.6 |         37.0 |
+ |        92.7 |         37.0 |
+ |        92.8 |         38.0 |
+ |        92.9 |         38.0 |
+ |        93.0 |         38.0 |
+ |        93.1 |         39.0 |
+ |        93.2 |         39.0 |
+ |        93.3 |         39.0 |
+ |        93.4 |         40.0 |
+ |        93.5 |         40.0 |
+ |        93.6 |         40.0 |
+ |        93.7 |         40.0 |
+ |        93.8 |         41.0 |
+ |        93.9 |         41.0 |
+ |        94.0 |         41.0 |
+ |        94.1 |         41.0 |
+ |        94.2 |         41.0 |
+ |        94.3 |         42.0 |
+ |        94.4 |         42.0 |
+ |        94.5 |         42.0 |
+ |        94.6 |         42.0 |
+ |        94.7 |         42.0 |
+ |        94.8 |         43.0 |
+ |        94.9 |         43.0 |
+ |        95.0 |         43.0 |
+ |        95.1 |         43.0 |
+ |        95.2 |         44.0 |
+ |        95.3 |         44.0 |
+ |        95.4 |         44.0 |
+ |        95.5 |         44.0 |
+ |        95.6 |         45.0 |
+ |        95.7 |         45.0 |
+ |        95.8 |         45.0 |
+ |        95.9 |         46.0 |
+ |        96.0 |         46.0 |
+ |        96.1 |         47.0 |
+ |        96.2 |         47.0 |
+ |        96.3 |         47.0 |
+ |        96.4 |         47.0 |
+ |        96.5 |         48.0 |
+ |        96.6 |         48.0 |
+ |        96.7 |         48.0 |
+ |        96.8 |         49.0 |
+ |        96.9 |         49.0 |
+ |        97.0 |         49.0 |
+ |        97.1 |         50.0 |
+ |        97.2 |         50.0 |
+ |        97.3 |         51.0 |
+ |        97.4 |         51.0 |
+ |        97.5 |         52.0 |
+ |        97.6 |         52.0 |
+ |        97.7 |         52.0 |
+ |        97.8 |         53.0 |
+ |        97.9 |         54.0 |
+ |        98.0 |         54.0 |
+ |        98.1 |         55.0 |
+ |        98.2 |         56.0 |
+ |        98.3 |         58.0 |
+ |        98.4 |         59.0 |
+ |        98.5 |         61.0 |
+ |        98.6 |         62.0 |
+ |        98.7 |         63.0 |
+ |        98.8 |         65.0 |
+ |        98.9 |         66.0 |
+ |        99.0 |         67.0 |
+ |        99.1 |         68.0 |
+ |        99.2 |         69.0 |
+ |        99.3 |         72.0 |
+ |        99.4 |         76.0 |
+ |        99.5 |         90.0 |
+ |        99.6 |        116.0 |
+ |        99.7 |        146.0 |
+ |        99.8 |        187.0 |
+ |        99.9 |        196.0 |
+ +-------------+--------------+
+	</pre>
+    </p>
+  </td>
+  <td>
+    <b>Througput vs #no of simultaneous users </b>
+   <img src="throughput-vs-threads.png" title="JMeter estimate of highest response rate given the number of threads we ran"/>  
+    <p><a href="throughput-vs-threads.csv">download</a> <a href="javascript:change('throughput_vs_threads')">show/hide</a><br/>
+	<pre class="page_details" id="throughput_vs_threads">
+ +--------------------------+----------------------+--------------------+
+ | Number of active threads | Average HTTP Request |       HTTP Request |
+ +--------------------------+----------------------+--------------------+
+ |                        1 |                      |  227.8132337157559 |
+ |                        2 |                      | 403.49106391279736 |
+ |                        3 |                      |  625.7629245162404 |
+ |                        4 |                      |  826.9574394065471 |
+ |                        5 |   1020.4322486750242 |  959.9023014832067 |
+ |                        6 |                      | 1164.8171099520523 |
+ +--------------------------+----------------------+--------------------+
+	</pre>
+    </p>
+  </td>
+</tr>
+<tr align="center">
+  <td>
+   <b>Latency vs #no of simultaneous users </b>
+   <img src="times-vs-threads.png" title="As the number of threads grows, the server may take more time to respond"/>  
+    <p><a href="times-vs-threads.csv">download</a> <a href="javascript:change('times_vs_threads')">show/hide</a><br/>
+	<pre class="page_details" id="times_vs_threads">
+ +--------------------------+----------------------+--------------------+
+ | Number of active threads | Average HTTP Request |       HTTP Request |
+ +--------------------------+----------------------+--------------------+
+ |                        1 |                      | 11.916666666666663 |
+ |                        2 |                      | 10.382075471698109 |
+ |                        3 |                      | 10.556270096463022 |
+ |                        4 |                      | 10.947142857142863 |
+ |                        5 |   13.724832214765108 | 14.759999999999994 |
+ |                        6 |                      | 14.611192392099474 |
+ +--------------------------+----------------------+--------------------+
+	</pre>
+    </p>
+  </td>
+  <td>
+
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,360 @@
+<html>
+<head>
+<title>Load Test Results: (2013-07-27 19:21:26)</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script src="../javascript.js"></script>
+</head>
+<body>
+
+<h1>Load Test: 2013-07-27 19:21:26</h1>
+
+<a href="../dashboard-view.html">back to dashboard</a>
+
+<pre>
+<b>MontySolr version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35
+<b>MontySolr commit:</b> --
+<b>Java:</b> 23.7-b01
+<b>System:</b> Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux
+
+<b>Java command line:</b> -Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr
+-Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data
+-Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg
+-Xmx20480m
+-Dmontysolr.max_workers=4
+-Dmontysolr.max_threads=400
+-Dsolr.cache.size=0
+-Dsolr.cache.initial=0
+-DstoreAll=true
+-Dmontysolr.enable.write=false
+-Dmontysolr.enable.warming=true
+-Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties
+-Dmontysolr.locktype=native
+
+ +--------------+--------+--------+--------+--------+--------+---------+-------+------+--------+-----+---------+
+ |         Test |    %90 |    %95 |    %98 |    %99 | %error |     avg | count |  max | median | min |   stdev |
+ +--------------+--------+--------+--------+--------+--------+---------+-------+------+--------+-----+---------+
+ |  HighFreqAND |   33.0 |   43.0 |   54.0 |   69.0 |  0.032 |  13.000 |  7881 |  223 |      7 |   1 |  17.565 |
+ | demo.queries | 1263.0 | 1701.0 | 1711.0 | 1717.0 |  1.000 | 742.000 |   378 | 2101 |    606 | 403 | 364.732 |
+ +--------------+--------+--------+--------+--------+--------+---------+-------+------+--------+-----+---------+
+
+<b>Lucene impl version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35
+<b>Lucene spec version:</b> 4.0-SNAPSHOT
+<b>Solr impl version:</b> 4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44
+<b>Solr spec version:</b> 4.0.0.2013.07.23.21.05.44
+</pre>
+
+<p>
+Runtime environment <a href="runtime-env.json">download</a> <a href="javascript:change('runtime_env')">show/hide</a>
+<pre class="page_details" id="runtime_env">
+{'debug': False,
+ 'durationInSecs': 60,
+ 'generate_comparison': None,
+ 'generate_queries': None,
+ 'google_password': 'XXX',
+ 'google_spreadsheet': u'',
+ 'google_user': u'',
+ 'java': 'java',
+ 'jmeter': '/var/lib/montysolr/solrjmeter/jmeter/bin/jmeter',
+ 'jmx_args': '-DdurationInSecs=60 -DserverPort=9002 -DserverName=adsate',
+ 'jmx_test': '/dvt/workspace/solrjmeter/jmx/SolrQueryTest.jmx',
+ 'noOfUsers': 0,
+ 'purge': False,
+ 'queries_pattern': ['/dvt/workspace/solrjmeter/queries/demo/*'],
+ 'query_endpoint': 'http://adsate:9002/solr',
+ 'rampUpInSecs': 0,
+ 'regenerate_html': True,
+ 'results_folder': 'demo',
+ 'roundup_correction': '3600',
+ 'run_command_after': u'',
+ 'run_command_before': u'',
+ 'save': True,
+ 'script_home': '/dvt/workspace/solrjmeter',
+ 'serverName': 'adsate',
+ 'serverPort': '9002',
+ 'setup_jmeter': False,
+ 'setup_prerequisities': True,
+ 'timeformat': '%Y-%m-%d %H:%M:%S',
+ 'timestamp': 1374967286.990983,
+ 'today': '2013-07-27 19:21:26',
+ 'today_folder': '2013.07.27.19.21.26',
+ 'upload': False}
+</pre>
+Solr Env before test <a href="before-test.json">download</a> <a href="javascript:change('before_test')">show/hide</a>
+<pre class="page_details" id="before_test">
+{'cacheDocumentClass': 'org.apache.solr.search.LRUCache',
+ 'cacheDocumentCumulativeEvictions': 2589246,
+ 'cacheDocumentCumulativeHitRatio': '0.00',
+ 'cacheDocumentCumulativeHits': 0,
+ 'cacheDocumentCumulativeInserts': 2589246,
+ 'cacheDocumentCumulativeLookups': 2589246,
+ 'cacheDocumentDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheDocumentEvictions': 2589246,
+ 'cacheDocumentHitRatio': '0.00',
+ 'cacheDocumentHits': 0,
+ 'cacheDocumentLookups': 2589246,
+ 'cacheDocumentSize': 0,
+ 'cacheDocumentVersion': '1.0',
+ 'cacheDocumentWarmupTime': 0,
+ 'cacheFieldClass': 'org.apache.solr.search.SolrFieldCacheMBean',
+ 'cacheFieldDescription': 'Provides introspection of the Lucene FieldCache, this is **NOT** a cache that is managed by Solr.',
+ 'cacheFieldEntriesCount': 82,
+ 'cacheFieldValueClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFieldValueCumulativeEvictions': 0,
+ 'cacheFieldValueCumulativeHitRatio': '0.00',
+ 'cacheFieldValueCumulativeHits': 0,
+ 'cacheFieldValueCumulativeInserts': 0,
+ 'cacheFieldValueCumulativeLookups': 0,
+ 'cacheFieldValueDescription': 'Concurrent LRU Cache(maxSize=10000, initialSize=10, minSize=9000, acceptableSize=9500, cleanupThread=false)',
+ 'cacheFieldValueEvictions': 0,
+ 'cacheFieldValueHitRatio': '0.00',
+ 'cacheFieldValueHits': 0,
+ 'cacheFieldValueLookups': 0,
+ 'cacheFieldValueSize': 0,
+ 'cacheFieldValueVersion': '1.0',
+ 'cacheFieldValueWarmupTime': 0,
+ 'cacheFieldVersion': '1.0',
+ 'cacheFilterClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFilterCumulativeEvictions': 0,
+ 'cacheFilterCumulativeHitRatio': '0.00',
+ 'cacheFilterCumulativeHits': 0,
+ 'cacheFilterCumulativeInserts': 0,
+ 'cacheFilterCumulativeLookups': 0,
+ 'cacheFilterDescription': 'Concurrent LRU Cache(maxSize=2, initialSize=0, minSize=1, acceptableSize=1, cleanupThread=false)',
+ 'cacheFilterEvictions': 0,
+ 'cacheFilterHitRatio': '0.00',
+ 'cacheFilterHits': 0,
+ 'cacheFilterLookups': 0,
+ 'cacheFilterSize': 0,
+ 'cacheFilterVersion': '1.0',
+ 'cacheFilterWarmupTime': 0,
+ 'cacheQueryClass': 'org.apache.solr.search.LRUCache',
+ 'cacheQueryCumulativeEvictions': 492711,
+ 'cacheQueryCumulativeHitRatio': '0.00',
+ 'cacheQueryCumulativeHits': 0,
+ 'cacheQueryCumulativeInserts': 492708,
+ 'cacheQueryCumulativeLookups': 496448,
+ 'cacheQueryDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheQueryEvictions': 492711,
+ 'cacheQueryHitRatio': '0.00',
+ 'cacheQueryHits': 0,
+ 'cacheQueryLookups': 496448,
+ 'cacheQuerySize': 0,
+ 'cacheQueryVersion': '1.0',
+ 'cacheQueryWarmupTime': 0,
+ 'coreRefCount': 2,
+ 'dataDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data/',
+ 'host': 'adsate',
+ 'indexCurrent': True,
+ 'indexDirectory': 'org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/proj.adsate/rchyla/perpetuum/live-9001_40.1.1.4_data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@bfa41a4; maxCacheMB=48.0 maxMergeSizeMB=4.0)',
+ 'indexHasDeletions': True,
+ 'indexLstModified': '2013-07-08T21:39:29.732Z',
+ 'indexMaxDoc': 12488625,
+ 'indexNumDocs': 9688981,
+ 'indexSegmentCount': 80,
+ 'indexSize': '312.66 GB',
+ 'indexSizeInBytes': 335715483241,
+ 'indexVersion': 20102,
+ 'instanceDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/collection1/',
+ 'jvmCommandLineArgs': '-Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr -Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data -Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg -Xmx20480m -Dmontysolr.max_workers=4 -Dmontysolr.max_threads=400 -Dsolr.cache.size=0 -Dsolr.cache.initial=0 -DstoreAll=true -Dmontysolr.enable.write=false -Dmontysolr.enable.warming=true -Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties -Dmontysolr.locktype=native',
+ 'jvmFree': '3 GB',
+ 'jvmMax': '17.8 GB',
+ 'jvmName': 'OpenJDK 64-Bit Server VM',
+ 'jvmProcessors': 8,
+ 'jvmTotal': '7.8 GB',
+ 'jvmUsed': '4.9 GB (%27.3)',
+ 'jvmUsedRaw': 5219717320,
+ 'jvmVersion': '23.7-b01',
+ 'luceneImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35',
+ 'luceneSpecVersion': '4.0-SNAPSHOT',
+ 'now': '2013-07-27T23:24:32.812Z',
+ 'searcherCaching': True,
+ 'searcherClass': 'org.apache.solr.search.SolrIndexSearcher',
+ 'searcherOpenedAt': '2013-07-26T15:47:44.107Z',
+ 'searcherReader': 'StandardDirectoryReader(segments_ru:20102 _ae(4.0.0.2):C426156/109458 _4na(4.0.0.2):C319124/56890 _7w(4.0.0.2):C317517/107217 _5c(4.0.0.2):C299479/97402 _qy(4.0.0.2):C372621/111841 _mg(4.0.0.2):C417277/116156 _ec(4.0.0.2):C396901/111410 _6pd(4.0.0.2):C78016/35625 _gk(4.0.0.2):C406534/114341 _jn(4.0.0.2):C403772/108255 _zx(4.0.0.2):C309202/85254 _1a0(4.0.0.2):C259133/82588 _t6(4.0.0.2):C350099/94869 _12f(4.0.0.2):C285281/85175 _wk(4.0.0.2):C356272/103533 _7jo(4.0.0.2):C145951/4595 _177(4.0.0.2):C253819/80882 _4k2(4.0.0.2):C256791/109377 _59y(4.0.0.2):C168926/36552 _4jl(4.0.0.2):C273782/83096 _4wl(4.0.0.2):C330690/39593 _7ez(4.0.0.2):C114282/3484 _4oy(4.0.0.2):C169928/102189 _5dw(4.0.0.2):C166757/49164 _4rk(4.0.0.2):C211921/115167 _4po(4.0.0.2):C325417/113425 _7cb(4.0.0.2):C123854/5864 _4vf(4.0.0.2):C260154/141036 _4ti(4.0.0.2):C226733/37166 _4u1(4.0.0.2):C349197/75763 _5ez(4.0.0.2):C208203/66419 _5lj(4.0.0.2):C234534/51004 _5g3(4.0.0.2):C189111/71289 _4zb(4.0.0.2):C290026/72705 _63q(4.0.0.2):C148430/52872 _5ka(4.0.0.2):C183134/37369 _7jg(4.0.0.2):C95063/18449 _54w(4.0.0.2):C173195/111 _52f(4.0.0.2):C72776/1 _59g(4.0.0.2):C368393/36 _5tn(4.0.0.2):C155874/100 _5vw(4.0.0.2):C129195/4 _5ol(4.0.0.2):C185607/5 _6d2(4.0.0.2):C87770/1 _5y4(4.0.0.2):C104834/10 _5sj(4.0.0.2):C112061/31 _66s(4.0.0.2):C147689/53 _61r(4.0.0.2):C57792/103 _6lh(4.0.0.2):C45479 _69m(4.0.0.2):C117427/62 _6g5(4.0.0.2):C48826 _6sr(4.0.0.2):C48858/14 _6si(4.0.0.2):C40131/2 _6z6(4.0.0.2):C111423/163 _6x8(4.0.0.2):C63663/20 _7dl(4.0.0.2):C113208/109 _73y(4.0.0.2):C69752/115 _71q(4.0.0.2):C111034/841 _79s(4.0.0.2):C123163/181 _76s(4.0.0.2):C79676/1 _7j4(4.0.0.2):C10525/7 _7ih(4.0.0.2):C6847/64 _7ld(4.0.0.2):C77511/2005 _7i2(4.0.0.2):C76382/8066 _7ln(4.0.0.2):C3776/22 _7lo(4.0.0.2):C219/1 _7mg(4.0.0.2):C7615 _7m5(4.0.0.2):C3709/36 _7lv(4.0.0.2):C339/6 _7m6(4.0.0.2):C851 _7m7(4.0.0.2):C1567 _7m9(4.0.0.2):C771 _7mc(4.0.0.2):C841 _7md(4.0.0.2):C194 _7mh(4.0.0.2):C154 _7mi(4.0.0.2):C1075 _7mj(4.0.0.2):C1305 _7mk(4.0.0.2):C954 _7ml(4.0.0.2):C1565 _7mm(4.0.0.2):C512)',
+ 'searcherRegisteredAt': '2013-07-26T15:54:58.6Z',
+ 'searcherWarmupTime': 0,
+ 'selectAvgRequestsPerSecond': 4.567058,
+ 'selectAvgTimePerRequest': 11.660855,
+ 'selectClass': 'org.apache.solr.handler.component.SearchHandler',
+ 'selectDescription': 'Search using components: org.apache.solr.handler.component.QueryComponent,org.apache.solr.handler.component.FacetComponent,org.apache.solr.handler.component.MoreLikeThisComponent,org.apache.solr.handler.component.HighlightComponent,org.apache.solr.handler.component.StatsComponent,org.apache.solr.handler.component.DebugComponent,',
+ 'selectErrors': 27865,
+ 'selectRequests': 519775,
+ 'selectTimeouts': 0,
+ 'selectTotalTime': 6061021,
+ 'selectVersion': '4.0.0.2013.07.23.21.05.44',
+ 'solrImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44',
+ 'solrSpecVersion': '4.0.0.2013.07.23.21.05.44',
+ 'start': '2013-07-26T15:47:43.134Z',
+ 'startTime': '2013-07-26T15:47:43.134Z',
+ 'systemArch': 'amd64',
+ 'systemCommittedVirtualMemorySize': 360324415488,
+ 'systemFreePhysicalMemorySize': 20563656704,
+ 'systemFreeSwapSpaceSize': 67108855808,
+ 'systemLoadAverage': 0.4,
+ 'systemMaxFileDescriptorCount': 1024,
+ 'systemName': 'Linux',
+ 'systemOpenFileDescriptorCount': 105,
+ 'systemProcessCpuTime': 7467130000000,
+ 'systemTotalPhysicalMemorySize': 66767228928,
+ 'systemTotalSwapSpaceSize': 67108855808,
+ 'systemUname': 'Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux\n',
+ 'systemUptime': ' 19:24:32 up 16 days, 22:24,  4 users,  load average: 0.40, 0.76, 0.60\n',
+ 'systemVersion': '2.6.32-71.el6.x86_64',
+ 'uptime': 113809757}
+</pre>
+Solr Env after test <a href="after-test.json">download</a> <a href="javascript:change('after_test')">show/hide</a>
+<pre class="page_details" id="after_test">
+{'cacheDocumentClass': 'org.apache.solr.search.LRUCache',
+ 'cacheDocumentCumulativeEvictions': '<b>2624256</b>',
+ 'cacheDocumentCumulativeHitRatio': '0.00',
+ 'cacheDocumentCumulativeHits': 0,
+ 'cacheDocumentCumulativeInserts': '<b>2624256</b>',
+ 'cacheDocumentCumulativeLookups': '<b>2624256</b>',
+ 'cacheDocumentDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheDocumentEvictions': '<b>2624256</b>',
+ 'cacheDocumentHitRatio': '0.00',
+ 'cacheDocumentHits': 0,
+ 'cacheDocumentLookups': '<b>2624256</b>',
+ 'cacheDocumentSize': 0,
+ 'cacheDocumentVersion': '1.0',
+ 'cacheDocumentWarmupTime': 0,
+ 'cacheFieldClass': 'org.apache.solr.search.SolrFieldCacheMBean',
+ 'cacheFieldDescription': 'Provides introspection of the Lucene FieldCache, this is **NOT** a cache that is managed by Solr.',
+ 'cacheFieldEntriesCount': 82,
+ 'cacheFieldValueClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFieldValueCumulativeEvictions': 0,
+ 'cacheFieldValueCumulativeHitRatio': '0.00',
+ 'cacheFieldValueCumulativeHits': 0,
+ 'cacheFieldValueCumulativeInserts': 0,
+ 'cacheFieldValueCumulativeLookups': 0,
+ 'cacheFieldValueDescription': 'Concurrent LRU Cache(maxSize=10000, initialSize=10, minSize=9000, acceptableSize=9500, cleanupThread=false)',
+ 'cacheFieldValueEvictions': 0,
+ 'cacheFieldValueHitRatio': '0.00',
+ 'cacheFieldValueHits': 0,
+ 'cacheFieldValueLookups': 0,
+ 'cacheFieldValueSize': 0,
+ 'cacheFieldValueVersion': '1.0',
+ 'cacheFieldValueWarmupTime': 0,
+ 'cacheFieldVersion': '1.0',
+ 'cacheFilterClass': 'org.apache.solr.search.FastLRUCache',
+ 'cacheFilterCumulativeEvictions': 0,
+ 'cacheFilterCumulativeHitRatio': '0.00',
+ 'cacheFilterCumulativeHits': 0,
+ 'cacheFilterCumulativeInserts': 0,
+ 'cacheFilterCumulativeLookups': 0,
+ 'cacheFilterDescription': 'Concurrent LRU Cache(maxSize=2, initialSize=0, minSize=1, acceptableSize=1, cleanupThread=false)',
+ 'cacheFilterEvictions': 0,
+ 'cacheFilterHitRatio': '0.00',
+ 'cacheFilterHits': 0,
+ 'cacheFilterLookups': 0,
+ 'cacheFilterSize': 0,
+ 'cacheFilterVersion': '1.0',
+ 'cacheFilterWarmupTime': 0,
+ 'cacheQueryClass': 'org.apache.solr.search.LRUCache',
+ 'cacheQueryCumulativeEvictions': '<b>500716</b>',
+ 'cacheQueryCumulativeHitRatio': '0.00',
+ 'cacheQueryCumulativeHits': 0,
+ 'cacheQueryCumulativeInserts': '<b>500713</b>',
+ 'cacheQueryCumulativeLookups': '<b>504453</b>',
+ 'cacheQueryDescription': 'LRU Cache(maxSize=0, initialSize=0)',
+ 'cacheQueryEvictions': '<b>500716</b>',
+ 'cacheQueryHitRatio': '0.00',
+ 'cacheQueryHits': 0,
+ 'cacheQueryLookups': '<b>504453</b>',
+ 'cacheQuerySize': 0,
+ 'cacheQueryVersion': '1.0',
+ 'cacheQueryWarmupTime': 0,
+ 'coreRefCount': 2,
+ 'dataDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data/',
+ 'host': 'adsate',
+ 'indexCurrent': True,
+ 'indexDirectory': 'org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/proj.adsate/rchyla/perpetuum/live-9001_40.1.1.4_data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@bfa41a4; maxCacheMB=48.0 maxMergeSizeMB=4.0)',
+ 'indexHasDeletions': True,
+ 'indexLstModified': '2013-07-08T21:39:29.732Z',
+ 'indexMaxDoc': 12488625,
+ 'indexNumDocs': 9688981,
+ 'indexSegmentCount': 80,
+ 'indexSize': '312.66 GB',
+ 'indexSizeInBytes': 335715483241,
+ 'indexVersion': 20102,
+ 'instanceDir': '/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/collection1/',
+ 'jvmCommandLineArgs': '-Dsolr.solr.home=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr -Dsolr.data.dir=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/solr/data -Djava.library.path=/proj.adsate/rchyla/perpetuum/python/lib/python2.6/site-packages/JCC-2.15-py2.6-linux-x86_64.egg -Xmx20480m -Dmontysolr.max_workers=4 -Dmontysolr.max_threads=400 -Dsolr.cache.size=0 -Dsolr.cache.initial=0 -DstoreAll=true -Dmontysolr.enable.write=false -Dmontysolr.enable.warming=true -Djava.util.logging.config.file=/proj.adsate/rchyla/perpetuum/live-9002_40.1.1.4/etc/logging.properties -Dmontysolr.locktype=native',
+ 'jvmFree': '<b>1.9 GB</b>',
+ 'jvmMax': '17.8 GB',
+ 'jvmName': 'OpenJDK 64-Bit Server VM',
+ 'jvmProcessors': 8,
+ 'jvmTotal': '<b>7.7 GB</b>',
+ 'jvmUsed': '<b>5.8 GB (%32.9)</b>',
+ 'jvmUsedRaw': '<b>6279118984</b>',
+ 'jvmVersion': '23.7-b01',
+ 'luceneImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:03:35',
+ 'luceneSpecVersion': '4.0-SNAPSHOT',
+ 'now': '<b>2013-07-27T23:27:19.72Z</b>',
+ 'searcherCaching': True,
+ 'searcherClass': 'org.apache.solr.search.SolrIndexSearcher',
+ 'searcherOpenedAt': '2013-07-26T15:47:44.107Z',
+ 'searcherReader': 'StandardDirectoryReader(segments_ru:20102 _ae(4.0.0.2):C426156/109458 _4na(4.0.0.2):C319124/56890 _7w(4.0.0.2):C317517/107217 _5c(4.0.0.2):C299479/97402 _qy(4.0.0.2):C372621/111841 _mg(4.0.0.2):C417277/116156 _ec(4.0.0.2):C396901/111410 _6pd(4.0.0.2):C78016/35625 _gk(4.0.0.2):C406534/114341 _jn(4.0.0.2):C403772/108255 _zx(4.0.0.2):C309202/85254 _1a0(4.0.0.2):C259133/82588 _t6(4.0.0.2):C350099/94869 _12f(4.0.0.2):C285281/85175 _wk(4.0.0.2):C356272/103533 _7jo(4.0.0.2):C145951/4595 _177(4.0.0.2):C253819/80882 _4k2(4.0.0.2):C256791/109377 _59y(4.0.0.2):C168926/36552 _4jl(4.0.0.2):C273782/83096 _4wl(4.0.0.2):C330690/39593 _7ez(4.0.0.2):C114282/3484 _4oy(4.0.0.2):C169928/102189 _5dw(4.0.0.2):C166757/49164 _4rk(4.0.0.2):C211921/115167 _4po(4.0.0.2):C325417/113425 _7cb(4.0.0.2):C123854/5864 _4vf(4.0.0.2):C260154/141036 _4ti(4.0.0.2):C226733/37166 _4u1(4.0.0.2):C349197/75763 _5ez(4.0.0.2):C208203/66419 _5lj(4.0.0.2):C234534/51004 _5g3(4.0.0.2):C189111/71289 _4zb(4.0.0.2):C290026/72705 _63q(4.0.0.2):C148430/52872 _5ka(4.0.0.2):C183134/37369 _7jg(4.0.0.2):C95063/18449 _54w(4.0.0.2):C173195/111 _52f(4.0.0.2):C72776/1 _59g(4.0.0.2):C368393/36 _5tn(4.0.0.2):C155874/100 _5vw(4.0.0.2):C129195/4 _5ol(4.0.0.2):C185607/5 _6d2(4.0.0.2):C87770/1 _5y4(4.0.0.2):C104834/10 _5sj(4.0.0.2):C112061/31 _66s(4.0.0.2):C147689/53 _61r(4.0.0.2):C57792/103 _6lh(4.0.0.2):C45479 _69m(4.0.0.2):C117427/62 _6g5(4.0.0.2):C48826 _6sr(4.0.0.2):C48858/14 _6si(4.0.0.2):C40131/2 _6z6(4.0.0.2):C111423/163 _6x8(4.0.0.2):C63663/20 _7dl(4.0.0.2):C113208/109 _73y(4.0.0.2):C69752/115 _71q(4.0.0.2):C111034/841 _79s(4.0.0.2):C123163/181 _76s(4.0.0.2):C79676/1 _7j4(4.0.0.2):C10525/7 _7ih(4.0.0.2):C6847/64 _7ld(4.0.0.2):C77511/2005 _7i2(4.0.0.2):C76382/8066 _7ln(4.0.0.2):C3776/22 _7lo(4.0.0.2):C219/1 _7mg(4.0.0.2):C7615 _7m5(4.0.0.2):C3709/36 _7lv(4.0.0.2):C339/6 _7m6(4.0.0.2):C851 _7m7(4.0.0.2):C1567 _7m9(4.0.0.2):C771 _7mc(4.0.0.2):C841 _7md(4.0.0.2):C194 _7mh(4.0.0.2):C154 _7mi(4.0.0.2):C1075 _7mj(4.0.0.2):C1305 _7mk(4.0.0.2):C954 _7ml(4.0.0.2):C1565 _7mm(4.0.0.2):C512)',
+ 'searcherRegisteredAt': '2013-07-26T15:54:58.6Z',
+ 'searcherWarmupTime': 0,
+ 'selectAvgRequestsPerSecond': '<b>4.6327</b>',
+ 'selectAvgTimePerRequest': '<b>12.102341</b>',
+ 'selectClass': 'org.apache.solr.handler.component.SearchHandler',
+ 'selectDescription': 'Search using components: org.apache.solr.handler.component.QueryComponent,org.apache.solr.handler.component.FacetComponent,org.apache.solr.handler.component.MoreLikeThisComponent,org.apache.solr.handler.component.HighlightComponent,org.apache.solr.handler.component.StatsComponent,org.apache.solr.handler.component.DebugComponent,',
+ 'selectErrors': '<b>28119</b>',
+ 'selectRequests': '<b>528019</b>',
+ 'selectTimeouts': 0,
+ 'selectTotalTime': '<b>6390266</b>',
+ 'selectVersion': '4.0.0.2013.07.23.21.05.44',
+ 'solrImplVersion': '4.0-SNAPSHOT 1506383 - rchyla - 2013-07-23 21:05:44',
+ 'solrSpecVersion': '4.0.0.2013.07.23.21.05.44',
+ 'start': '2013-07-26T15:47:43.134Z',
+ 'startTime': '2013-07-26T15:47:43.134Z',
+ 'systemArch': 'amd64',
+ 'systemCommittedVirtualMemorySize': 360324415488,
+ 'systemFreePhysicalMemorySize': '<b>20804050944</b>',
+ 'systemFreeSwapSpaceSize': 67108855808,
+ 'systemLoadAverage': '<b>2.18</b>',
+ 'systemMaxFileDescriptorCount': 1024,
+ 'systemName': 'Linux',
+ 'systemOpenFileDescriptorCount': 105,
+ 'systemProcessCpuTime': '<b>7807580000000</b>',
+ 'systemTotalPhysicalMemorySize': 66767228928,
+ 'systemTotalSwapSpaceSize': 67108855808,
+ 'systemUname': 'Linux adsate.cfa.harvard.edu 2.6.32-71.el6.x86_64 #1 SMP Fri May 20 03:51:51 BST 2011 x86_64 x86_64 x86_64 GNU/Linux\n',
+ 'systemUptime': '<b> 19:27:19 up 16 days, 22:27,  4 users,  load average: 2.18, 1.28, 0.81\n</b>',
+ 'systemVersion': '2.6.32-71.el6.x86_64',
+ 'uptime': '<b>113976674</b>'}
+</pre>
+</p>
+
+
+<div class="dashboard">
+
+
+    <div class="test-block">
+    <h3>HighFreqAND</h3>
+    <p>
+    <a href="HighFreqAND/test-view.html">
+        <img src="HighFreqAND/transactions-per-sec.png" title="Responses that were rejected as invalid + HTTP error codes (ideally, you will see only successess)"/>
+    </a>  
+    </p>
+    </div>
+    
+
+    <div class="test-block">
+    <h3>demo.queries</h3>
+    <p>
+    <a href="demo.queries/test-view.html">
+        <img src="demo.queries/transactions-per-sec.png" title="Responses that were rejected as invalid + HTTP error codes (ideally, you will see only successess)"/>
+    </a>  
+    </p>
+    </div>
+    
+
+</div>
+
+
+</body>
+</html>
+
+
