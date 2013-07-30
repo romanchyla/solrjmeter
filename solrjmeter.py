@@ -170,14 +170,15 @@ def check_options(options, args):
             else:
                 options.queries_pattern.append(os.path.abspath(p))
                 
-        
+    options.workdir = os.path.join(INSTDIR, _NAME)
         
     if options.generate_comparison:
         options.generate_comparison = options.generate_comparison.split(',')
         if len(options.generate_comparison) < 1:
             error("When generating comparison, we need at least two result folders")
-        for rf in options.generate_comparison:
-            if rf == options.results_folder or os.path.exists(rf):
+        for rf in range(len(options.generate_comparison)):
+            tfolder = options.workdir + "/" + options.generate_comparison[rf] 
+            if options.generate_comparison[rf] == options.results_folder or os.path.exists(tfolder):
                 continue
             error("The folder '%s' does not exist" % rf)
         
@@ -632,10 +633,18 @@ def run_test(test, options):
     
     
     
-def tablify(csv_filepath):    
+def tablify(csv_filepath, dygraph_format=False):    
     with open(csv_filepath, 'r') as f:
         data = csv.reader(f)
         labels = data.next()
+        if dygraph_format:
+            labs = [labels[0]]
+            for x in labels[1:]:
+                labs.append(x)
+                labs.append('stdev')
+            labels = labs
+            
+        
         return Table(*[Table.Column(x[0], tuple(x[1:])) for x in zip(labels, *list(data))])        
 
 def run_cmd_thread(*args):
@@ -961,6 +970,37 @@ def regenerate_html(options):
     generate_includes(options_copy, force=True)
 
 
+def read_csv_report(csv_file):
+    count = -1
+    colnames = None
+    with open(csv_file, 'r') as test_file:
+        for line in test_file:
+            line = line.strip()
+            if not line:
+                continue
+            
+            count += 1
+            
+            if count == 0:
+                colnames = line.split(',')
+                continue
+            data = line.split(',')
+            date = data[0]
+            
+            yield Measurement(date, count, colnames, data[1:])
+
+@contextmanager
+def csv_writer(csv_file, col_names):
+    fo = open(csv_file, 'w')
+    writer = csv.writer(fo, delimiter=',',
+                        quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(col_names)
+    try:
+        yield writer
+    finally:
+        fo.close()
+    
+        
 
 def generate_top_level_comparison(options):
     
@@ -974,6 +1014,11 @@ def generate_top_level_comparison(options):
     doComparisonGraph('%(comparison_id)s', '%(test_name)s', data);
     </script>
     </div>
+    <p><a href="%(comparison_id)s.csv">download</a> <a href="javascript:change('%(comparison_id)s-table')">show/hide</a><br/>
+    <pre class="page_details" id="%(comparison_id)s-table">
+%(csv_table)s
+    </pre>
+    </p>
     </div>
     """
     
@@ -993,40 +1038,29 @@ def generate_top_level_comparison(options):
     
     roundup_correction = options.roundup_correction
     
+    aggregated = []
+    
     # read in data, apply rounding up corrections
     for test_name in valid_tests.keys():
         results = {}
         print 'reading: %s' % results_folder + "/" + test_name + '.csv'
         for test_id, results_folder in zip(range(len(options.generate_comparison)), options.generate_comparison):
-            with open(results_folder + "/" + test_name + '.csv', 'r') as test_file:
-                count = -1
-                for line in test_file:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    
-                    count += 1
-                    
-                    if count == 0:
-                        continue
-                    data = line.split(',')
-                    
-                    date = data[0]
-                    value = data[1]
-                    stdev = data[2]
-                    
-                    timestamp = time.mktime(datetime.datetime.strptime(date, options.timeformat).timetuple())
-                    rounded_timestamp = timestamp - (timestamp % roundup_correction)
-                    if rounded_timestamp not in results:
-                        results[rounded_timestamp] = [[] for x in range(len(options.generate_comparison))]
-                    
-                    results[rounded_timestamp][test_id].append((test_id, timestamp, value, stdev))
+            
+            for measurement in read_csv_report(results_folder + "/" + test_name + '.csv'):
+                d = list(measurement.get_measurements())[0] # only first one is interesting for us
+                timestamp = time.mktime(datetime.datetime.strptime(d.date, options.timeformat).timetuple())
+                rounded_timestamp = timestamp - (timestamp % roundup_correction)
+                if rounded_timestamp not in results:
+                    results[rounded_timestamp] = [[] for x in range(len(options.generate_comparison))]
+                
+                results[rounded_timestamp][test_id].append((test_id, timestamp, d.value, d.stdev))
         
         # transform results into simple CSV (some dates may be missing, or be present multiple times [inside interval])
         offsets = {}
         for k in options.generate_comparison:
             offsets[k] = []
-        report_name = 'comparison-%s-%s-aggregate-report' % (test_name, '_'.join(options.generate_comparison))
+            
+        report_name = 'comparison-%s-%s-aggregate-report' % ('_'.join(options.generate_comparison), test_name)
         with open(report_name + '.csv', 'w') as aggr:
             writer = csv.writer(aggr, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -1058,18 +1092,66 @@ def generate_top_level_comparison(options):
         js_blocks.append(one_block % {'comparison_id': report_name, 
                                       'test_name': test_name, 
                                       'offsets': simplejson.dumps(offsets),
-                                      'first_test': options.generate_comparison[0]})
+                                      'csv_table': str(tablify(report_name + '.csv', dygraph_format=True))
+                                      })
+        aggregated.append(report_name)
                    
                    
+    top_comparison_name = 'comparison-%s-aggregate-report' % ('_'.join(options.generate_comparison))
+        
+    # now, interesting experiment - create an aggreagte view of all
+    # measurements (arithmetic mean of their means, and stdevs)
+    
+    aggr_data = {}
+    for aggr_name in aggregated:
+        for measurement in read_csv_report(aggr_name + '.csv'):
+            for data in measurement.get_measurements():
+                if data.date not in aggr_data:
+                    aggr_data[data.date] = {}
+                pointer = aggr_data[data.date]
+                
+                if data.series_name not in pointer:
+                    pointer[data.series_name] = {'value':[], 'stdev': []}
+                
+                pointer = pointer[data.series_name]
+                
+                pointer['value'].append(data.value)
+                pointer['stdev'].append(data.stdev)
+                
+    # sort by date
+    # pprint(aggr_data)
+    aggr_data = sorted(aggr_data.items(), key=lambda x: x[0])
+    offsets = {}
+    with csv_writer(top_comparison_name + '.csv', ['Date'] + options.generate_comparison) as writer:
+        for date, values in aggr_data:
+            row = [date]
+            for ser_name in options.generate_comparison:
+                if ser_name in values:
+                    row.append('%0.3f' % (sum(values[ser_name]['value'])/len(values[ser_name]['value']),))
+                    row.append('%0.3f' % (sum(values[ser_name]['stdev'])/len(values[ser_name]['stdev']),))
+                else:
+                    row.append('NaN')
+                    row.append('NaN')
+            writer.writerow(row)
+            
+    js_blocks.insert(0, one_block % {'comparison_id': top_comparison_name, 
+                                      'test_name': top_comparison_name, 
+                                      'offsets': simplejson.dumps(offsets),
+                                      'csv_table': str(tablify(top_comparison_name + '.csv', dygraph_format=True))
+                                      })   
+                
+    
                     
     with open(options.script_home + '/html/comparison-view.tmpl', 'r') as t:
         tmpl = t.read()
+        
     kwargs = load_tmpl_kwargs(options)
     
     
     kwargs['blocks'] = '\n'.join(js_blocks)
+    kwargs['first_test'] = options.generate_comparison[0]
     
-    with open(report_name + '.html', 'w') as w:
+    with open(top_comparison_name + '.html', 'w') as w:
         w.write(tmpl % kwargs)
                         
     generate_includes(options, force=True)                                 
@@ -1146,6 +1228,32 @@ class Table:
             self.name = name
             self.width = max(len(name), max(len(x) for x in data))
             self.format = ' %%%s%ds ' % (align, self.width)
+
+
+class Measurement(object):
+    def __init__(self, date, count, col_names, values):
+        self.date = date
+        self.count = count
+        self.values = values
+        self.col_names = col_names
+        assert len(values) % 2 == 0
+        
+    def get_number_of_cols(self):
+        return len(self.values) / 2
+    
+    def get_measurements(self):
+        i = 1
+        for x in range(0, len(self.values), 2):
+            yield DataPoint(self.date, self.count, self.col_names[i], self.values[x], self.values[x+1])
+            i += 1
+
+class DataPoint(object):
+    def __init__(self, date, count, series_name, value, stdev):
+        self.date = date
+        self.count = count
+        self.series_name = series_name
+        self.value = value and float(value) or 0.0
+        self.stdev = stdev and float(stdev) or 0.0
 
 
 def main(argv):
