@@ -32,6 +32,7 @@ import copy
 import Queue
 import threading
 import urllib
+import traceback
 from contextlib import contextmanager
 from pprint import pprint,pformat
 
@@ -62,6 +63,7 @@ if "check_output" not in dir( subprocess ): # duck punch it in!
 
 def error(*msgs):
     sys.stderr.write("**ERROR**\n")
+    traceback.print_stack()
     for msg in msgs:
         sys.stderr.write(msg)
         sys.stderr.write("\n")
@@ -114,6 +116,9 @@ def req(url, **kwargs):
     return r    
 
 def check_options(options, args):
+    
+    if '' in args:
+        args.remove('')
     
     if not options.jmx_test or not os.path.exists(options.jmx_test):
         error('option jmx_test must point to a valid JMX file, we got: %s' % options.jmx_test )
@@ -311,7 +316,9 @@ def get_arg_parser():
     p.add_option('-U', '--noOfUsers',
                  default=0, action='store', type='int',
                  help='How many seconds to warm up')
-    
+    p.add_option('-o', '--additionalSolrParams',
+                 default='', action='store',
+                 help='Additional URL-encoded params to pass with every request')
     return p
 
 
@@ -1167,7 +1174,7 @@ def main(argv):
 
         acquire_lock('%s/solrjmeter.pid' % options.results_folder)
         
-        if options.debug:
+        if options.debug or True:
             print "============="
             for k,v in options.__dict__.items():
                 if 'password' in k:
