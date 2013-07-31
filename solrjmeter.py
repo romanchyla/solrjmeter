@@ -298,7 +298,9 @@ def get_arg_parser():
     p.add_option('-c', '--roundup_correction',
                  default='3600', action='store',
                  help='Roundup date of the measurement (to cluster) different tests; possible values: day,hour,min,sec,[int=number of seconds]')
-    
+    p.add_option('-e', '--core_name',
+                 default='', action='store',
+                 help='Name of the core to read statistics from (if empty, default core will be used)')
     
     
     # JMeter options specific to our .jmx test
@@ -474,7 +476,7 @@ def harvest_details_about_montysolr(options):
     mbeans_data = req('%s/admin/mbeans' % options.query_endpoint, stats='true')
     cores_data = req('%s/admin/cores' % options.query_endpoint, stats='true')
     
-    cn = cores_data['defaultCoreName']
+    cn = cores_data[options.core_name or 'defaultCoreName']
     ci = mbeans_data['solr-mbeans'].index('CORE')+1
     ch = mbeans_data['solr-mbeans'].index('QUERYHANDLER')+1
     cc = mbeans_data['solr-mbeans'].index('CACHE')+1
