@@ -198,6 +198,9 @@ def check_options(options, args):
                 options.roundup_correction = 1
             else:
                 error('Unknown correction value: %s' % roundup_correction)
+    
+    if os.path.abspath(options.script_home + "/utils") not in sys.path:
+        sys.path.insert(0, os.path.abspath(options.script_home + "/utils"))
         
 def get_pid(pidpath):
     if os.path.exists(pidpath):
@@ -394,8 +397,13 @@ def update_montysolr(options):
     if options.update_command:
         run_cmd([options.invoke_update, '>', 'running_update_command.log'])
         
+
         
 def generate_queries(options):
+    
+    from utils import generate_queries as gq
+    
+    gq.main(options)
     
     print 'Getting perf queries from solr'
     data = None

@@ -99,6 +99,6 @@ python solrjmeter.py -a -x ./jmx/SolrQueryTest.jmx -q ./queries/adsabs/auto-gene
 
 
 # 31-7-2013: incresing the round-up time to group all the tests 
-# python solrjmeter.py -a -C g1,g1-custom,cms,cms-custom -c 22000
+# python solrjmeter.py -a -C g1,g1-custom,cms,cms-custom -c 22000 -x ./jmx/SolrQueryTest.jmx
 
-python solrjmeter.py -a -C g1-custom,cms-custom,cms-x1,cms-x2,cms-x3 -c 25000
+python solrjmeter.py -a -C g1-custom,cms-custom,cms-x1,cms-x2,cms-x3 -c 15000 -x ./jmx/SolrQueryTest.jmx
