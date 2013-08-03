@@ -979,32 +979,35 @@ def regenerate_html(options):
     print 'Regenerating includes'
     generate_includes(options_copy, force=True)
 
-
-def read_csv_report(csv_file):
+def csv_reader(csv_file, generic=False):
     count = -1
     colnames = None
-    with open(csv_file, 'r') as test_file:
-        for line in test_file:
-            line = line.strip()
-            if not line:
+    fi = open(csv_file, 'r')
+    csv_reader = csv.reader(fi, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    try:
+        for data in csv_reader:
+            if len(data) == 0 or len(data) > 0 and data[0][0] == '#':
                 continue
             
             count += 1
             
             if count == 0:
-                colnames = line.split(',')
+                colnames = data
                 continue
-            data = line.split(',')
-            date = data[0]
-            
-            yield Measurement(date, count, colnames, data[1:])
+            if generic:
+                yield data
+            else:
+                yield Measurement(data[0], count, colnames, data[1:])
+    finally:
+        fi.close()
 
 @contextmanager
-def csv_writer(csv_file, col_names):
+def csv_writer(csv_file, col_names=None):
     fo = open(csv_file, 'w')
     writer = csv.writer(fo, delimiter=',',
                         quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(col_names)
+    if col_names:
+        writer.writerow(col_names)
     try:
         yield writer
     finally:
@@ -1056,7 +1059,7 @@ def generate_top_level_comparison(options):
         print 'reading: %s' % results_folder + "/" + test_name + '.csv'
         for test_id, results_folder in zip(range(len(options.generate_comparison)), options.generate_comparison):
             
-            for measurement in read_csv_report(results_folder + "/" + test_name + '.csv'):
+            for measurement in csv_reader(results_folder + "/" + test_name + '.csv'):
                 d = list(measurement.get_measurements())[0] # only first one is interesting for us
                 timestamp = time.mktime(datetime.datetime.strptime(d.date, options.timeformat).timetuple())
                 rounded_timestamp = timestamp - (timestamp % roundup_correction)
@@ -1114,7 +1117,7 @@ def generate_top_level_comparison(options):
     
     aggr_data = {}
     for aggr_name in aggregated:
-        for measurement in read_csv_report(aggr_name + '.csv'):
+        for measurement in csv_reader(aggr_name + '.csv'):
             for data in measurement.get_measurements():
                 if data.date not in aggr_data:
                     aggr_data[data.date] = {}
