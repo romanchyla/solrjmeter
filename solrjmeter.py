@@ -129,7 +129,9 @@ def check_options(options, args):
     if not options.serverName and not options.serverPort:
         error("You must specify both server and port")
         
-    options.query_endpoint = 'http://%s:%s/solr' % (options.serverName, options.serverPort)
+    options.query_endpoint = 'http://%s:%s%s' % (options.serverName, 
+                                                    options.serverPort,
+                                                    options.serverPath)
     
     jmx_options = []
     for k, v in options.__dict__.items():
@@ -313,6 +315,9 @@ def get_arg_parser():
     p.add_option('-p', '--serverPort',
                  default='', action='store',
                  help='Port, eg. 9000')
+    p.add_option('-t', '--serverPath',
+                 default='/solr', action='store',
+                 help='Path to access your solr - eg. /solr or /solr/collection1...')
     p.add_option('-i', '--durationInSecs',
                  default=5, action='store', type='int',
                  help='How many seconds to run each test')
@@ -354,6 +359,20 @@ def check_prerequisities(options):
             req(options.query_endpoint + "/select")
         except:
             error('Cannot contact: %s' % options.query_endpoint)
+            
+        # try to find the admin endpoint
+        try:
+            req(options.query_endpoint + "/admin/cores")
+            options.admin_endpoint = options.query_endpoint + "/admin"
+        except:
+            # possibly a core path
+            apath = '/'.join(options.query_endpoint.split('/')[0:-1]) + "/admin"
+            try:
+                req(apath + '/cores')
+                options.admin_endpoint = apath
+            except:
+                error('Cannot find admin pages: %s, please report a bug' % apath)
+        
 
 
 def setup_jmeter(options):
@@ -468,9 +487,12 @@ def find_tests(options):
         tests = set()
         for pattern in options.queries_pattern:
             if os.path.exists(pattern):
-                with changed_dir(pattern):
-                    for x in glob.glob('*.queries'):
-                        tests.add(x)
+                if os.path.isfile(pattern):
+                    tests.add(pattern)
+                else:
+                    with changed_dir(pattern):
+                        for x in glob.glob('*.queries'):
+                            tests.add(x)
             else:
                 for x in glob.glob(pattern):
                     tests.add(x)
@@ -480,9 +502,9 @@ def find_tests(options):
     
 
 def harvest_details_about_montysolr(options):
-    system_data = req('%s/admin/system' % options.query_endpoint)
-    mbeans_data = req('%s/admin/mbeans' % options.query_endpoint, stats='true')
-    cores_data = req('%s/admin/cores' % options.query_endpoint, stats='true')
+    system_data = req('%s/system' % options.admin_endpoint)
+    mbeans_data = req('%s/mbeans' % options.admin_endpoint, stats='true')
+    cores_data = req('%s/cores' % options.admin_endpoint, stats='true')
     
     cn = cores_data[options.core_name or 'defaultCoreName']
     ci = mbeans_data['solr-mbeans'].index('CORE')+1

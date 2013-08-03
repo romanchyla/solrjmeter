@@ -47,6 +47,11 @@
             <stringProp name="Argument.value">${__P(additionalSolrParams,)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="serverPath" elementType="Argument">
+            <stringProp name="Argument.name">serverPath</stringProp>
+            <stringProp name="Argument.value">${__P(solrUrl,/solr)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -112,7 +117,7 @@
           <stringProp name="HTTPSampler.response_timeout">60000</stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/solr/select?${additionalSolrParams}</stringProp>
+          <stringProp name="HTTPSampler.path">${serverPath}/select?${additionalSolrParams}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
