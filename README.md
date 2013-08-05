@@ -42,7 +42,8 @@ be prepared for information overload:
       - a detailed view on various characteristics per each query file (this is the most detailed view)
       
 
-If you want to see an example, open demo/dashboard-view.html in your browser  
+If you want to see an example, open demo/dashboard-view.html in your browser  or visit
+http://29min.wordpress.com/2013/07/31/measuring-solr-query-performance/
 
 
 
@@ -68,13 +69,13 @@ but different Java parameters.
    and measure performance, saving results into special folder 'gc1'
   
   ```
-  $ python solrjmeter.py -a -x ./jmeter/SolrQueryTest.jmx -q ./demo/queries/*.queries -s localhost -p 8983  -a --durationInSecs 60 -R gc1
+  $ python solrjmeter.py -a -x ./jmeter/SolrQueryTest.jmx -q ./queries/demo/*.queries -s localhost -p 8983  -a --durationInSecs 60 -R gc1
   ```
   
 2. restart solr (without G1 garbage collector) and re-measure, save results into 'cms'
   
   ```
-  $ python solrjmeter.py -a -x ./jmeter/SolrQueryTest.jmx -q ./demo/queries/*.queries -s localhost -p 8983  -a --durationInSecs 60 -R cms
+  $ python solrjmeter.py -a -x ./jmeter/SolrQueryTest.jmx -q ./queries/demo/*.queries -s localhost -p 8983  -a --durationInSecs 60 -R cms
   ```
   
 3. now we can generate comparison view of 'g1' vs 'cms'
@@ -189,3 +190,16 @@ core will be searched/measured by jmeter)
 ```
 $ python solrjmeter.py -e other_name -t /solr/other_name -s localhost -p 8983 ....
 ```
+
+License
+=======
+
+See LICENSE in the root folder.
+
+
+Contact
+=======
+
+You can write to me at rchyla plus the little shell thing plus 'cfa harvard edu'.replace(' ', '.')
+
+Comments and patches are much welcome!
