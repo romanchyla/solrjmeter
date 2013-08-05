@@ -1317,7 +1317,11 @@ def main(argv):
 
         acquire_lock('%s/solrjmeter.pid' % options.results_folder)
         
-        if options.debug or True:
+        # install pre-requisities if requested
+        check_prerequisities(options)
+        
+        
+        if options.debug or True: # for now always print them
             print "============="
             for k,v in options.__dict__.items():
                 if 'password' in k:
@@ -1327,8 +1331,6 @@ def main(argv):
             print 'args=', args
             print "============="
         
-        # install pre-requisities if requested
-        check_prerequisities(options)
         
                     
         if options.regenerate_html:
