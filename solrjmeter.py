@@ -502,11 +502,11 @@ def find_tests(options):
     
 
 def harvest_details_about_montysolr(options):
-    system_data = req('%s/system' % options.query_endpoint)
-    mbeans_data = req('%s/mbeans' % options.query_endpoint, stats='true')
+    system_data = req('%s/admin/system' % options.query_endpoint)
+    mbeans_data = req('%s/admin/mbeans' % options.query_endpoint, stats='true')
     cores_data = req('%s/cores' % options.admin_endpoint, stats='true')
     
-    cn = cores_data[options.core_name or 'defaultCoreName']
+    cn = options.core_name or cores_data['defaultCoreName']
     ci = mbeans_data['solr-mbeans'].index('CORE')+1
     ch = mbeans_data['solr-mbeans'].index('QUERYHANDLER')+1
     cc = mbeans_data['solr-mbeans'].index('CACHE')+1
