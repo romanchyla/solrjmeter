@@ -1,0 +1,3413 @@
+all:"551a"	==145
+all:"766"	==163
+all:"538a"	==152
+all:"014"	==149
+all:"8443e"	==166
+all:"132012"	==138
+all:"25"	==156
+all:"29j"	==146
+all:"29h"	==142
+all:"1945"	==146
+all:"2012epjwc"	==154
+all:"550a"	==136
+all:"124"	==166
+all:"8442e"	==161
+all:"74"	==163
+all:"146e"	==135
+all:"53"	==166
+all:"p"	==154
+all:"t"	==166
+all:"292"	==164
+all:"290"	==140
+all:"2013ycat"	==138
+all:"2013aj"	==166
+all:"2008jgre"	==137
+all:"190"	==152
+all:"1089"	==145
+all:"279"	==147
+all:"118"	==157
+all:"00"	==140
+all:"540a"	==144
+all:"2012grb"	==140
+all:"2013cbet"	==152
+all:"ast"	==139
+all:"549a"	==148
+all:"539a"	==160
+all:"2012lpico1683"	==159
+all:"k"	==148
+all:"1v"	==145
+all:"2011ap"	==152
+all:"541a"	==166
+all:"w"	==151
+all:"2012apjs"	==165
+all:"2011aoel"	==150
+all:"60"	==143
+all:"1w"	==154
+all:"2012phrvc"	==153
+all:"2012hcxa"	==154
+all:"189"	==142
+all:"2012sspma"	==147
+all:"2012an"	==161
+all:"5100"	==143
+all:"2012sf2a"	==141
+all:"2011arxiv1104"	==148
+all:"284"	==145
+all:"1104"	==154
+all:"543a"	==162
+all:"z"	==163
+all:"ae"	==160
+all:"2006jgre"	==144
+all:"4614"	==165
+all:"2012javso"	==147
+all:"48"	==137
+all:"45"	==152
+all:"2012pasj"	==152
+all:"2013icar"	==165
+all:"326"	==147
+all:"327"	==141
+all:"544a"	==157
+all:"552a"	==145
+all:"2012phdt"	==155
+all:"73"	==154
+all:"2012ssrv"	==144
+all:"2012natur"	==161
+all:"2013soph"	==145
+all:"q"	==162
+all:"545a"	==153
+pubdate:"1932-07-01T00:00:00Z"	==4
+pubdate:"1911-06-01T00:00:00Z"	==4
+pubdate:"1921-02-01T00:00:00Z"	==4
+pubdate:"1916-08-01T00:00:00Z"	==4
+pubdate:"1913-09-01T00:00:00Z"	==4
+pubdate:"1912-07-01T00:00:00Z"	==4
+pubdate:"1928-02-01T00:00:00Z"	==4
+pubdate:"1926-07-01T00:00:00Z"	==4
+pubdate:"1914-11-01T00:00:00Z"	==4
+pubdate:"1924-10-01T00:00:00Z"	==4
+pubdate:"1916-06-01T00:00:00Z"	==4
+pubdate:"1911-10-01T00:00:00Z"	==4
+pubdate:"1927-08-01T00:00:00Z"	==4
+pubdate:"1913-05-01T00:00:00Z"	==4
+pubdate:"1933-02-01T00:00:00Z"	==4
+pubdate:"1929-08-01T00:00:00Z"	==4
+pubdate:"1936-05-01T00:00:00Z"	==4
+pubdate:"1918-08-01T00:00:00Z"	==4
+pubdate:"1930-05-01T00:00:00Z"	==4
+pubdate:"1920-03-01T00:00:00Z"	==4
+pubdate:"1966-01-01T00:00:00Z"	==4
+pubdate:"1937-02-01T00:00:00Z"	==4
+pubdate:"1936-11-01T00:00:00Z"	==4
+pubdate:"1931-10-01T00:00:00Z"	==4
+pubdate:"1922-02-01T00:00:00Z"	==4
+pubdate:"1920-05-01T00:00:00Z"	==4
+pubdate:"1926-02-01T00:00:00Z"	==4
+pubdate:"1984-04-01T00:00:00Z"	==4
+pubdate:"1926-10-01T00:00:00Z"	==4
+pubdate:"1923-09-01T00:00:00Z"	==4
+pubdate:"1915-11-01T00:00:00Z"	==4
+pubdate:"1932-10-01T00:00:00Z"	==4
+pubdate:"1918-02-01T00:00:00Z"	==4
+pubdate:"1914-07-01T00:00:00Z"	==4
+pubdate:"1914-03-01T00:00:00Z"	==4
+pubdate:"1933-06-01T00:00:00Z"	==4
+pubdate:"1930-04-01T00:00:00Z"	==4
+pubdate:"1924-11-01T00:00:00Z"	==4
+pubdate:"1911-02-01T00:00:00Z"	==4
+pubdate:"1937-05-01T00:00:00Z"	==4
+pubdate:"1915-03-01T00:00:00Z"	==4
+pubdate:"1843-01-01T00:00:00Z"	==4
+pubdate:"1949-01-01T00:00:00Z"	==4
+pubdate:"1948-01-01T00:00:00Z"	==4
+pubdate:"1911-08-01T00:00:00Z"	==4
+pubdate:"1979-05-01T00:00:00Z"	==4
+pubdate:"1911-09-01T00:00:00Z"	==4
+pubdate:"1931-07-01T00:00:00Z"	==4
+pubdate:"1914-05-01T00:00:00Z"	==4
+pubdate:"1932-04-01T00:00:00Z"	==4
+pubdate:"1945-01-01T00:00:00Z"	==4
+pubdate:"1911-05-01T00:00:00Z"	==4
+pubdate:"1921-09-01T00:00:00Z"	==4
+pubdate:"1911-04-01T00:00:00Z"	==4
+pubdate:"1922-04-01T00:00:00Z"	==4
+pubdate:"1906-01-01T00:00:00Z"	==4
+pubdate:"1917-08-01T00:00:00Z"	==4
+pubdate:"1979-09-01T00:00:00Z"	==4
+pubdate:"1912-08-01T00:00:00Z"	==4
+pubdate:"1969-01-01T00:00:00Z"	==4
+pubdate:"1928-08-01T00:00:00Z"	==4
+pubdate:"1912-10-01T00:00:00Z"	==4
+pubdate:"1874-01-01T00:00:00Z"	==4
+pubdate:"1913-04-01T00:00:00Z"	==4
+pubdate:"1912-06-01T00:00:00Z"	==4
+pubdate:"1919-03-01T00:00:00Z"	==4
+pubdate:"1979-10-01T00:00:00Z"	==4
+pubdate:"1965-01-01T00:00:00Z"	==4
+pubdate:"1917-03-01T00:00:00Z"	==4
+pubdate:"1911-07-01T00:00:00Z"	==4
+pubdate:"1932-03-01T00:00:00Z"	==4
+pubdate:"1915-06-01T00:00:00Z"	==4
+pubdate:"1912-02-01T00:00:00Z"	==4
+pubdate:"1919-08-01T00:00:00Z"	==4
+pubdate:"1911-11-01T00:00:00Z"	==4
+pubdate:"1929-03-01T00:00:00Z"	==4
+pubdate:"1923-04-01T00:00:00Z"	==4
+pubdate:"1912-03-01T00:00:00Z"	==4
+pubdate:"1924-03-01T00:00:00Z"	==4
+pubdate:"1922-06-01T00:00:00Z"	==4
+pubdate:"1981-12-01T00:00:00Z"	==4
+pubdate:"1922-08-01T00:00:00Z"	==4
+pubdate:"1924-05-01T00:00:00Z"	==4
+pubdate:"1855-01-01T00:00:00Z"	==4
+pubdate:"1946-02-01T00:00:00Z"	==4
+pubdate:"1922-05-01T00:00:00Z"	==4
+pubdate:"1913-06-01T00:00:00Z"	==4
+pubdate:"1913-03-01T00:00:00Z"	==4
+pubdate:"1935-03-01T00:00:00Z"	==4
+pubdate:"1921-06-01T00:00:00Z"	==4
+pubdate:"1912-09-01T00:00:00Z"	==4
+pubdate:"1930-08-01T00:00:00Z"	==4
+pubdate:"1911-03-01T00:00:00Z"	==4
+pubdate:"1978-02-01T00:00:00Z"	==4
+pubdate:"1936-03-01T00:00:00Z"	==4
+pubdate:"1933-09-01T00:00:00Z"	==4
+pubdate:"1915-05-01T00:00:00Z"	==4
+pubdate:"1915-07-01T00:00:00Z"	==4
+pubdate:"1913-10-01T00:00:00Z"	==4
+pubdate:"1915-09-01T00:00:00Z"	==4
+abstract:"morphology"	==1549
+abstract:"kinetic"	==1564
+abstract:"27"	==1573
+abstract:"conclusions"	==1582
+abstract:"28"	==1527
+abstract:"α"	==1528
+abstract:"candidates"	==1570
+abstract:"satellites"	==1512
+abstract:"necessary"	==1600
+abstract:"circulation"	==1526
+abstract:"double"	==1604
+abstract:"frame"	==1544
+abstract:"spectrograph"	==1523
+abstract:"redshifts"	==1516
+abstract:"errors"	==1599
+abstract:"lunar"	==1618
+abstract:"interplanetary"	==1559
+abstract:"threedimensional"	==1528
+abstract:"post"	==1576
+abstract:"extreme"	==1598
+abstract:"improved"	==1550
+abstract:"candidate"	==1597
+abstract:"latitudes"	==1616
+abstract:"decay"	==1560
+abstract:"length"	==1569
+abstract:"apply"	==1549
+abstract:"quality"	==1562
+abstract:"signals"	==1518
+abstract:"remains"	==1525
+abstract:"comparing"	==1579
+abstract:"reduction"	==1515
+abstract:"tool"	==1523
+abstract:"observe"	==1561
+abstract:"groundbased"	==1573
+abstract:"iii"	==1529
+abstract:"target"	==1515
+abstract:"supernovae"	==1607
+abstract:"characteristic"	==1616
+abstract:"modified"	==1611
+abstract:"aim"	==1582
+abstract:"thin"	==1619
+abstract:"error"	==1533
+abstract:"providing"	==1564
+abstract:"situ"	==1587
+abstract:"terrestrial"	==1617
+abstract:"develop"	==1614
+abstract:"variety"	==1536
+abstract:"latter"	==1573
+abstract:"six"	==1539
+abstract:"detail"	==1580
+abstract:"species"	==1579
+abstract:"application"	==1564
+abstract:"energetic"	==1619
+abstract:"flows"	==1605
+abstract:"mag"	==1551
+abstract:"parallel"	==1540
+abstract:"natural"	==1564
+abstract:"longer"	==1544
+abstract:"algorithm"	==1579
+abstract:"requires"	==1600
+abstract:"curve"	==1618
+abstract:"nuclear"	==1531
+abstract:"typically"	==1579
+abstract:"fact"	==1546
+first_author_norm:"balantekin,a"	==6
+first_author_norm:"benitezherrera,s"	==6
+first_author_norm:"adamkovics,m"	==6
+first_author_norm:"belanger,g"	==6
+first_author_norm:"biermann,p"	==6
+first_author_norm:"boisse,i"	==6
+first_author_norm:"babyk,i"	==6
+first_author_norm:"almendrosl.,i"	==6
+first_author_norm:"bolotina,o"	==6
+first_author_norm:"battaglia,n"	==6
+first_author_norm:"bastian,n"	==6
+first_author_norm:"brown,s"	==6
+first_author_norm:"burrows,a"	==6
+first_author_norm:"biver,n"	==6
+first_author_norm:"antusch,s"	==6
+first_author_norm:"bonifacio,p"	==6
+first_author_norm:"asmar,s"	==6
+first_author_norm:"amati,l"	==6
+first_author_norm:"boice,d"	==6
+first_author_norm:"bills,b"	==6
+first_author_norm:"archinal,b"	==6
+first_author_norm:"bougher,s"	==6
+first_author_norm:"agarwal,s"	==6
+first_author_norm:"bianchi,l"	==6
+first_author_norm:"ansoldi,s"	==6
+first_author_norm:"brustein,r"	==6
+first_author_norm:"bednarek,w"	==6
+first_author_norm:"abreu,n"	==6
+first_author_norm:"bondarenko,n"	==6
+first_author_norm:"bodewits,d"	==6
+first_author_norm:"breen,s"	==6
+first_author_norm:"arregui,i"	==6
+first_author_norm:"brandenberger,r"	==6
+first_author_norm:"banijamali,a"	==6
+first_author_norm:"boffin,h"	==6
+first_author_norm:"bagenal,f"	==6
+first_author_norm:"aurich,r"	==6
+first_author_norm:"alecian,e"	==6
+first_author_norm:"bibring,j"	==6
+first_author_norm:"bellazzini,m"	==6
+first_author_norm:"anderson,l"	==6
+first_author_norm:"babu,s"	==6
+first_author_norm:"bensby,t"	==6
+first_author_norm:"bersier,d"	==6
+first_author_norm:"anderson,p"	==6
+first_author_norm:"aoki,s"	==6
+first_author_norm:"akras,s"	==6
+first_author_norm:"barkov,m"	==6
+first_author_norm:"beck,r"	==6
+first_author_norm:"bono,g"	==6
+first_author_norm:"barger,v"	==6
+first_author_norm:"albrecht,s"	==6
+first_author_norm:"artemyev,a"	==6
+first_author_norm:"beuther,h"	==6
+first_author_norm:"ambjorn,j"	==6
+first_author_norm:"arkhypov,o"	==6
+first_author_norm:"brescia,m"	==6
+first_author_norm:"baker,a"	==6
+first_author_norm:"baker,j"	==6
+first_author_norm:"brain,d"	==6
+first_author_norm:"baker,r"	==6
+first_author_norm:"berger,t"	==6
+first_author_norm:"andre,n"	==6
+first_author_norm:"bouchez,a"	==6
+first_author_norm:"burger,m"	==6
+first_author_norm:"baran,a"	==6
+first_author_norm:"arina,c"	==6
+first_author_norm:"bernardeau,f"	==6
+first_author_norm:"bai,y"	==6
+first_author_norm:"branduardiraymont,g"	==6
+first_author_norm:"bridges,j"	==6
+first_author_norm:"bisikalo,d"	==6
+first_author_norm:"burkhardt,c"	==6
+first_author_norm:"bisabr,y"	==6
+first_author_norm:"allen,r"	==6
+first_author_norm:"a'hearn,m"	==6
+first_author_norm:"akamatsu,h"	==6
+first_author_norm:"ayani,k"	==6
+first_author_norm:"alexander,s"	==6
+first_author_norm:"baluev,r"	==6
+first_author_norm:"biswas,t"	==6
+first_author_norm:"allahverdi,r"	==6
+first_author_norm:"asano,k"	==6
+first_author_norm:"bodaghee,a"	==6
+first_author_norm:"brown,d"	==6
+first_author_norm:"burns,j"	==6
+first_author_norm:"breneman,a"	==6
+first_author_norm:"brown,t"	==6
+first_author_norm:"barranco,j"	==6
+first_author_norm:"belton,m"	==6
+first_author_norm:"bertucci,c"	==6
+first_author_norm:"boynton,w"	==6
+first_author_norm:"alexander,c"	==6
+first_author_norm:"barnouin,o"	==6
+first_author_norm:"alvarezmuniz,j"	==6
+first_author_norm:"andersson,n"	==6
+first_author_norm:"abe,m"	==6
+first_author_norm:"abe,k"	==6
+first_author_norm:"basak,r"	==6
+first_author_norm:"bauer,j"	==6
+first_author_surname:"florinski"	==11
+first_author_surname:"molaro"	==11
+first_author_surname:"benavides"	==11
+first_author_surname:"ahluwalia"	==11
+first_author_surname:"dalton"	==11
+first_author_surname:"patel"	==11
+first_author_surname:"aledo"	==11
+first_author_surname:"heller"	==11
+first_author_surname:"hendrix"	==11
+first_author_surname:"albrecht"	==11
+first_author_surname:"fong"	==11
+first_author_surname:"mcnamara"	==11
+first_author_surname:"perri"	==11
+first_author_surname:"elias"	==11
+first_author_surname:"andreev"	==11
+first_author_surname:"overhaus"	==11
+first_author_surname:"fynbo"	==11
+first_author_surname:"lien"	==11
+first_author_surname:"mignani"	==11
+first_author_surname:"nandi"	==11
+first_author_surname:"docobo"	==11
+first_author_surname:"caimmi"	==11
+first_author_surname:"grau"	==11
+first_author_surname:"monard"	==11
+first_author_surname:"robles"	==11
+first_author_surname:"badman"	==11
+first_author_surname:"lacluyze"	==11
+first_author_surname:"rojas"	==11
+first_author_surname:"henze"	==11
+first_author_surname:"casulli"	==11
+first_author_surname:"mckay"	==11
+first_author_surname:"carr"	==11
+first_author_surname:"bae"	==11
+first_author_surname:"christiansen"	==11
+first_author_surname:"oey"	==11
+first_author_surname:"chaston"	==11
+first_author_surname:"dahl"	==11
+first_author_surname:"agudo"	==11
+first_author_surname:"conroy"	==11
+first_author_surname:"lopes"	==11
+first_author_surname:"padmanabhan"	==11
+first_author_surname:"randall"	==11
+first_author_surname:"allard"	==11
+first_author_surname:"cayley"	==11
+first_author_surname:"chimento"	==11
+first_author_surname:"munoz"	==11
+first_author_surname:"matsui"	==11
+first_author_surname:"edgar"	==11
+first_author_surname:"howes"	==11
+first_author_surname:"ivezic"	==11
+first_author_surname:"berry"	==11
+first_author_surname:"leprette"	==11
+first_author_surname:"maselli"	==11
+first_author_surname:"middleton"	==11
+first_author_surname:"abdel"	==11
+first_author_surname:"liemohn"	==11
+first_author_surname:"donaldson"	==11
+first_author_surname:"fuller"	==11
+first_author_surname:"mizuno"	==11
+first_author_surname:"delva"	==11
+first_author_surname:"olson"	==11
+first_author_surname:"jang"	==11
+first_author_surname:"cahill"	==11
+first_author_surname:"baldi"	==11
+first_author_surname:"jamil"	==11
+first_author_surname:"hiesinger"	==11
+first_author_surname:"nagashima"	==11
+first_author_surname:"limaye"	==11
+first_author_surname:"casey"	==11
+first_author_surname:"fritz"	==11
+first_author_surname:"kwok"	==11
+first_author_surname:"piatti"	==11
+first_author_surname:"rauscher"	==11
+first_author_surname:"guha"	==11
+first_author_surname:"kocer"	==11
+first_author_surname:"pace"	==11
+first_author_surname:"dorman"	==11
+first_author_surname:"hawley"	==11
+first_author_surname:"buczkowski"	==11
+first_author_surname:"dutta"	==11
+first_author_surname:"kitamura"	==11
+first_author_surname:"craig"	==11
+first_author_surname:"carroll"	==11
+first_author_surname:"kaufman"	==11
+first_author_surname:"herrmann"	==11
+first_author_surname:"andrade"	==11
+first_author_surname:"immler"	==11
+first_author_surname:"mukherjee"	==11
+first_author_surname:"lyutikov"	==11
+first_author_surname:"radioti"	==11
+first_author_surname:"hayward"	==11
+first_author_surname:"noda"	==11
+first_author_surname:"albert"	==11
+first_author_surname:"barger"	==11
+first_author_surname:"bartlett"	==11
+first_author_surname:"lau"	==11
+first_author_surname:"law"	==11
+first_author_surname:"herman"	==11
+first_author_surname:"ceamanos"	==11
+first_author_surname:"ciabattari"	==11
+reference:"2007apj...658..710n"	==49
+reference:"2010mnras.401....7h"	==49
+reference:"2010apj...720.1513k"	==49
+reference:"1979icar...40....1b"	==49
+reference:"1997mnras.292...27h"	==49
+reference:"1983jplph..29..525s"	==49
+reference:"1966jgr....71.5559h"	==48
+reference:"1924apj....60...22m"	==48
+reference:"2009a&a...505.1087n"	==49
+reference:"1965apj...142..419p"	==49
+reference:"2001apj...562l..55f"	==49
+reference:"1975pasj...27..533m"	==48
+reference:"1982jgr....87.6011m"	==49
+reference:"2010spie.7733e..12k"	==49
+reference:"2009apj...699.2026r"	==49
+reference:"2004apj...601..864t"	==49
+reference:"2010arxiv1008.3703c"	==49
+reference:"1994phrvl..72...17d"	==49
+reference:"1961cajph..39.1433a"	==49
+reference:"2009ara&a..47..427h"	==49
+reference:"1973apj...183.1051g"	==49
+reference:"2000apjs..129..435b"	==49
+reference:"1999jgr...10424995b"	==49
+reference:"1985apj...298l...7h"	==49
+reference:"2000georl..27..145g"	==49
+reference:"1995comp..119..197g"	==49
+reference:"2009ara&a..47..211h"	==49
+reference:"2006phr...427....1p"	==49
+reference:"1996sci...274..954r"	==49
+reference:"2002jgre..107.5111c"	==49
+reference:"2006natur.442.1014s"	==49
+reference:"2000aj....120..165t"	==49
+reference:"2012a&a...537a..17r"	==49
+reference:"1975jgr....80.4181f"	==48
+reference:"2005e&psl.240...11g"	==49
+reference:"2007ara&a..45..441m"	==49
+reference:"2009a&a...497..945s"	==49
+reference:"2006a&a...450..345k"	==49
+reference:"1959sdmm.book.....s"	==49
+reference:"1983apj...266..160l"	==49
+reference:"1970jetpl..12..312z"	==49
+reference:"2006phrvl..96k1102b"	==49
+reference:"1997jgr...10224047f"	==49
+reference:"2000jgr...10520297l"	==49
+reference:"1982apj...262..590f"	==49
+reference:"2003georl..30.1493h"	==49
+reference:"2003apjs..149..205m"	==49
+reference:"2012phrvl.108d1101h"	==49
+reference:"2003spie.4841.1670l"	==49
+reference:"2009natur.459..398d"	==49
+reference:"2008arxiv0805.1726s"	==49
+reference:"1960ratr.book.....c"	==48
+reference:"1992apjs...82..351l"	==49
+reference:"1997apjs..111..377w"	==49
+reference:"2008jgra..113.5304f"	==49
+reference:"1974ijtp...10..363h"	==48
+reference:"2009a&a...497..635c"	==49
+reference:"2011mnras.414..940y"	==49
+reference:"2000apj...542..535g"	==49
+reference:"2004a&a...428.1001c"	==49
+reference:"1977phrvd..16..953s"	==49
+reference:"1956mnras.116..351b"	==48
+reference:"2004angeo..22..567r"	==49
+reference:"1982natur.300..728a"	==49
+reference:"1991apjs...76..813s"	==49
+reference:"2006rvmp...78..537b"	==49
+reference:"2002apj...576..323r"	==49
+reference:"2010mnras.401.2531a"	==49
+reference:"2004gr.qc.....4018a"	==49
+reference:"2006apj...647..853w"	==49
+reference:"1992ap&ss.195....1h"	==49
+reference:"2008apj...688..770f"	==49
+reference:"1994natur.370..629m"	==49
+reference:"2004jgre..109.8002n"	==49
+reference:"1979phrvd..19.3524h"	==49
+reference:"2002adspr..30..129r"	==49
+reference:"1965mnras.130..125g"	==49
+reference:"2006ijmpd..15.2105s"	==49
+reference:"2011sci...333..856s"	==49
+reference:"2008phrvd..78d3519h"	==49
+reference:"2002pasp..114..144f"	==49
+reference:"1973apj...184..839s"	==48
+reference:"2006apj...652..518m"	==49
+reference:"1998a&a...336..150m"	==49
+reference:"2000ssrv...92..423s"	==49
+reference:"1969ncimr...1..252p"	==48
+reference:"2011apjs..192....9t"	==49
+reference:"2003jgra..108.1249a"	==49
+reference:"2001aspc..238..269l"	==49
+reference:"2006apj...636..777a"	==49
+reference:"2007a&a...476..137a"	==49
+reference:"1987jgr....92.2565r"	==49
+reference:"2010aste.book.....a"	==49
+reference:"2008arnps..58...99h"	==49
+reference:"2005aj....130..873j"	==49
+reference:"2010apj...718..348a"	==49
+reference:"2009apj...697...55g"	==49
+reference:"2007apjs..171...61h"	==49
+reference:"1986spie..627..733t"	==49
+reference:"2006aj....132.2268m"	==49
+year:"1782"	==1
+year:"1972"	==1
+year:"1894"	==1
+year:"1815"	==1
+year:"1830"	==1
+year:"1817"	==1
+year:"1968"	==1
+year:"1811"	==1
+year:"1834"	==1
+year:"1962"	==1
+year:"1963"	==1
+year:"1798"	==1
+year:"1793"	==1
+year:"1796"	==1
+year:"1795"	==1
+year:"1794"	==1
+year:"1951"	==1
+year:"1953"	==1
+year:"1952"	==1
+year:"1805"	==1
+year:"1829"	==1
+year:"1800"	==1
+year:"1821"	==1
+year:"1820"	==1
+author_facet_hier:"0/Melosh, H"	==54
+author_facet_hier:"0/Weber, M"	==56
+author_facet_hier:"0/Banday, A"	==56
+author_facet_hier:"1/Bambery, R/Bambery, R."	==55
+author_facet_hier:"0/Pickett, J"	==56
+author_facet_hier:"0/Pierpaoli, E"	==56
+author_facet_hier:"1/Maurice, S/Maurice, S."	==55
+author_facet_hier:"1/Giroletti, M/Giroletti, M."	==56
+author_facet_hier:"0/Kurth, W"	==55
+author_facet_hier:"0/Lutz, D"	==56
+author_facet_hier:"0/Brandenburg, A"	==55
+author_facet_hier:"0/Dolag, K"	==55
+author_facet_hier:"0/Knox, L"	==54
+author_facet_hier:"1/Toth, J/Toth, J."	==56
+author_facet_hier:"0/Suzuki, N"	==55
+author_facet_hier:"0/Kugel, F"	==54
+author_facet_hier:"0/Marsh, T"	==55
+author_facet_hier:"0/Gres, O"	==55
+author_facet_hier:"0/Ellis, R"	==54
+author_facet_hier:"1/Boselli, A/Boselli, A."	==55
+author_facet_hier:"0/Schinnerer, E"	==56
+author_facet_hier:"0/Cohen, S"	==54
+author_facet_hier:"1/Hahn, G/Hahn, G."	==56
+author_facet_hier:"1/Urata, Y/Urata, Y."	==55
+author_facet_hier:"0/Luehr, H"	==56
+author_facet_hier:"0/Hahn, G"	==56
+author_facet_hier:"0/Tanaka, Y"	==55
+author_facet_hier:"1/Moutou, C/Moutou, C."	==55
+author_facet_hier:"0/Chaplin, W"	==55
+author_facet_hier:"0/Ridley, A"	==55
+author_facet_hier:"1/Bosch, J/Bosch, J. M."	==56
+author_facet_hier:"0/Cecconi, B"	==54
+author_facet_hier:"0/Klessen, R"	==56
+author_facet_hier:"0/Foley, R"	==56
+author_facet_hier:"0/de Sanctis, M"	==55
+author_facet_hier:"0/Ishikawa, M"	==54
+author_facet_hier:"0/Barclay, T"	==54
+author_facet_hier:"0/Johnson, M"	==56
+author_facet_hier:"1/Gres, O/Gres, O."	==55
+author_facet_hier:"1/Brown, R/Brown, R. H."	==55
+author_facet_hier:"1/Santos, N/Santos, N. C."	==56
+author_facet_hier:"1/de Sanctis, M/de Sanctis, M. C."	==55
+author_facet_hier:"1/Mittlefehldt, D/Mittlefehldt, D. W."	==55
+author_facet_hier:"0/Stephan, K"	==56
+author_facet_hier:"0/Masiero, J"	==54
+author_facet_hier:"0/Chen, T"	==54
+author_facet_hier:"0/Mitra, S"	==54
+author_facet_hier:"0/Masi, U"	==54
+author_facet_hier:"0/Masi, S"	==55
+author_facet_hier:"0/Ensslin, T"	==54
+author_facet_hier:"1/Palomba, E/Palomba, E."	==56
+author_facet_hier:"0/Bambery, R"	==55
+author_facet_hier:"0/Kring, D"	==55
+author_facet_hier:"1/Loeb, A/Loeb, Abraham"	==56
+author_facet_hier:"0/Rowe, J"	==56
+author_facet_hier:"0/Perley, D"	==56
+author_facet_hier:"1/Zarka, P/Zarka, P."	==56
+author_facet_hier:"0/Larson, D"	==56
+author_facet_hier:"0/Wade, L"	==55
+author_facet_hier:"0/Bizyaev, D"	==56
+author_facet_hier:"0/Conrad, J"	==56
+author_facet_hier:"0/Aharonian, F"	==55
+author_facet_hier:"0/Alexander, D"	==56
+author_facet_hier:"0/Barbiellini, G"	==54
+author_facet_hier:"1/Banday, A/Banday, A. J."	==55
+author_facet_hier:"1/Coustenis, A/Coustenis, A."	==55
+author_facet_hier:"0/Nysewander, M"	==56
+author_facet_hier:"0/Horanyi, M"	==55
+author_facet_hier:"0/Liu, T"	==54
+author_facet_hier:"0/Tamura, M"	==56
+author_facet_hier:"0/Morselli, A"	==55
+author_facet_hier:"0/Bishop, J"	==55
+author_facet_hier:"0/Hughes, J"	==54
+author_facet_hier:"0/Valenziano, L"	==56
+author_facet_hier:"0/Davis, R"	==56
+author_facet_hier:"1/Hillebrandt, W/Hillebrandt, W."	==55
+author_facet_hier:"0/Lopez-Caniego, M"	==56
+author_facet_hier:"0/Lui, A"	==55
+author_facet_hier:"0/Pepe, F"	==56
+author_facet_hier:"0/Paneque, D"	==55
+author_facet_hier:"0/Cheung, C"	==55
+author_facet_hier:"0/Lawrence, J"	==56
+author_facet_hier:"0/Torres, G"	==55
+author_facet_hier:"0/Volnova, A"	==55
+author_facet_hier:"0/Wang, G"	==55
+author_facet_hier:"0/Reynolds, C"	==55
+author_facet_hier:"0/Anderson, S"	==55
+author_facet_hier:"0/Hopkins, A"	==54
+author_facet_hier:"0/Barreiro, R"	==54
+author_facet_hier:"0/Hauber, E"	==54
+author_facet_hier:"0/Boer, M"	==55
+author_facet_hier:"0/Cucchiara, A"	==55
+author_facet_hier:"0/Parakhin, N"	==56
+author_facet_hier:"1/Perlmutter, S/Perlmutter, S."	==55
+author_facet_hier:"0/Kromer, M"	==54
+author_facet_hier:"0/Caraveo, P"	==56
+author_facet_hier:"0/Mathur, S"	==54
+author_facet_hier:"1/Schwadron, N/Schwadron, N. A."	==55
+author_facet_hier:"0/Yamamoto, K"	==55
+author_facet_hier:"0/Clark, B"	==56
+copyright:"queen"	==4
+copyright:"heidelbergb"	==3
+copyright:"SIF"	==8
+copyright:"fiacutesica"	==2
+copyright:"versita"	==8
+copyright:"geological"	==2
+copyright:"0"	==3
+copyright:"attribution"	==2
+copyright:"permission"	==4
+copyright:"sterken"	==5
+copyright:"framework"	==2
+copyright:"brasileira"	==2
+copyright:"csirocalifornia"	==3
+copyright:"1996"	==9
+copyright:"commons"	==2
+copyright:"activity"	==2
+copyright:"c)2013"	==4
+copyright:"I.I"	==2
+copyright:"IMCCE"	==2
+copyright:"domain"	==3
+copyright:"acad"	==7
+copyright:"acadeacutemie"	==7
+copyright:"energy"	==2
+copyright:"crown"	==5
+copyright:"universiteta"	==3
+copyright:"astrophysical"	==2
+copyright:"are"	==3
+copyright:"3.0"	==2
+copyright:"et"	==3
+copyright:"csiro/california"	==3
+copyright:"canada"	==5
+copyright:"AUTHOR"	==5
+copyright:"heidelberg%b"	==3
+copyright:"creative"	==2
+copyright:"3"	==3
+copyright:"public"	==3
+copyright:"c2013"	==4
+copyright:"korea"	==6
+copyright:"compilation"	==2
+copyright:"article"	==4
+copyright:"chapter"	==2
+copyright:"technology/inta"	==3
+copyright:"30"	==2
+copyright:"calfornia"	==2
+copyright:"survey"	==3
+copyright:"tomskogo"	==3
+copyright:"INA"	==2
+copyright:"commonwealth"	==2
+copyright:"alliance"	==2
+copyright:"majesty"	==4
+copyright:"wegener"	==3
+copyright:"right"	==3
+copyright:"des"	==7
+copyright:"her"	==4
+copyright:"wien"	==5
+copyright:"f&iacute;sica"	==2
+copyright:"italia"	==7
+copyright:"alfred"	==3
+copyright:"basic"	==2
+copyright:"acad&eacute;mie"	==7
+copyright:"society2012"	==4
+copyright:"controller"	==2
+copyright:"society,2012"	==4
+copyright:"with"	==7
+copyright:"1994"	==5
+copyright:"1997"	==6
+copyright:"f"	==4
+copyright:"1998"	==3
+copyright:"work"	==4
+copyright:"i"	==2
+copyright:"EDP"	==2
+copyright:"dynamo"	==2
+copyright:"governement"	==2
+copyright:"technologyinta"	==3
+copyright:"al"	==4
+copyright:"cosmology"	==2
+copyright:"physical"	==6
+copyright:"izdatelstvo"	==3
+copyright:"mie"	==7
+copyright:"field"	==2
+copyright:"warsaw"	==8
+copyright:"polar"	==3
+copyright:"INTA"	==8
+copyright:"centre"	==2
+copyright:"after"	==2
+copyright:"II"	==2
+copyright:"ESA"	==2
+copyright:"cycle"	==2
+copyright:"considered"	==2
+copyright:"southeastern"	==9
+copyright:"2002"	==3
+copyright:"academic"	==2
+author:"güsten, r"	==34
+author:"bouhou, b"	==34
+author:"titus, t n"	==34
+author:"ehlmann, b l"	==34
+author:"brüggen, m"	==33
+author:"colless, matthew"	==33
+author:"lindfors, e"	==34
+author:"maury, a"	==34
+author:"stawarz, ł"	==34
+author:"caraveo, p a"	==33
+author:"bridges, m"	==34
+author:"schmedemann, n"	==34
+author:"mousis, o"	==34
+author:"matthaeus, w h"	==34
+author:"higa, m"	==34
+author:"frolova, a"	==34
+author:"fermi lat collaboration,"	==33
+author:"atteia, j l"	==33
+author:"benzvi, s"	==33
+author:"hirata, n"	==34
+author:"giraud héraud, y"	==34
+author:"carreno, a"	==34
+author:"wurz, p"	==34
+author:"de breuck, c"	==33
+author:"kocher, p"	==34
+author:"garcía, r a"	==33
+author:"dominis prester, d"	==34
+author:"rowe, jason f"	==34
+author:"evangelista, y"	==33
+author:"young, d t"	==34
+author:"patanchon, g"	==34
+author:"flasar, f m"	==34
+author:"asplund, m"	==34
+author:"gombosi, t i"	==33
+author:"soriano, m"	==34
+author:"geier, s"	==33
+author:"auld, r"	==33
+author:"argyle, r w"	==34
+author:"sharif, m"	==34
+author:"paoletti, r"	==34
+author:"biver, n"	==34
+author:"knödlseder, j"	==34
+author:"davies, roger l"	==34
+author:"hill, v"	==33
+author:"bianchi, s"	==33
+author:"netterfield, c b"	==34
+author:"rosati, p"	==34
+author:"nittler, l r"	==34
+author:"perotto, l"	==34
+author:"elvis, m"	==34
+author:"gasparrini, d"	==34
+author:"o'brien, d p"	==34
+author:"kostov, a"	==34
+author:"bellazzini, r"	==33
+author:"mimeev, a"	==34
+author:"grün, e"	==34
+author:"sigismondi, costantino"	==34
+author:"fiaschi, m"	==34
+author:"brandenburg, axel"	==34
+author:"duffard, r"	==34
+author:"vaccari, m"	==34
+author:"anderson, d r"	==34
+author:"hinse, t c"	==34
+author:"hiroi, t"	==34
+author:"mccubbin, f m"	==34
+author:"harris, a w"	==33
+author:"hinton, j a"	==34
+author:"mumma, m j"	==34
+author:"leloudas, g"	==34
+author:"nati, f"	==34
+author:"böhringer, h"	==34
+author:"giebels, b"	==34
+author:"meynet, g"	==34
+author:"franchi, i a"	==34
+author:"buehler, r"	==34
+author:"küppers, m"	==34
+author:"pelassa, v"	==34
+author:"gargano, f"	==34
+author:"trifoglio, m"	==34
+author:"cimatti, a"	==34
+author:"shimomoto, s"	==34
+author:"johnson, r e"	==34
+author:"ferrando, r"	==34
+author:"ederoclite, a"	==34
+author:"charles, e"	==33
+author:"giordano, f"	==34
+author:"dyar, m d"	==33
+author:"berta, s"	==33
+author:"baldini, l"	==33
+author:"collier cameron, a"	==34
+author:"hergenrother, c w"	==34
+author:"chornock, r"	==34
+author:"abe, s"	==34
+author:"paredes, j m"	==34
+author:"groussin, o"	==34
+author:"hosokawa, k"	==34
+author:"de palma, f"	==33
+author:"agol, eric"	==34
+author:"butler, r c"	==33
+author:"elbaz, d"	==33
+aff:"office"	==335
+aff:"0033"	==342
+aff:"ad(department"	==333
+aff:"geography"	==347
+aff:"kanagawa"	==340
+aff:"shanghai"	==340
+aff:"program"	==348
+aff:"alberta"	==351
+aff:"suite"	==340
+aff:"iowa"	==355
+aff:"firenze"	==337
+aff:"cote"	==349
+aff:"bis"	==351
+aff:"bank"	==363
+aff:"graz"	==337
+aff:"M5S"	==356
+aff:"peking"	==343
+aff:"excellence"	==360
+aff:"D-69117"	==351
+aff:"IRFU"	==353
+aff:"prague"	==334
+aff:"ACT"	==367
+aff:"43210"	==357
+aff:"astroparticle"	==350
+aff:"78712"	==345
+aff:"janssen"	==358
+aff:"4800"	==359
+aff:"1710"	==362
+aff:"94035"	==366
+aff:"00133"	==344
+aff:"PL"	==361
+aff:"addepartment"	==334
+aff:"tempe"	==345
+aff:"magnetism"	==334
+aff:"DSM"	==352
+aff:"94305"	==350
+aff:"sinica"	==362
+aff:"60637"	==349
+aff:"vicolo"	==365
+aff:"jersey"	==343
+aff:"8502"	==342
+aff:"facility"	==350
+aff:"einstein"	==367
+aff:"liege"	==337
+aff:"cho"	==354
+aff:"D69117"	==355
+aff:"90095"	==336
+aff:"69120"	==336
+aff:"113-0033"	==339
+aff:"albert"	==362
+aff:"kashiwa"	==366
+aff:"irvine"	==357
+aff:"astro"	==366
+aff:"98"	==340
+aff:"ranzani"	==346
+aff:"frascati"	==333
+aff:"hamburg"	==361
+aff:"CP"	==359
+aff:"d'azur"	==337
+aff:"dazur"	==343
+aff:"19"	==349
+aff:"SW"	==356
+aff:"air"	==348
+aff:"physikalisches"	==340
+aff:"CNRSINSU"	==342
+aff:"cosmos"	==364
+aff:"2100"	==338
+aff:"blackett"	==357
+aff:"606"	==336
+aff:"azur"	==349
+aff:"1200"	==354
+aff:"rio"	==349
+aff:"IEEC"	==356
+aff:"U.S"	==361
+aff:"corporation"	==358
+aff:"chiba"	==335
+aff:"polar"	==352
+aff:"INTA"	==356
+aff:"AJ"	==338
+aff:"1130033"	==339
+aff:"data"	==334
+aff:"sonnensystemforschung"	==339
+aff:"normale"	==342
+aff:"helsinki"	==342
+aff:"bohr"	==356
+aff:"sendai"	==337
+aff:"academia"	==359
+aff:"alabama"	==355
+first_author:"akarsu, özgür"	==4
+first_author:"akras, s"	==4
+first_author:"adams, fred c"	==4
+first_author:"alonso garcía, j"	==4
+first_author:"aime, c"	==4
+first_author:"baudis, laura"	==4
+first_author:"aprile, e"	==4
+first_author:"alikhanov, i"	==4
+first_author:"asmar, s w"	==4
+first_author:"belkacem, k"	==4
+first_author:"andrews, timothy"	==4
+first_author:"atrio barandela, f"	==4
+first_author:"adeli, s"	==4
+first_author:"arraut, ivan"	==4
+first_author:"allison, j r"	==4
+first_author:"barth, c a"	==4
+first_author:"aoki, wako"	==4
+first_author:"amirhashchi, hassan"	==4
+first_author:"barausse, enrico"	==4
+first_author:"arlot, j e"	==4
+first_author:"barr, amy c"	==4
+first_author:"abu zayyad, t"	==4
+first_author:"barbero g, j fernando"	==4
+first_author:"agee, c b"	==4
+first_author:"altobelli, n"	==4
+first_author:"beaufoy, mark"	==4
+first_author:"acevedo, r d"	==4
+first_author:"avgoustidis, anastasios"	==4
+first_author:"barnes, jason w"	==4
+first_author:"ajello, m"	==4
+first_author:"banfield, d"	==4
+first_author:"bagenal, fran"	==4
+first_author:"andersson, l"	==4
+first_author:"andersson, n"	==4
+first_author:"acquaviva, viviana"	==4
+first_author:"asselmeyer maluga, torsten"	==4
+first_author:"aviles, alejandro"	==4
+first_author:"bell, m b"	==4
+first_author:"alonso herrero, almudena"	==4
+first_author:"augusto, c r a"	==4
+first_author:"astashenok, artyom v"	==4
+first_author:"barlow, n g"	==4
+first_author:"alexander, c m o'd"	==4
+first_author:"asaduzzaman, a m"	==4
+first_author:"barnes, j r"	==4
+first_author:"banu, a"	==4
+first_author:"alesci, emanuele"	==4
+first_author:"anderson, richard i"	==4
+first_author:"baerwald, philipp"	==4
+first_author:"belczynski, krzysztof"	==4
+first_author:"achúcarro, ana"	==4
+first_author:"angelakis, e"	==4
+first_author:"abazajian, kevork n"	==4
+first_author:"a'hearn, michael f"	==4
+first_author:"anderson, r c"	==4
+first_author:"anderson, j"	==4
+first_author:"bednarek, w"	==4
+first_author:"becker, l"	==4
+first_author:"allen, s w"	==4
+first_author:"accadia, t"	==4
+first_author:"anderson, f s"	==4
+first_author:"antares collaboration,"	==4
+first_author:"baloga, s m"	==4
+first_author:"beck, rainer"	==4
+first_author:"ajello, joseph m"	==4
+first_author:"bandfield, joshua l"	==4
+first_author:"anand, m"	==4
+first_author:"barlow, nadine g"	==4
+first_author:"basu, b"	==4
+first_author:"agudo, iván"	==4
+first_author:"anglada escudé, guillem"	==4
+first_author:"bastian, n"	==4
+first_author:"arrigo, kevin r"	==4
+first_author:"ailleris, p"	==4
+first_author:"beilicke, m"	==4
+first_author:"adams, j c"	==4
+first_author:"abbot, dorian s"	==4
+first_author:"archinal, b a"	==4
+first_author:"babichev, eugeny"	==4
+first_author:"bandfield, j l"	==4
+first_author:"arkhypov, o v"	==4
+first_author:"apel, w d"	==4
+first_author:"alinejad, h"	==4
+first_author:"albrecht, evonir"	==4
+first_author:"baioni, d"	==4
+first_author:"ali, a"	==4
+first_author:"becker, k j"	==4
+first_author:"aldering, g"	==4
+first_author:"arminjon, mayeul"	==4
+first_author:"bandos, igor a"	==4
+first_author:"akmaev, r a"	==4
+first_author:"barret, didier"	==4
+first_author:"belikov, andrey n"	==4
+first_author:"barnes, rory"	==4
+first_author:"bahcivan, h"	==4
+first_author:"arregui, i"	==4
+first_author:"anninos, dionysios"	==4
+first_author:"barkov, maxim v"	==4
+first_author:"barnaby, neil"	==4
+first_author:"andrews hanna, j c"	==4
+reader:"4a40c6e98b"	==100
+reader:"Xd8e85120e"	==102
+reader:"50cec65b80"	==100
+reader:"X78377570f"	==102
+reader:"4bfb4e1248"	==102
+reader:"4ed246e3db"	==102
+reader:"Xb942fb71c"	==101
+reader:"Xb405ec81d"	==102
+reader:"X2f2c13f41"	==101
+reader:"4b84450ee8"	==101
+reader:"4a9ef9ce41"	==102
+reader:"Xd28ab5495"	==102
+reader:"4d7a396e46"	==101
+reader:"46e8a8fa7e"	==102
+reader:"4dd216937d"	==101
+reader:"X4a6d74519"	==101
+reader:"50a94c526c"	==102
+reader:"Xbe15c432b"	==102
+reader:"X39ca85f48"	==101
+reader:"5126c412a9"	==102
+reader:"X3c18eeabc"	==102
+reader:"4f938370a5"	==101
+reader:"X8b62e404b"	==102
+reader:"Xe672aa24c"	==102
+reader:"X6fb264621"	==102
+reader:"X721d1d437"	==101
+reader:"Xcbb8fada3"	==102
+reader:"5076edad31"	==100
+reader:"X931d6478d"	==102
+reader:"X2dba8c746"	==101
+reader:"510bc68795"	==101
+reader:"Xf258b0630"	==102
+reader:"Xc4e129a7a"	==101
+reader:"517fbcfd38"	==102
+reader:"Xd8da8cfc0"	==101
+reader:"4faafbd7c6"	==101
+reader:"X341c7d6ef"	==102
+reader:"Xb2cf0865f"	==102
+reader:"X9ef3bfc46"	==102
+reader:"X82991b10d"	==101
+reader:"X22807f826"	==101
+reader:"X0f79ebc79"	==102
+reader:"X7c973e4c6"	==101
+reader:"Xa99fb61d2"	==102
+reader:"X5b4341921"	==101
+reader:"46e1ba5c5d"	==100
+reader:"50f7763118"	==101
+reader:"X6b3e73070"	==101
+reader:"5075b62cb9"	==101
+reader:"4c850ef833"	==100
+reader:"X5590b2d88"	==102
+reader:"5122904bd8"	==101
+reader:"Xea3eda939"	==102
+reader:"499b083eb5"	==100
+reader:"5008178df2"	==100
+reader:"X946d450cb"	==102
+reader:"Xfad7c9d5a"	==101
+reader:"475cfaaaa6"	==100
+reader:"50995e2728"	==102
+reader:"4ff44726a3"	==101
+reader:"Xd1ba2afbf"	==102
+reader:"Xf28808e18"	==101
+reader:"4cd374bab4"	==100
+reader:"4c686824b9"	==100
+reader:"X9bb931ed8"	==101
+reader:"Xcbbe36ed4"	==102
+reader:"X6805289b8"	==102
+reader:"X0463b9aca"	==101
+reader:"X19feb6e28"	==102
+reader:"4f54dd88a2"	==102
+reader:"Xd0d03f199"	==102
+reader:"50b9d48784"	==102
+reader:"X931c4adf8"	==102
+reader:"Xa63e1acb7"	==101
+reader:"X2a629ced1"	==101
+reader:"5111cc43a6"	==101
+reader:"Xe1e1855d4"	==101
+reader:"50fc613463"	==100
+reader:"Xe55730033"	==101
+reader:"Xd3f831481"	==101
+reader:"4fdf13ebb2"	==100
+reader:"X9eaf595ef"	==101
+reader:"X50f39cdde"	==101
+reader:"469eeba729"	==100
+reader:"519f010baa"	==101
+reader:"Xc68b5a173"	==102
+reader:"4f2a8ba8d7"	==100
+reader:"X41c1fd300"	==101
+reader:"4a738d9714"	==101
+reader:"X7dfbaa967"	==102
+reader:"5117bebb4c"	==101
+reader:"Xc562914ef"	==102
+reader:"X6b057fe43"	==101
+reader:"Xa52c2d685"	==101
+reader:"X032c1e40c"	==102
+reader:"X5f7c6157d"	==102
+reader:"X470253ab4"	==102
+reader:"X582c0ee57"	==102
+reader:"X8a9cdfb15"	==102
+reader:"Xbd5d72bef"	==102
+issue:"6494"	==1
+issue:"579"	==1
+issue:"f4"	==1
+issue:"d13"	==1
+issue:"663"	==1
+issue:"5293"	==1
+issue:"d24"	==1
+issue:"61"	==1
+issue:"6127"	==1
+issue:"89"	==1
+issue:"67"	==1
+issue:"1159"	==1
+issue:"139"	==1
+issue:"6128"	==1
+issue:"d1"	==1
+issue:"d14"	==1
+issue:"d15"	==1
+issue:"d12"	==1
+issue:"6076"	==1
+issue:"6107"	==1
+issue:"47"	==1
+issue:"5540"	==1
+issue:"d18"	==1
+issue:"6075"	==1
+issue:"5237"	==1
+issue:"7436"	==1
+issue:"7424"	==1
+issue:"7417"	==1
+issue:"7415"	==1
+issue:"5685"	==1
+issue:"c11"	==1
+issue:"422"	==1
+issue:"5848"	==1
+issue:"6243"	==1
+issue:"142"	==1
+issue:"7390"	==1
+issue:"7392"	==1
+issue:"612"	==1
+issue:"7443"	==1
+issue:"6099"	==1
+issue:"6098"	==1
+issue:"5325"	==1
+issue:"5205"	==1
+issue:"c6"	==1
+issue:"6176"	==1
+issue:"107"	==1
+issue:"g2"	==1
+issue:"5229"	==1
+issue:"38"	==1
+issue:"5367"	==1
+issue:"5578"	==1
+issue:"6131"	==1
+issue:"36"	==1
+issue:"1455"	==1
+issue:"416"	==1
+issue:"2001"	==1
+issue:"6071"	==1
+issue:"73"	==1
+issue:"c8"	==1
+email:"a.w.wolfendale@durham.ac.uk"	==1
+email:"a.masters@stp.isas.jaxa.jp"	==1
+email:"abe@stelab.nagoya"	==1
+email:"2chlaidze@gmail.com"	==1
+email:"a.breeveld@ucl.ac.uk"	==1
+email:"[bianco@icra.it"	==1
+email:"aarnio@umich.edu"	==1
+email:"a.abdelsalam@gmail.com"	==1
+email:"aalvarez@eso.org"	==1
+email:"aas@cfa.harvard.edu"	==1
+email:"abayo@eso.org"	==1
+email:"a.hagermann@open.ac.uk"	==1
+email:"a.biggin@liverpool.ac.uk"	==1
+email:"a.j.breivik@geo.uio.no"	==1
+email:"a.wolf@mpi"	==1
+email:"a9806222@unet.univie.ac.at"	==1
+email:"a.doyle@keele.ac.uk"	==1
+email:"a.m.s.smith@keele.ac.uk"	==1
+email:"abatta@astro.unam.mx"	==1
+email:"aabdolmaleki@uok.ac.ir"	==1
+email:"a.balogh@imperial.ac.uk"	==1
+email:"aaronb@cora.nwra.com"	==1
+email:"a.m.gurnell@qmul.ac.uk"	==1
+email:"a2hu@uwaterloo.ca"	==1
+email:"aagnello@ast.cam.ac.uk"	==1
+email:"a.brennan@pgrad.unimelb.edu.au"	==1
+email:"a.j.vanderhorst@uva.nl"	==1
+email:"a.obermeier@astro.ru.nl"	==1
+email:"a.j.long@durham.ac.uk"	==1
+email:"aav21@st"	==1
+email:"a.behboodi@stu.umz.ac.ir"	==1
+email:"79892345@qq.com"	==1
+email:"aabedin@uwo.ca"	==1
+email:"12792322@puk.ac.za"	==1
+email:"abauer@aa0.gov.au"	==1
+email:"a.usero@oan.es"	==1
+email:"a.miglio@bham.ac.uk"	==1
+email:"a.j.norton@open.ac.uk"	==1
+email:"a.morlok@open.ac.uk"	==1
+email:"abenson@obs.carnegiescience.edu"	==1
+email:"a.cherman@damtp.cam.ac.uk"	==1
+email:"a.j.finlay@durham.ac.uk"	==1
+email:"a.murtazov@rsu.edu.ru"	==1
+email:"a.bahari@umz.ac.ir"	==1
+email:"a.pastorello@qub.ac.uk"	==1
+email:"aakylas@noa.gr"	==1
+email:"a.chamballu@imperial.ac.uk"	==1
+email:"a.rajantie@imperial.ac.uk"	==1
+email:"aalonso@ifca.unican.es"	==1
+email:"ab271@leicester.ac.uk"	==1
+email:"a.l.melchior@obspm.fr"	==1
+email:"a.m.swinbank@dur.ac.uk"	==1
+email:"abbassi@ipm.ir"	==1
+email:"abbot@uchicago.edu"	==1
+email:"a.radioti@ulg.ac.be"	==1
+email:"aberkner@hs.uni"	==1
+email:"abbas@oato.inaf.it"	==1
+email:"a.sanna@astro.rug.nl"	==1
+email:"abeck@usm.uni"	==1
+email:"abe@gfz"	==1
+email:"aam@astro.caltech.edu"	==1
+email:"aal@iki.rssi.ru"	==1
+email:"a.eggemeier@stud.uni"	==1
+email:"aam@roe.ac.uk"	==1
+email:"a.efstathiou@euc.ac.cy"	==1
+email:"2gvv@mail.ru"	==1
+email:"abalde@univap.br"	==1
+email:"abdik@tapir.caltech.edu"	==1
+email:"a.grushinsky@mail.ru"	==1
+email:"aas@crao.crimea.ua"	==1
+email:"a.d.challinor@ast.cam.ac.uk"	==1
+email:"a.frey@uwinnipeg.ca"	==1
+email:"a.arcones@unibas.ch"	==1
+email:"a.heavens@imperial.ac.uk"	==1
+email:"abdo_shaltout@yahoo.com"	==1
+email:"aake@astro.ku.dk"	==1
+email:"a.g.polnarev@qmul.ac.uk"	==1
+email:"a.zijltra@manchester.ac.uk"	==1
+email:"a.mayer@univie.ac.at"	==1
+email:"aaszynkiewicz@utep.edu"	==1
+email:"a.deprez@unistra.fr"	==1
+email:"a.hosford@herts.ac.uk"	==1
+email:"aac@mathstat.dal.ca"	==1
+email:"a.yamauchi@nao.ac.jp"	==1
+email:"a.banijamali@nit.ac.ir"	==1
+email:"abacmann@ujf"	==1
+email:"a.j.j.raassen@sron.nl"	==1
+email:"ab_rwill9955b@yahoo.com"	==1
+email:"aaz@camk.edu.pl"	==1
+email:"aallam@usc.edu"	==1
+email:"aakyuz@cu.edu.tr"	==1
+email:"a.nogga@fz"	==1
+email:"a.ruffell@qub.ac.uk"	==1
+email:"a.d.morse@open.ac.uk"	==1
+email:"a.gazol@crya.unam.mx"	==1
+email:"a.merle@soton.ac.uk"	==1
+email:"abdelhak.djouadi@th.u"	==1
+email:"aamottaghi@ut.ac.ir"	==1
+email:"a.gallagher@herts.ac.uk"	==1
+email:"abalant@astro.uni"	==1
+full:"signatures"	==8426
+full:"move"	==8462
+full:"discovered"	==8451
+full:"013"	==8291
+full:"adding"	==8471
+full:"photons"	==8304
+full:"signals"	==8523
+full:"explicitly"	==8317
+full:"excluded"	==8334
+full:"clusters"	==8516
+full:"cm2"	==8537
+full:"2013"	==8446
+full:"bin"	==8229
+full:"tests"	==8445
+full:"di"	==8399
+full:"fluid"	==8360
+full:"beam"	==8484
+full:"122"	==8496
+full:"immediately"	==8381
+full:"regarding"	==8320
+full:"remove"	==8587
+full:"2b"	==8427
+full:"essential"	==8266
+full:"weighted"	==8587
+full:"correlations"	==8254
+full:"phenomena"	==8457
+full:"ex"	==8388
+full:"ways"	==8535
+full:"affects"	==8379
+full:"contained"	==8561
+full:"net"	==8338
+full:"dominate"	==8597
+full:"reaching"	==8259
+full:"residual"	==8599
+full:"spectroscopic"	==8570
+full:"observable"	==8230
+full:"cos"	==8278
+full:"cambridge"	==8489
+full:"additionally"	==8331
+full:"redshift"	==8400
+full:"illustrate"	==8445
+full:"molecular"	==8439
+full:"shifted"	==8566
+full:"hubble"	==8231
+full:"heat"	==8524
+full:"aligned"	==8289
+full:"representing"	==8525
+full:"pi"	==8278
+full:"empirical"	==8567
+full:"aim"	==8401
+full:"ir"	==8335
+full:"tions"	==8408
+full:"manner"	==8331
+full:"concentration"	==8482
+full:"develop"	==8366
+full:"goal"	==8304
+full:"studying"	==8340
+full:"channel"	==8439
+full:"170"	==8377
+full:"simplicity"	==8443
+full:"exp"	==8300
+full:"flows"	==8437
+full:"reflect"	==8438
+full:"moment"	==8311
+full:"connected"	==8594
+full:"mag"	==8312
+full:"009"	==8318
+full:"equatorial"	==8370
+full:"independently"	==8373
+full:"attempt"	==8347
+full:"1976"	==8432
+full:"cosmology"	==8501
+full:"restricted"	==8257
+grant:"0508996"	==1
+grant:"0647604"	==1
+grant:"0506469"	==1
+grant:"0507219"	==1
+grant:"0507519"	==1
+grant:"0606960"	==1
+grant:"0098249"	==1
+grant:"0307642"	==1
+grant:"0074728"	==1
+grant:"0307562"	==1
+grant:"0607601"	==1
+grant:"0507813"	==1
+grant:"0607682"	==1
+grant:"0506577"	==1
+grant:"0506573"	==1
+grant:"0506749"	==1
+grant:"0702933"	==1
+grant:"0200876"	==1
+grant:"0206115"	==1
+grant:"0079541"	==1
+grant:"0705085"	==1
+grant:"0630532"	==1
+grant:"0307417"	==1
+grant:"0507117"	==1
+grant:"0307413"	==1
+grant:"0070702"	==1
+grant:"0507581"	==1
+grant:"0704954"	==1
+grant:"0607733"	==1
+grant:"0206262"	==1
+grant:"0307842"	==1
+grant:"0703902"	==1
+grant:"0503871"	==1
+grant:"0506669"	==1
+grant:"0506845"	==1
+grant:"0507456"	==1
+grant:"0507455"	==1
+grant:"0507589"	==1
+grant:"0503946"	==1
+grant:"0406650"	==1
+grant:"0094335"	==1
+grant:"0606703"	==1
+grant:"0607416"	==1
+grant:"0407063"	==1
+grant:"0507529"	==1
+grant:"0407297"	==1
+grant:"0407295"	==1
+grant:"0507323"	==1
+grant:"0507325"	==1
+grant:"0607482"	==1
+grant:"0507833"	==1
+grant:"0602221"	==1
+grant:"0607712"	==1
+grant:"0440936"	==1
+grant:"0407356"	==1
+grant:"0401460"	==1
+grant:"0407352"	==1
+grant:"0507729"	==1
+grant:"0206084"	==1
+grant:"0506541"	==1
+grant:"0540599"	==1
+grant:"0098728"	==1
+grant:"0098683"	==1
+grant:"0406906"	==1
+grant:"0307912"	==1
+grant:"0506628"	==1
+grant:"0649261"	==1
+grant:"0305431"	==1
+grant:"0507713"	==1
+grant:"0449678"	==1
+grant:"0621481"	==1
+grant:"0406883"	==1
+grant:"0406884"	==1
+grant:"0443999"	==1
+grant:"0602288"	==1
+grant:"0098435"	==1
+grant:"0607505"	==1
+grant:"0453611"	==1
+grant:"0451408"	==1
+grant:"0071099"	==1
+grant:"0451407"	==1
+grant:"0507463"	==1
+grant:"0612724"	==1
+grant:"0606868"	==1
+grant:"0440784"	==1
+grant:"0406891"	==1
+grant:"0206146"	==1
+grant:"0607028"	==1
+grant:"0552798"	==1
+grant:"0607667"	==1
+grant:"0507367"	==1
+grant:"0444017"	==1
+grant:"0428325"	==1
+grant:"0606975"	==1
+grant:"0519398"	==1
+grant:"0079482"	==1
+grant:"0406816"	==1
+grant:"0205500"	==1
+grant:"0607567"	==1
+grant:"0449001"	==1
+pubdate_sort:"19350300"	==4
+pubdate_sort:"19361100"	==4
+pubdate_sort:"19280100"	==4
+pubdate_sort:"19130900"	==4
+pubdate_sort:"19150300"	==4
+pubdate_sort:"19210900"	==4
+pubdate_sort:"19160600"	==4
+pubdate_sort:"19260700"	==4
+pubdate_sort:"19370200"	==4
+pubdate_sort:"19360100"	==4
+pubdate_sort:"19150900"	==4
+pubdate_sort:"19240500"	==4
+pubdate_sort:"19320400"	==4
+pubdate_sort:"19230900"	==4
+pubdate_sort:"19110300"	==4
+pubdate_sort:"19321000"	==4
+pubdate_sort:"19200500"	==4
+pubdate_sort:"19110200"	==4
+pubdate_sort:"19260200"	==4
+pubdate_sort:"19480000"	==4
+pubdate_sort:"19120600"	==4
+pubdate_sort:"19300500"	==4
+pubdate_sort:"19190800"	==4
+pubdate_sort:"19180800"	==4
+pubdate_sort:"19160800"	==4
+pubdate_sort:"19110800"	==4
+pubdate_sort:"19290300"	==4
+pubdate_sort:"19261000"	==4
+pubdate_sort:"19200300"	==4
+pubdate_sort:"18550000"	==4
+pubdate_sort:"19220500"	==4
+pubdate_sort:"19370500"	==4
+pubdate_sort:"19150700"	==4
+pubdate_sort:"19110600"	==4
+pubdate_sort:"19111100"	==4
+pubdate_sort:"19140500"	==4
+pubdate_sort:"19460200"	==4
+pubdate_sort:"19650000"	==4
+pubdate_sort:"19200000"	==4
+pubdate_sort:"19270800"	==4
+pubdate_sort:"19120200"	==4
+pubdate_sort:"19180200"	==4
+pubdate_sort:"19240300"	==4
+pubdate_sort:"19320700"	==4
+pubdate_sort:"19120700"	==4
+pubdate_sort:"18430000"	==4
+pubdate_sort:"19230400"	==4
+pubdate_sort:"19130400"	==4
+pubdate_sort:"19220400"	==4
+pubdate_sort:"19111000"	==4
+pubdate_sort:"19121000"	==4
+pubdate_sort:"19290800"	==4
+pubdate_sort:"19660000"	==4
+pubdate_sort:"19151100"	==4
+pubdate_sort:"19241000"	==4
+pubdate_sort:"19110500"	==4
+pubdate_sort:"19150500"	==4
+pubdate_sort:"19131000"	==4
+pubdate_sort:"19060000"	==4
+pubdate_sort:"19170800"	==4
+pubdate_sort:"19120800"	==4
+pubdate_sort:"19360300"	==4
+pubdate_sort:"19010000"	==4
+pubdate_sort:"19150600"	==4
+pubdate_sort:"19190300"	==4
+pubdate_sort:"19300400"	==4
+pubdate_sort:"19330200"	==4
+pubdate_sort:"19260100"	==4
+pubdate_sort:"19120300"	==4
+pubdate_sort:"19130300"	==4
+pubdate_sort:"18740000"	==4
+pubdate_sort:"19310700"	==4
+pubdate_sort:"19330900"	==4
+pubdate_sort:"19140700"	==4
+pubdate_sort:"19490000"	==4
+pubdate_sort:"19130600"	==4
+pubdate_sort:"19280200"	==4
+pubdate_sort:"19220600"	==4
+pubdate_sort:"19241100"	==4
+pubdate_sort:"19110400"	==4
+pubdate_sort:"19311000"	==4
+pubdate_sort:"19140300"	==4
+pubdate_sort:"19210600"	==4
+pubdate_sort:"19280800"	==4
+pubdate_sort:"19320300"	==4
+pubdate_sort:"19120900"	==4
+pubdate_sort:"19170300"	==4
+pubdate_sort:"19141100"	==4
+pubdate_sort:"19130500"	==4
+pubdate_sort:"19240100"	==4
+pubdate_sort:"19110900"	==4
+pubdate_sort:"19220800"	==4
+pubdate_sort:"19110700"	==4
+pubdate_sort:"19330600"	==4
+pubdate_sort:"19220200"	==4
+pubdate_sort:"19470000"	==4
+pubdate_sort:"19360500"	==4
+pubdate_sort:"19300800"	==4
+pubdate_sort:"19210200"	==4
+pubdate_sort:"19330100"	==4
+bibstem_facet:"JFM"	==9
+bibstem_facet:"POPot"	==10
+bibstem_facet:"OAJ"	==7
+bibstem_facet:"CeMDA.tmp"	==8
+bibstem_facet:"PAN"	==8
+bibstem_facet:"PlST"	==5
+bibstem_facet:"BKDor"	==5
+bibstem_facet:"OLEB..tmp"	==5
+bibstem_facet:"CoPhC"	==10
+bibstem_facet:"JApA..tmp"	==5
+bibstem_facet:"NIMPB"	==7
+bibstem_facet:"EPJA"	==6
+bibstem_facet:"grav.book"	==8
+bibstem_facet:"JSWSC"	==6
+bibstem_facet:"EPJP"	==8
+bibstem_facet:"NatSR"	==11
+bibstem_facet:"WRR"	==7
+bibstem_facet:"JAI"	==7
+bibstem_facet:"JAD"	==7
+bibstem_facet:"AstPo"	==4
+bibstem_facet:"IzKry"	==8
+bibstem_facet:"PUSNO"	==11
+bibstem_facet:"OExpr"	==9
+bibstem_facet:"thmc.book"	==10
+bibstem_facet:"IzFZ"	==11
+bibstem_facet:"RvMP"	==7
+bibstem_facet:"USNOO"	==5
+bibstem_facet:"LOCir"	==7
+bibstem_facet:"ASTRA"	==7
+bibstem_facet:"CaJPh"	==8
+bibstem_facet:"CNSNS"	==5
+bibstem_facet:"TOYal"	==8
+bibstem_facet:"RoAJ"	==6
+bibstem_facet:"pss3.book"	==11
+bibstem_facet:"SIGMA"	==7
+bibstem_facet:"AuJES"	==7
+bibstem_facet:"PhyEd"	==6
+bibstem_facet:"AMM"	==10
+bibstem_facet:"SpWea"	==9
+bibstem_facet:"PZ"	==8
+bibstem_facet:"JMP"	==9
+bibstem_facet:"sia..conf"	==6
+bibstem_facet:"CoTPh"	==7
+bibstem_facet:"GReGr.tmp"	==11
+bibstem_facet:"ZhETF"	==6
+bibstem_facet:"acs..rept"	==5
+bibstem_facet:"RaSc"	==7
+bibstem_facet:"JOSAA"	==7
+bibstem_facet:"HEDP"	==6
+bibstem_facet:"AbbOO"	==6
+bibstem_facet:"POCN"	==5
+bibstem_facet:"SGeo"	==6
+bibstem_facet:"ivsg.conf"	==6
+bibstem_facet:"TMP"	==7
+bibstem_facet:"JPhB"	==6
+bibstem_facet:"PhyU"	==6
+bibstem_facet:"ABKoe"	==7
+bibstem_facet:"JMoSp"	==5
+bibstem_facet:"APS..MARY"	==4
+bibstem_facet:"APS..MARB"	==4
+bibstem_facet:"EGUGA"	==9
+bibstem_facet:"JOptT"	==8
+bibstem_facet:"ALMAN"	==9
+bibstem_facet:"MsT"	==7
+bibstem_facet:"RECMa"	==5
+bibstem_facet:"PhTea"	==8
+bibstem_facet:"HisSc"	==5
+bibstem_facet:"JCoPh"	==7
+bibstem_facet:"LRSP"	==7
+bibstem_facet:"S&W"	==10
+bibstem_facet:"JAVSO.tmp"	==6
+bibstem_facet:"AnP"	==4
+bibstem_facet:"TATJ"	==11
+bibstem_facet:"CEAB"	==11
+bibstem_facet:"JChPh"	==5
+bibstem_facet:"atnf.prop"	==5
+bibstem_facet:"ACPD"	==4
+bibstem_facet:"tucv.book"	==10
+bibstem_facet:"ChPhB"	==5
+bibstem_facet:"APS..MAR."	==8
+bibstem_facet:"Gerb"	==9
+bibstem_facet:"JPhA"	==6
+bibstem_facet:"BAVSM"	==4
+bibstem_facet:"JETPL"	==9
+bibstem_facet:"PhT"	==10
+bibstem_facet:"fura.book"	==11
+bibstem_facet:"RuPhJ"	==5
+bibstem_facet:"PWasO"	==7
+bibstem_facet:"GAR"	==5
+bibstem_facet:"PABei"	==6
+bibstem_facet:"AR&T"	==6
+bibstem_facet:"A&ARv"	==10
+bibstem_facet:"CRPhy"	==7
+bibstem_facet:"DoSSR"	==5
+bibstem_facet:"NCimB"	==10
+bibstem_facet:"FoPh"	==5
+bibstem_facet:"psrd.rept"	==10
+bibstem_facet:"efgt.book"	==9
+bibstem_facet:"NuPhS"	==5
+bibstem_facet:"jebh.book"	==8
+	pub:"37
+publow"		==unsolved
+pub:"meetings"	==49
+pub:"fifty"	==44
+pub:"session"	==47
+pub:"radio"	==51
+pub:"solutions"	==31
+pub:"giant"	==39
+pub:"astronautica"	==34
+pub:"fuer"	==35
+pub:"xxviii"	==49
+pub:"young"	==44
+pub:"nacional"	==34
+pub:"argentino"	==34
+pub:"skies"	==42
+pub:"real"	==44
+pub:"meeting:"	==38
+pub:"tracers"	==40
+pub:"di"	==43
+pub:"astronomico"	==40
+pub:"dell'osservatorio"	==39
+pub:"processes"	==31
+pub:"countries"	==44
+pub:"sky."	==44
+pub:"seriia"	==51
+pub:"berliner"	==32
+pub:"lisa"	==39
+pub:"measuring"	==31
+pub:"veraenderliche"	==32
+pub:"second"	==35
+pub:"physics,"	==49
+pub:"uspekhi"	==48
+pub:"revista"	==44
+	pub:"boskovic\""		==40
+pub:"mexicana"	==44
+pub:"cis"	==44
+pub:"hydraulic"	==31
+pub:"moon"	==34
+pub:"scientists"	==44
+pub:"lecture"	==49
+pub:"electronics"	==47
+pub:"canarias"	==36
+pub:"dwarf"	==40
+pub:"milanomerate"	==39
+pub:"observing"	==31
+pub:"instituto"	==36
+pub:"g"	==35
+pub:"british"	==51
+pub:"fizicheskaia"	==51
+pub:"resultados"	==34
+pub:"studies"	==46
+pub:"southeastern"	==32
+pub:"zvezdy"	==40
+	pub:"\"rudjer"		==40
+pub:"kinematic"	==40
+pub:"iac"	==36
+pub:"kinematics"	==40
+pub:"observations"	==50
+pub:"heritage"	==41
+pub:"bulgarian"	==33
+pub:"berlin"	==51
+pub:"izvestiia"	==51
+pub:"astrof&iacute;sica"	==36
+pub:"plasmas"	==50
+pub:"insights"	==36
+pub:"applied"	==34
+pub:"springer"	==49
+pub:"prilozhenie"	==32
+pub:"seminars"	==36
+pub:"era"	==51
+pub:"9th"	==39
+pub:"galaxies:"	==49
+pub:"icha"	==49
+pub:"planets"	==37
+pub:"pubblicazioni"	==39
+pub:"verlag"	==49
+pub:"technology"	==35
+pub:"astronomia"	==46
+pub:"virtual"	==44
+pub:"chemical"	==41
+pub:"meteor"	==37
+pub:"talks,"	==36
+pub:"arbeitsgemeinschaft"	==32
+pub:"meets"	==40
+pub:"keys"	==40
+pub:"astrofisica"	==44
+pub:"peremennye"	==40
+pub:"wgn,"	==37
+pub:"4th"	==36
+pub:"sterne"	==46
+pub:"era:"	==44
+pub:"recent"	==36
+pub:"visual"	==31
+pub:"optical"	==33
+pub:"2007"	==35
+pub:"african"	==42
+pub:"y"	==44
+pub:"organization"	==37
+pub:"laboratories"	==39
+pub:"bodies"	==40
+pub_raw:"49,"	==239
+pub_raw:"code"	==237
+pub_raw:"egret,"	==199
+pub_raw:"ballester,"	==199
+pub_raw:"infrared"	==213
+pub_raw:"germany."	==230
+pub_raw:"web"	==206
+pub_raw:"le"	==220
+pub_raw:"28,"	==235
+pub_raw:"751,"	==210
+pub_raw:","	==234
+pub_raw:"761,"	==227
+pub_raw:"source"	==239
+pub_raw:"745,"	==234
+pub_raw:"greenbelt,"	==213
+pub_raw:"2010"	==241
+pub_raw:"early"	==212
+pub_raw:"291,"	==195
+pub_raw:"xxi."	==200
+pub_raw:"41,"	==200
+pub_raw:"university"	==235
+pub_raw:"768,"	==235
+pub_raw:"ouwehand,"	==218
+pub_raw:"752,"	==198
+pub_raw:"757,"	==225
+pub_raw:"<numpages>19</numpages>"	==219
+pub_raw:"stars,"	==201
+pub_raw:"744,"	==223
+pub_raw:"282,"	==202
+pub_raw:"1012,"	==197
+	pub_raw:"href=\"http://pos.sissa.it/cgibin/reader/conf.cgi?confid=146\">http://pos.sissa.it/cgibin/reader/conf.cgi?confid=146</a>,"		==228
+pub_raw:"8444,"	==199
+pub_raw:"108,"	==199
+pub_raw:"753,"	==218
+pub_raw:"nature,"	==216
+pub_raw:"section"	==220
+pub_raw:"xray"	==224
+pub_raw:"report,"	==223
+pub_raw:"541,"	==196
+pub_raw:"512,"	==229
+pub_raw:"283,"	==210
+pub_raw:"stellar"	==227
+pub_raw:"november,"	==200
+pub_raw:"modeling"	==224
+pub_raw:"annales"	==206
+pub_raw:"754,"	==197
+pub_raw:"sinica"	==215
+pub_raw:"marriott"	==199
+pub_raw:"rive"	==199
+pub_raw:"25,"	==201
+pub_raw:"765,"	==209
+pub_raw:"<numpages>18</numpages>"	==226
+pub_raw:"45,"	==209
+pub_raw:"telecommunications"	==203
+pub_raw:"pr"	==199
+pub_raw:"755,"	==218
+pub_raw:"xii"	==242
+pub_raw:"maryland."	==213
+pub_raw:"749,"	==234
+pub_raw:"a11,"	==201
+pub_raw:"c."	==225
+pub_raw:"lorente."	==199
+pub_raw:"sciences,"	==214
+pub_raw:"764,"	==227
+pub_raw:"canada,"	==207
+pub_raw:"technologies"	==234
+pub_raw:"10"	==241
+pub_raw:"gauche"	==199
+pub_raw:"14"	==205
+pub_raw:"(geomagnetizm"	==213
+pub_raw:"der"	==214
+pub_raw:"xii)."	==229
+pub_raw:"n.p.f."	==199
+pub_raw:"record"	==237
+pub_raw:"cosmos"	==230
+pub_raw:"767,"	==213
+pub_raw:"461."	==199
+pub_raw:"mechanica"	==216
+pub_raw:"1974,"	==226
+pub_raw:"(nic"	==229
+pub_raw:"144,"	==221
+pub_raw:"8447,"	==218
+pub_raw:"756,"	==238
+pub_raw:"future,"	==227
+pub_raw:"s."	==237
+pub_raw:"geophysics,"	==200
+pub_raw:"conferences,"	==206
+pub_raw:"610"	==204
+pub_raw:"stars"	==226
+pub_raw:"greece."	==202
+pub_raw:"aeronomiia,"	==215
+pub_raw:"physica,"	==215
+pub_raw:"scientia"	==215
+pub_raw:"astrobiology,"	==201
+pub_raw:"746,"	==218
+pub_raw:"750,"	==218
+pub_raw:"47,"	==223
+pub_raw:"52,"	==195
+pub_raw:"epj"	==206
+pub_raw:"nuclei"	==239
+volume:"2967"	==23
+volume:"79531"	==14
+volume:"78725"	==19
+volume:"82294"	==14
+volume:"495"	==14
+volume:"139"	==16
+volume:"138"	==13
+volume:"490"	==17
+volume:"491"	==15
+volume:"493"	==14
+volume:"79337"	==15
+volume:"79860"	==15
+volume:"79338"	==14
+volume:"713"	==21
+volume:"711"	==16
+volume:"710"	==17
+volume:"024"	==15
+volume:"128"	==23
+volume:"81733"	==15
+volume:"81734"	==13
+volume:"135"	==13
+volume:"198"	==20
+volume:"195"	==14
+volume:"707"	==17
+volume:"88"	==21
+volume:"275"	==18
+volume:"395"	==15
+volume:"82"	==13
+volume:"205"	==22
+volume:"8521"	==22
+volume:"82134"	==15
+volume:"80040"	==14
+volume:"80043"	==13
+volume:"79999"	==13
+volume:"206"	==21
+volume:"366"	==17
+volume:"367"	==17
+volume:"364"	==18
+volume:"81292"	==13
+volume:"80660"	==13
+volume:"382"	==15
+volume:"384"	==15
+volume:"102"	==22
+volume:"100"	==19
+volume:"101"	==19
+volume:"79114"	==18
+volume:"79112"	==21
+volume:"1439"	==20
+volume:"78050"	==14
+volume:"69"	==17
+volume:"174"	==13
+volume:"173"	==20
+volume:"857"	==14
+volume:"82409"	==21
+volume:"80064"	==13
+volume:"80062"	==23
+volume:"186"	==21
+volume:"82555"	==13
+volume:"79647"	==14
+volume:"79648"	==14
+volume:"168"	==21
+volume:"166"	==14
+volume:"96"	==22
+volume:"78443"	==13
+volume:"80253"	==13
+volume:"865"	==13
+volume:"78176"	==13
+volume:"82716"	==13
+volume:"77551"	==17
+volume:"80884"	==14
+volume:"81467"	==14
+volume:"81461"	==13
+volume:"80160"	==15
+volume:"81840"	==14
+volume:"329"	==15
+volume:"80000"	==13
+volume:"79787"	==13
+volume:"mar"	==23
+volume:"142"	==16
+volume:"140"	==15
+volume:"79998"	==14
+volume:"612"	==13
+volume:"79788"	==14
+volume:"149"	==18
+volume:"81942"	==17
+volume:"79789"	==13
+volume:"488"	==14
+volume:"486"	==16
+volume:"485"	==20
+volume:"78900"	==13
+volume:"481"	==19
+volume:"79918"	==21
+volume:"83517"	==14
+volume:"77875"	==23
+volume:"79019"	==13
+volume:"77702"	==15
+volume:"77703"	==14
+volume:"356"	==19
+volume:"79223"	==14
+volume:"79715"	==20
+author_norm:"yoshida,n"	==42
+author_norm:"leonardi,r"	==42
+author_norm:"schlickeiser,r"	==42
+author_norm:"ganga,k"	==42
+author_norm:"margot,j"	==42
+author_norm:"camarasa,j"	==41
+author_norm:"fernandez,y"	==42
+author_norm:"portegieszwart,s"	==42
+author_norm:"mellier,y"	==42
+author_norm:"pu,z"	==42
+author_norm:"shearer,c"	==42
+author_norm:"crill,b"	==41
+author_norm:"bortnik,j"	==41
+author_norm:"dubus,g"	==41
+author_norm:"battaner,e"	==41
+author_norm:"burchell,m"	==41
+author_norm:"westphal,a"	==42
+author_norm:"ponthieu,n"	==42
+author_norm:"goodman,j"	==42
+author_norm:"travnicek,p"	==42
+author_norm:"malkan,m"	==42
+author_norm:"bode,m"	==41
+author_norm:"bendo,g"	==41
+author_norm:"franchi,i"	==42
+author_norm:"clark,d"	==42
+author_norm:"zhao,b"	==42
+author_norm:"kurkisuonio,h"	==42
+author_norm:"kataoka,j"	==42
+author_norm:"buson,s"	==42
+author_norm:"camilo,f"	==41
+author_norm:"halekas,j"	==42
+author_norm:"bottke,w"	==41
+author_norm:"croom,s"	==41
+author_norm:"bonaldi,a"	==41
+author_norm:"colombi,s"	==41
+author_norm:"gary,s"	==42
+author_norm:"stubbs,c"	==42
+author_norm:"popa,l"	==42
+author_norm:"ohtake,m"	==42
+author_norm:"dyar,m"	==41
+author_norm:"peacock,j"	==42
+author_norm:"carbognani,a"	==41
+author_norm:"esposito,p"	==41
+author_norm:"myers,a"	==42
+author_norm:"atteia,j"	==41
+author_norm:"depoy,d"	==42
+author_norm:"halpern,m"	==42
+author_norm:"forster,f"	==42
+author_norm:"sudiwala,r"	==42
+author_norm:"toth,g"	==42
+author_norm:"haeusler,b"	==42
+author_norm:"horesh,a"	==42
+author_norm:"simmons,a"	==42
+author_norm:"cimatti,a"	==42
+author_norm:"fang,x"	==41
+author_norm:"nelson,t"	==42
+author_norm:"abdu,m"	==41
+author_norm:"hivon,e"	==42
+author_norm:"tristram,m"	==42
+author_norm:"delmonte,e"	==42
+author_norm:"deangelis,a"	==42
+author_norm:"lilje,p"	==42
+author_norm:"daddi,e"	==42
+author_norm:"pecontal,e"	==42
+author_norm:"berger,t"	==42
+author_norm:"feng,x"	==42
+author_norm:"parks,g"	==42
+author_norm:"forti,g"	==42
+author_norm:"cumming,a"	==41
+author_norm:"feng,l"	==42
+author_norm:"mumma,m"	==42
+author_norm:"cappellari,m"	==42
+author_norm:"simon,j"	==42
+author_norm:"chornock,r"	==42
+author_norm:"zolensky,m"	==42
+author_norm:"bedding,t"	==42
+author_norm:"kasper,j"	==42
+author_norm:"zdziarski,a"	==42
+author_norm:"kann,d"	==42
+author_norm:"hu,l"	==42
+author_norm:"ho,l"	==42
+author_norm:"yamada,t"	==42
+author_norm:"tauber,j"	==42
+author_norm:"hinton,j"	==42
+author_norm:"knoche,j"	==42
+author_norm:"rosset,c"	==42
+author_norm:"rubinomartin,j"	==42
+author_norm:"newell,p"	==42
+author_norm:"greenhagen,b"	==42
+author_norm:"fuschino,f"	==42
+author_norm:"zonca,a"	==42
+author_norm:"saunders,c"	==42
+author_norm:"brown,j"	==41
+author_norm:"zalozhnich,i"	==42
+author_norm:"diaz,m"	==42
+author_norm:"boggs,s"	==42
+author_norm:"jordan,a"	==42
+author_norm:"savchenko,v"	==42
+author_norm:"abe,s"	==42
+author_norm:"bragaglia,a"	==41
+date:"2004-04-30T19:59:28.768Z"	==109
+date:"2003-11-21T20:34:16.704Z"	==122
+date:"2003-06-30T23:59:21.088Z"	==114
+date:"2004-04-18T23:42:38.592Z"	==109
+date:"2010-04-30T23:14:34.112Z"	==113
+date:"2003-08-01T00:00:00Z"	==103
+date:"2007-05-31T21:17:24.352Z"	==117
+date:"2010-11-30T23:57:16.16Z"	==114
+date:"2007-05-24T21:31:04.576Z"	==117
+date:"2010-04-27T16:01:01.44Z"	==113
+date:"2002-07-31T23:59:23.136Z"	==114
+date:"2002-05-31T19:28:25.088Z"	==117
+date:"1922-02-03T23:38:31.808Z"	==109
+date:"2010-05-01T00:00:00Z"	==113
+date:"2003-10-31T23:56:56.704Z"	==106
+date:"2008-08-31T23:01:36.896Z"	==104
+date:"1691-04-06T08:49:37.792Z"	==112
+date:"2002-05-31T23:59:58.976Z"	==117
+date:"2003-11-30T23:58:16.576Z"	==122
+date:"2002-05-24T01:03:36.448Z"	==117
+date:"2002-09-30T23:59:56.928Z"	==111
+date:"2003-10-31T21:15:17.376Z"	==106
+date:"1935-02-28T04:06:12.224Z"	==121
+date:"2003-03-30T17:36:02.048Z"	==112
+date:"2004-04-30T23:59:58.976Z"	==109
+date:"2002-05-31T23:59:18.016Z"	==117
+date:"2007-05-31T23:59:56.928Z"	==117
+date:"2010-12-01T00:00:00Z"	==114
+date:"2003-11-30T23:36:25.856Z"	==122
+date:"2002-09-30T22:49:33.952Z"	==111
+date:"2003-03-31T23:59:58.976Z"	==112
+date:"2002-08-01T00:00:00Z"	==114
+date:"1943-11-14T15:04:39.168Z"	==116
+date:"2003-10-31T23:59:56.928Z"	==106
+date:"2003-09-30T19:36:02.816Z"	==113
+date:"2010-09-01T00:00:00Z"	==103
+date:"2009-04-30T21:48:28.032Z"	==118
+date:"2008-09-01T00:00:00Z"	==104
+date:"2008-08-31T23:59:58.976Z"	==104
+date:"2003-06-25T17:25:54.816Z"	==114
+date:"2003-09-30T23:59:57.952Z"	==113
+date:"2010-04-30T23:58:15.552Z"	==113
+date:"2009-04-30T23:59:56.928Z"	==118
+date:"2010-11-30T22:56:06.144Z"	==114
+date:"2009-04-19T20:10:06.72Z"	==118
+date:"2003-07-01T00:00:00Z"	==114
+date:"2004-05-01T00:00:00Z"	==109
+date:"2003-06-30T23:59:57.952Z"	==114
+date:"1919-12-01T14:53:55.072Z"	==106
+date:"2003-12-01T00:00:00Z"	==122
+date:"2010-11-24T22:27:52.448Z"	==114
+date:"2002-09-30T23:59:28.256Z"	==111
+date:"2003-03-31T21:33:45.344Z"	==112
+date:"2009-05-01T00:00:00Z"	==118
+date:"2003-01-01T00:00:00Z"	==103
+date:"2003-09-20T17:15:47.584Z"	==113
+date:"2003-04-01T00:00:00Z"	==112
+date:"2008-08-31T23:58:24.768Z"	==104
+date:"1928-08-17T01:52:22.016Z"	==109
+date:"2007-05-31T23:59:03.68Z"	==117
+date:"2003-11-01T00:00:00Z"	==106
+date:"2002-07-31T23:28:48.128Z"	==114
+date:"2003-10-28T00:02:53.056Z"	==106
+date:"2003-10-01T00:00:00Z"	==113
+date:"2007-06-01T00:00:00Z"	==117
+date:"2003-06-30T23:15:39.648Z"	==114
+date:"2002-07-25T04:22:05.568Z"	==114
+date:"2009-04-30T23:59:32.352Z"	==118
+date:"2003-03-31T23:57:56.096Z"	==112
+date:"1932-12-24T19:21:35.488Z"	==116
+date:"2003-09-30T23:58:11.456Z"	==113
+date:"1996-02-18T08:55:20.832Z"	==114
+date:"2004-04-30T23:59:46.688Z"	==109
+date:"2002-10-01T00:00:00Z"	==111
+date:"2002-09-25T07:40:34.688Z"	==111
+date:"2002-06-01T00:00:00Z"	==117
+date:"2003-09-01T00:00:00Z"	==103
+date:"2008-08-26T17:11:52.064Z"	==104
+date:"2003-11-30T23:59:58.976Z"	==122
+date:"2010-04-30T23:59:57.952Z"	==113
+keyword_norm:"magnetically"	==6
+keyword_norm:"ejecta"	==15
+keyword_norm:"experiments"	==6
+keyword_norm:"pulses"	==8
+keyword_norm:"nitrogen"	==13
+keyword_norm:"magnetospheres"	==8
+keyword_norm:"tables"	==9
+keyword_norm:"imf"	==13
+keyword_norm:"absorption"	==15
+keyword_norm:"sky"	==8
+keyword_norm:"protostars"	==7
+keyword_norm:"source"	==7
+keyword_norm:"olivine"	==11
+keyword_norm:"samples"	==20
+keyword_norm:"sulfur"	==8
+keyword_norm:"plasma"	==11
+keyword_norm:"equilibrium"	==18
+keyword_norm:"saturation"	==9
+keyword_norm:"string"	==11
+keyword_norm:"frequencies"	==9
+keyword_norm:"scaling"	==8
+keyword_norm:"mixing"	==7
+keyword_norm:"brightness"	==9
+keyword_norm:"radiant"	==14
+keyword_norm:"isotropy"	==11
+keyword_norm:"instability"	==12
+keyword_norm:"intermittency"	==6
+keyword_norm:"body"	==18
+keyword_norm:"vortices"	==7
+keyword_norm:"chronology"	==7
+keyword_norm:"transport"	==19
+keyword_norm:"nonlinear"	==8
+keyword_norm:"electromagnetic"	==12
+keyword_norm:"plages"	==15
+keyword_norm:"current"	==7
+keyword_norm:"state"	==7
+keyword_norm:"critical"	==21
+keyword_norm:"parallax"	==14
+keyword_norm:"faculae"	==13
+keyword_norm:"variability"	==10
+keyword_norm:"parent"	==8
+keyword_norm:"incident"	==7
+keyword_norm:"relaxation"	==7
+keyword_norm:"temperature"	==12
+keyword_norm:"isotopes"	==6
+keyword_norm:"geometry"	==11
+keyword_norm:"tracing"	==11
+keyword_norm:"annual"	==18
+keyword_norm:"propagation"	==16
+keyword_norm:"magnetospheric"	==12
+keyword_norm:"size"	==8
+keyword_norm:"perturbation"	==17
+keyword_norm:"photometers"	==16
+keyword_norm:"nitric"	==12
+keyword_norm:"blazars"	==6
+keyword_norm:"trapped"	==10
+keyword_norm:"lightcurve"	==6
+keyword_norm:"neutral"	==9
+keyword_norm:"stochastic"	==18
+keyword_norm:"antennas"	==9
+keyword_norm:"aligned"	==17
+keyword_norm:"atmospheric"	==19
+keyword_norm:"balloons"	==9
+keyword_norm:"n"	==17
+keyword_norm:"oxide"	==12
+keyword_norm:"amplitude"	==15
+keyword_norm:"zodiac"	==16
+keyword_norm:"mirrors"	==7
+keyword_norm:"torque"	==15
+keyword_norm:"constellations"	==10
+keyword_norm:"positrons"	==9
+keyword_norm:"cluster"	==14
+keyword_norm:"crystals"	==16
+keyword_norm:"helium"	==14
+keyword_norm:"currents"	==17
+keyword_norm:"ray"	==11
+keyword_norm:"cross"	==6
+keyword_norm:"field"	==20
+keyword_norm:"potential"	==12
+keyword_norm:"electrical"	==6
+keyword_norm:"spatial"	==11
+keyword_norm:"lithium"	==9
+keyword_norm:"silicates"	==9
+keyword_norm:"polar"	==20
+keyword_norm:"elements"	==16
+keyword_norm:"trace"	==8
+keyword_norm:"tides"	==13
+keyword_norm:"nucleus"	==19
+keyword_norm:"seismology"	==16
+keyword_norm:"velocity"	==17
+keyword_norm:"luminescence"	==10
+keyword_norm:"radioactive"	==11
+keyword_norm:"coupling"	==8
+keyword_norm:"light"	==13
+keyword_norm:"depth"	==8
+keyword_norm:"inhomogeneity"	==6
+keyword_norm:"correlation"	==6
+keyword_norm:"comparisons"	==19
+keyword_norm:"bodies"	==8
+keyword_norm:"laws"	==11
+keyword:"submillimeter:"	==166
+keyword:"mesospheric"	==162
+keyword:"(1854)"	==169
+keyword:"lacertae"	==182
+keyword:"thermal"	==176
+keyword:"seismotectonics"	==152
+keyword:"motions"	==190
+keyword:"(3334)"	==182
+keyword:"ground"	==169
+keyword:"inverse"	==146
+keyword:"group"	==176
+keyword:"atmosphere:"	==195
+keyword:"masses"	==156
+keyword:"(1626"	==158
+keyword:"diffuse"	==155
+keyword:"convective"	==171
+keyword:"(2756)"	==150
+keyword:"deformation"	==161
+keyword:"plasmasphere"	==152
+keyword:"oceans"	==172
+keyword:"95.36.+x"	==172
+keyword:"ultraviolet"	==157
+keyword:"saturn"	==159
+keyword:"halo"	==176
+keyword:"volcano"	==163
+keyword:"venus"	==165
+keyword:"equation"	==172
+keyword:"1242)"	==157
+keyword:"crustal"	==186
+keyword:"approximations"	==145
+keyword:"zones"	==165
+keyword:"computer"	==181
+keyword:"laboratory"	==166
+keyword:"sinks"	==178
+keyword:"spectral"	==148
+keyword:"oceanic"	==150
+keyword:"sunspots"	==149
+keyword:"asteroids:"	==159
+keyword:"chromosphere"	==166
+keyword:"thermosphere:"	==167
+keyword:"98.80.es"	==193
+keyword:"bl"	==183
+keyword:"weak"	==161
+keyword:"free"	==153
+keyword:"pressure"	==166
+keyword:"deposition"	==197
+keyword:"imaging"	==160
+keyword:"instability"	==150
+keyword:"6033)"	==173
+keyword:"strong"	==155
+keyword:"telescopes"	==168
+keyword:"hydrology"	==196
+keyword:"(3337"	==186
+keyword:"galactic"	==184
+keyword:"98.80.jk"	==163
+keyword:"petrology:"	==188
+keyword:"haloes"	==186
+keyword:"massive"	==162
+keyword:"2487"	==152
+keyword:"probability"	==161
+keyword:"cmes"	==150
+keyword:"interstellar"	==171
+keyword:"elementary"	==186
+keyword:"massloss"	==194
+keyword:"(0412"	==173
+keyword:"(7867)"	==166
+keyword:"(2772)"	==150
+keyword:"nova"	==160
+keyword:"storm"	==153
+keyword:"(2411)"	==172
+keyword:"(0358)"	==153
+keyword:"gas"	==155
+keyword:"heat"	==183
+keyword:"peculiar"	==165
+keyword:"population"	==189
+keyword:"electromagnetics:"	==190
+keyword:"xrays"	==168
+keyword:"(4490)"	==176
+keyword:"biosphere/atmosphere"	==193
+keyword:"ions"	==147
+keyword:"vehicles"	==177
+keyword:"petrology"	==172
+keyword:"ages"	==185
+keyword:"thermospheric"	==170
+keyword:"0793"	==170
+keyword:"4912)"	==175
+keyword:"geomagnetic"	==193
+keyword:"sciences"	==149
+keyword:"nanoscale"	==168
+keyword:"interior"	==168
+keyword:"location:"	==185
+keyword:"photometry:"	==193
+keyword:"agn"	==176
+keyword:"center"	==164
+keyword:"blazar"	==170
+keyword:"spectra"	==176
+keyword:"(2463)"	==152
+keyword:"electrons"	==188
+keyword:"sn"	==159
+keyword:"charged"	==170
+ack:"produced"	==343
+ack:"edu"	==343
+ack:"4"	==367
+ack:"plasma"	==355
+ack:"geomagnetism"	==348
+ack:"texas"	==345
+ack:"aya2010"	==331
+ack:"kingdom"	==347
+ack:"di"	==370
+ack:"masaki"	==368
+ack:"supercomputer"	==337
+ack:"nos"	==367
+ack:"regarding"	==356
+ack:"thankful"	==353
+ack:"ohio"	==379
+ack:"cdaweb"	==344
+ack:"italian"	==355
+ack:"england"	==365
+ack:"computer"	==364
+ack:"lee"	==367
+ack:"index"	==334
+ack:"05"	==330
+ack:"contributed"	==360
+ack:"experiment"	==377
+ack:"7"	==346
+ack:"innovation"	==358
+ack:"jaxa"	==334
+ack:"canarias"	==342
+ack:"supporting"	==370
+ack:"korea"	==371
+ack:"respectively"	==354
+ack:"jointly"	==338
+ack:"key"	==367
+ack:"monbukagakusho"	==374
+ack:"american"	==367
+ack:"ncar"	==332
+ack:"south"	==331
+ack:"image"	==373
+ack:"nsc"	==343
+ack:"stsci"	==359
+ack:"force"	==338
+ack:"van"	==354
+ack:"initial"	==331
+ack:"draft"	==331
+ack:"mike"	==375
+ack:"optical"	==343
+ack:"russian"	==355
+ack:"fg02"	==358
+ack:"behalf"	==370
+ack:"ministerio"	==354
+ack:"norway"	==338
+ack:"preparation"	==351
+ack:"detailed"	==361
+ack:"mpia"	==361
+ack:"portsmouth"	==356
+ack:"fujimoto"	==378
+ack:"anr"	==344
+ack:"kavli"	==375
+ack:"potsdam"	==345
+ack:"several"	==347
+ack:"polar"	==379
+ack:"meteorological"	==360
+ack:"significant"	==344
+ack:"chris"	==375
+ack:"computations"	==358
+ack:"ocean"	==354
+ack:"federal"	==340
+ack:"services"	==344
+ack:"arizona"	==343
+ack:"swiss"	==350
+ack:"organization"	==374
+grant_facet_hier:"1/DOE/DESC0004036"	==1
+grant_facet_hier:"1/DOE/DESC0005324"	==1
+grant_facet_hier:"1/NASA-ARC/NNX08BA91G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX11AB70G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AN23G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AX83G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX09AG46G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AO48G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AW07G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AX95G"	==1
+grant_facet_hier:"1/DOE/FG0302ER63327"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AH85G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AF71G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AO83G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX11AB86G"	==1
+grant_facet_hier:"1/DOE/DESC0005305"	==1
+grant_facet_hier:"1/DOE/DEFE0004381"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AW30G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AI64G"	==1
+grant_facet_hier:"1/DOE/FG0207ER46372"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AZ66G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX11AN74A"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AJ41G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AT33G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AV64G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AP41G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AI02G"	==1
+grant_facet_hier:"1/DOE/DESC0006861"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AB81G"	==1
+grant_facet_hier:"1/DOE/DESC0006974"	==1
+grant_facet_hier:"1/DOE/DESC0003930"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AG53G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AB82G"	==1
+grant_facet_hier:"1/DOE/DESC0004958"	==1
+grant_facet_hier:"1/DOE/DESC0004956"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AH79G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AH37G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AE36G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AC13G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX09AC11G"	==1
+grant_facet_hier:"1/DOE/DESC0005110"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AR10G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AE23G"	==1
+grant_facet_hier:"1/DOE/FG0302ER15318"	==1
+grant_facet_hier:"1/DOE/DESC0002712"	==1
+grant_facet_hier:"1/NASA-ARC/NNX10AG02A"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AQ96G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AH67G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AX79G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AM58G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX10AC42G"	==1
+grant_facet_hier:"1/DOE/FG0796ER14714"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AT25G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AD11G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX09AG54G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX10AC39G"	==1
+grant_facet_hier:"1/DOE/DESC0002140"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AH52G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AV72G"	==1
+grant_facet_hier:"1/DOE/FG0291ER40690"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AY27G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AK44G"	==1
+grant_facet_hier:"1/DOE/FG0295ER40893"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AD12G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AV88G"	==1
+grant_facet_hier:"1/DOE/DESC0007859"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AL60G"	==1
+grant_facet_hier:"1/DOE/DESC0004087"	==1
+grant_facet_hier:"1/DOE/DESC0001784"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AV35G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX09AM18H"	==1
+grant_facet_hier:"1/NASA-ARC/NNX10AC40G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AM64G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AD68G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX09AF89G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX06AE70G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AJ36G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX09AF09G"	==1
+grant_facet_hier:"1/DOE/DESC0002607"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AN84G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX09AR96A"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AB68G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX12AC81G"	==1
+grant_facet_hier:"1/DOE/DESC0003960"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08BA62G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX09AG69A"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AP96G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX09AW16A"	==1
+grant_facet_hier:"1/NASA-ARC/NNX09AP11G"	==1
+grant_facet_hier:"1/DOE/DESC0005596"	==1
+grant_facet_hier:"1/DOE/DESC0004661"	==1
+grant_facet_hier:"1/DOE/DESC0006772"	==1
+grant_facet_hier:"1/NASA-ARC/NNX11AN75A"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AH75G"	==1
+grant_facet_hier:"1/DOE/DESC0001088"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX07AJ76G"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AI35G"	==1
+grant_facet_hier:"1/DOE/DESC0005313"	==1
+grant_facet_hier:"1/NASA-GSFC/NNX08AX74G"	==1
+grant_facet_hier:"1/NASA-ARC/NNX11AK04A"	==1
+bibstem:"jbis...65"	==43
+bibstem:"usfin"	==45
+bibstem:"mpc..7779"	==40
+bibstem:"afrsk..16"	==42
+bibstem:"bmoe...13"	==47
+bibstem:"mpla...16"	==45
+bibstem:"yscc.conf"	==44
+bibstem:"bmoe....7"	==42
+bibstem:"sssf"	==43
+bibstem:"dmkt"	==40
+bibstem:"bmoe....8"	==40
+bibstem:"bmoe....9"	==42
+bibstem:"bmoe...19"	==42
+bibstem:"bmoe...18"	==44
+bibstem:"ijaa"	==42
+bibstem:"mpc..7986"	==46
+bibstem:"bmoe...11"	==41
+bibstem:"bmoe...10"	==41
+bibstem:"sssf.conf"	==43
+bibstem:"bmoe...12"	==42
+bibstem:"bmoe...15"	==45
+bibstem:"bmoe...14"	==45
+bibstem:"bmoe...17"	==44
+bibstem:"bmoe...16"	==43
+bibstem:"gapfd"	==47
+bibstem:"e&psl.357"	==43
+bibstem:"rsri.conf"	==45
+bibstem:"acasn..53"	==42
+bibstem:"mpc..7858"	==44
+bibstem:"mpc..7992"	==47
+bibstem:"jphcs.355"	==39
+bibstem:"iauss...6"	==47
+bibstem:"apjs..201"	==39
+bibstem:"cha&a..36"	==41
+bibstem:"soph..tmp"	==47
+bibstem:"bmoe...35"	==41
+bibstem:"bmoe...34"	==41
+bibstem:"bmoe...33"	==41
+bibstem:"bmoe...32"	==41
+bibstem:"bmoe...31"	==41
+bibstem:"p&ss...60"	==44
+bibstem:"iauss"	==47
+bibstem:"ijmpd..22"	==46
+bibstem:"ap&ss.340"	==41
+bibstem:"msais..21"	==47
+bibstem:"epjc...72"	==43
+bibstem:"mmras..41"	==42
+bibstem:"e&psl.317"	==42
+bibstem:"bmoe...20"	==44
+bibstem:"bmoe...21"	==44
+bibstem:"bmoe...22"	==42
+bibstem:"bmoe...23"	==42
+bibstem:"bmoe...24"	==41
+bibstem:"bmoe...25"	==45
+bibstem:"bmoe...26"	==42
+bibstem:"bmoe...27"	==40
+bibstem:"bmoe...28"	==41
+bibstem:"mpc..7879"	==45
+bibstem:"pasj...65"	==43
+bibstem:"dgkg.book"	==40
+bibstem:"kodob...3"	==39
+bibstem:"kodob...4"	==47
+bibstem:"kpcb"	==40
+bibstem:"rsri"	==45
+bibstem:"bueop"	==42
+bibstem:"soph..280"	==47
+bibstem:"soph..283"	==42
+bibstem:"mpbu...28"	==46
+bibstem:"ijasb..11"	==39
+bibstem:"pasrb..11"	==40
+bibstem:"sci...338"	==45
+bibstem:"sci...337"	==46
+bibstem:"epjwc..39"	==40
+bibstem:"afrsk"	==42
+bibstem:"pasp..125"	==41
+bibstem:"yscc"	==44
+bibstem:"gecoa..77"	==42
+bibstem:"mpc..7758"	==47
+bibstem:"astbu"	==47
+bibstem:"mpc..8162"	==40
+bibstem:"lpico1649"	==46
+bibstem:"dmkt.conf"	==40
+bibstem:"ycat..353"	==45
+bibstem:"japa"	==42
+bibstem:"mpc..8004"	==43
+bibstem:"gcgc"	==39
+bibstem:"jahh"	==41
+bibstem:"ijmpa..27"	==40
+bibstem:"dgkg"	==40
+bibstem:"epjc"	==43
+bibstem:"rmxaa"	==44
+bibstem:"gcgc.conf"	==39
+bibstem:"acasn"	==42
+bibstem:"sass"	==41
+bibstem:"pasrb"	==40
+bibstem:"m&ps...48"	==45
+bibstem:"mpc..8016"	==44
+bibstem:"jcap...06"	==43
+bibstem:"aipc.1514"	==41
+bibstem:"oap....18"	==42
+citation_count:"151"	==1
+citation_count:"217"	==1
+citation_count:"200"	==1
+citation_count:"152"	==1
+citation_count:"559"	==1
+citation_count:"154"	==1
+citation_count:"1340"	==1
+citation_count:"156"	==1
+citation_count:"983"	==1
+citation_count:"194"	==1
+citation_count:"197"	==1
+citation_count:"196"	==1
+citation_count:"213"	==1
+citation_count:"190"	==1
+citation_count:"444"	==1
+citation_count:"271"	==1
+citation_count:"258"	==1
+citation_count:"116"	==1
+citation_count:"274"	==1
+citation_count:"110"	==1
+citation_count:"135"	==1
+citation_count:"178"	==1
+citation_count:"234"	==1
+citation_count:"176"	==1
+citation_count:"175"	==1
+citation_count:"174"	==1
+citation_count:"173"	==1
+citation_count:"225"	==1
+citation_count:"232"	==1
+citation_count:"170"	==1
+citation_count:"138"	==1
+citation_count:"1636"	==1
+citation_count:"657"	==1
+citation_count:"1161"	==1
+citation_count:"490"	==1
+citation_count:"1145"	==1
+citation_count:"211"	==1
+citation_count:"182"	==1
+citation_count:"456"	==1
+citation_count:"184"	==1
+citation_count:"325"	==1
+citation_count:"620"	==1
+citation_count:"189"	==1
+citation_count:"284"	==1
+citation_count:"202"	==1
+citation_count:"235"	==1
+citation_count:"147"	==1
+citation_count:"510"	==1
+citation_count:"145"	==1
+citation_count:"142"	==1
+citation_count:"204"	==1
+citation_count:"370"	==1
+citation_count:"663"	==1
+citation_count:"302"	==1
+citation_count:"350"	==1
+citation_count:"148"	==1
+citation_count:"307"	==1
+citation_count:"255"	==1
+citation_count:"310"	==1
+citation_count:"260"	==1
+citation_count:"241"	==1
+citation_count:"306"	==1
+citation_count:"242"	==1
+citation_count:"164"	==1
+citation_count:"226"	==1
+citation_count:"166"	==1
+citation_count:"268"	==1
+citation_count:"160"	==1
+citation_count:"161"	==1
+citation_count:"221"	==1
+citation_count:"282"	==1
+citation_count:"424"	==1
+citation_count:"233"	==1
+citation_count:"299"	==1
+citation_count:"757"	==1
+citation_count:"267"	==1
+citation_count:"396"	==1
+read_count:"146.0"	==31
+read_count:"154.0"	==26
+read_count:"178.0"	==21
+read_count:"155.0"	==32
+read_count:"174.0"	==21
+read_count:"164.0"	==21
+read_count:"147.0"	==24
+read_count:"141.0"	==31
+read_count:"176.0"	==21
+read_count:"140.0"	==32
+read_count:"159.0"	==24
+read_count:"139.0"	==30
+read_count:"162.0"	==26
+read_count:"158.0"	==33
+read_count:"161.0"	==20
+read_count:"160.0"	==20
+read_count:"153.0"	==24
+read_count:"168.0"	==29
+read_count:"152.0"	==23
+read_count:"151.0"	==26
+read_count:"143.0"	==34
+read_count:"127.0"	==32
+read_count:"142.0"	==35
+read_count:"167.0"	==20
+read_count:"150.0"	==23
+read_count:"156.0"	==19
+read_count:"165.0"	==22
+read_count:"157.0"	==24
+read_count:"148.0"	==28
+read_count:"136.0"	==31
+read_count:"144.0"	==23
+read_count:"137.0"	==31
+read_count:"132.0"	==34
+read_count:"145.0"	==29
+page:"763"	==15
+page:"1149"	==15
+page:"498"	==15
+page:"494"	==15
+page:"490"	==15
+page:"697"	==15
+page:"694"	==15
+page:"1071"	==14
+page:"542"	==15
+page:"288"	==15
+page:"348"	==15
+page:"284"	==15
+page:"817"	==15
+page:"1317"	==15
+page:"1095"	==15
+page:"1096"	==14
+page:"761"	==15
+page:"679"	==15
+page:"1098"	==14
+page:"1062"	==14
+page:"a128"	==15
+page:"a129"	==15
+page:"530"	==15
+page:"370"	==15
+page:"a122"	==15
+page:"a124"	==15
+page:"l8"	==15
+page:"a127"	==15
+page:"591"	==15
+page:"595"	==15
+page:"1081"	==14
+page:"705"	==15
+page:"707"	==15
+page:"703"	==15
+page:"583"	==15
+page:"833"	==15
+page:"1133"	==14
+page:"527"	==15
+page:"520"	==15
+page:"1019"	==15
+page:"1010"	==15
+page:"424"	==15
+page:"1013"	==15
+page:"1138"	==14
+page:"1231"	==15
+page:"1335"	==15
+page:"1132"	==15
+page:"781"	==15
+page:"1643"	==15
+page:"1431"	==15
+page:"821"	==15
+page:"a126"	==15
+page:"1008"	==14
+page:"1003"	==15
+page:"1223"	==15
+page:"570"	==15
+page:"577"	==15
+page:"1083"	==14
+page:"1039"	==15
+page:"1032"	==15
+page:"1034"	==14
+page:"1035"	==14
+page:"1359"	==15
+page:"1353"	==15
+page:"1219"	==15
+page:"567"	==15
+page:"506"	==15
+page:"1088"	==14
+page:"1025"	==14
+page:"1027"	==14
+page:"1021"	==15
+page:"1189"	==14
+page:"1028"	==14
+page:"1181"	==15
+page:"1102"	==14
+page:"723"	==15
+page:"605"	==15
+page:"1166"	==14
+page:"555"	==15
+page:"1204"	==15
+page:"1091"	==14
+page:"1050"	==15
+page:"1192"	==14
+page:"1111"	==14
+page:"560"	==15
+page:"1113"	==14
+page:"1115"	==15
+page:"1117"	==14
+page:"1563"	==15
+page:"1271"	==15
+page:"1179"	==14
+page:"1042"	==15
+page:"1041"	==15
+page:"1047"	==14
+page:"1045"	==14
+page:"1048"	==15
+page:"474"	==15
+page:"1361"	==15
+page:"479"	==15
+page:"681"	==15
+cite_read_boost:"0.49949646"	==63
+cite_read_boost:"0.5443"	==62
+cite_read_boost:"0.28233337"	==56
+cite_read_boost:"0.4968"	==57
+cite_read_boost:"0.33559388"	==55
+cite_read_boost:"0.37029266"	==60
+cite_read_boost:"0.47569275"	==60
+cite_read_boost:"0.33558655"	==55
+cite_read_boost:"0.5339966"	==56
+cite_read_boost:"0.49679565"	==57
+cite_read_boost:"0.50639343"	==63
+cite_read_boost:"0.4843"	==53
+cite_read_boost:"0.21662903"	==55
+cite_read_boost:"0.4842987"	==53
+cite_read_boost:"0.5046997"	==55
+cite_read_boost:"0.4712"	==57
+cite_read_boost:"0.503"	==60
+cite_read_boost:"0.4800949"	==62
+cite_read_boost:"0.5573883"	==59
+cite_read_boost:"0.4822"	==59
+cite_read_boost:"0.3013382"	==53
+cite_read_boost:"0.5432"	==53
+cite_read_boost:"0.3761"	==58
+cite_read_boost:"0.5419922"	==55
+cite_read_boost:"0.508"	==61
+cite_read_boost:"0.4995"	==57
+cite_read_boost:"0.49219513"	==57
+cite_read_boost:"0.5253"	==53
+cite_read_boost:"0.4985962"	==54
+cite_read_boost:"0.4664"	==58
+cite_read_boost:"0.33612445"	==53
+cite_read_boost:"0.5152"	==60
+cite_read_boost:"0.30134466"	==53
+cite_read_boost:"0.3673"	==62
+cite_read_boost:"0.534"	==56
+cite_read_boost:"0.4986"	==54
+cite_read_boost:"0.49769592"	==59
+cite_read_boost:"0.671875"	==54
+cite_read_boost:"0.5029907"	==60
+cite_read_boost:"0.3672943"	==62
+cite_read_boost:"0.5004"	==57
+cite_read_boost:"0.5246"	==57
+cite_read_boost:"0.07371276"	==56
+cite_read_boost:"0.51519775"	==60
+cite_read_boost:"0.5465851"	==59
+cite_read_boost:"0.28233618"	==56
+cite_read_boost:"0.4931"	==60
+cite_read_boost:"0.2166311"	==55
+cite_read_boost:"0.42869568"	==63
+cite_read_boost:"0.38419342"	==53
+cite_read_boost:"0.5064"	==63
+cite_read_boost:"0.5167"	==55
+cite_read_boost:"0.46139526"	==63
+cite_read_boost:"0.4882965"	==59
+cite_read_boost:"0.4922"	==57
+cite_read_boost:"0.5252991"	==53
+cite_read_boost:"0.4768"	==62
+cite_read_boost:"0.4883"	==59
+cite_read_boost:"0.4977"	==59
+cite_read_boost:"0.4801"	==62
+cite_read_boost:"0.39648438"	==53
+cite_read_boost:"0.48929596"	==56
+cite_read_boost:"0.56889343"	==53
+cite_read_boost:"0.26013947"	==60
+cite_read_boost:"0.5166931"	==55
+cite_read_boost:"0.28354645"	==58
+cite_read_boost:"0.5574"	==59
+cite_read_boost:"0.4862976"	==61
+cite_read_boost:"0.4757"	==60
+cite_read_boost:"0.4893"	==56
+cite_read_boost:"0.073711395"	==56
+cite_read_boost:"0.4614"	==63
+cite_read_boost:"0.47119904"	==57
+cite_read_boost:"0.4287"	==63
+cite_read_boost:"0.3842"	==53
+cite_read_boost:"0.45619965"	==60
+cite_read_boost:"0.25106812"	==56
+cite_read_boost:"0.4562"	==60
+cite_read_boost:"0.3703"	==59
+cite_read_boost:"0.54429626"	==62
+cite_read_boost:"0.542"	==55
+cite_read_boost:"0.476799"	==62
+cite_read_boost:"0.54319763"	==53
+cite_read_boost:"0.5466"	==59
+cite_read_boost:"0.37609863"	==58
+cite_read_boost:"0.4588"	==62
+cite_read_boost:"0.5079956"	==61
+cite_read_boost:"0.5743"	==61
+cite_read_boost:"0.52459717"	==57
+cite_read_boost:"0.3361206"	==53
+cite_read_boost:"0.4863"	==61
+cite_read_boost:"0.4930954"	==60
+cite_read_boost:"0.45879364"	==62
+cite_read_boost:"0.5689"	==53
+cite_read_boost:"0.46639252"	==58
+cite_read_boost:"0.57429504"	==61
+cite_read_boost:"0.26014674"	==60
+cite_read_boost:"0.5047"	==55
+cite_read_boost:"0.5003967"	==57
+cite_read_boost:"0.482193"	==59
+first_author_facet_hier:"0/Chavanis, P"	==8
+first_author_facet_hier:"0/Cowee, M"	==8
+first_author_facet_hier:"0/Fu, R"	==8
+first_author_facet_hier:"0/Bousso, R"	==8
+first_author_facet_hier:"0/Gonzalez Hernandez, J"	==8
+first_author_facet_hier:"0/Dombard, A"	==8
+first_author_facet_hier:"0/Ekers, R"	==8
+first_author_facet_hier:"0/Ceamanos, J"	==8
+first_author_facet_hier:"0/Capria, M"	==8
+first_author_facet_hier:"0/Dong, H"	==8
+first_author_facet_hier:"0/Bridges, N"	==8
+first_author_facet_hier:"0/Billard, J"	==8
+first_author_facet_hier:"0/Coc, A"	==8
+first_author_facet_hier:"0/Dong, Z"	==8
+first_author_facet_hier:"0/Ellis, G"	==8
+first_author_facet_hier:"0/Benecchi, S"	==8
+first_author_facet_hier:"0/Dickey, J"	==8
+first_author_facet_hier:"0/Grimm, R"	==8
+first_author_facet_hier:"0/Erard, S"	==8
+first_author_facet_hier:"0/Chiang, C"	==8
+first_author_facet_hier:"0/Cheng, C"	==8
+first_author_facet_hier:"0/Gorham, P"	==8
+first_author_facet_hier:"0/Guo, Z"	==8
+first_author_facet_hier:"0/Arridge, C"	==8
+first_author_facet_hier:"0/Gomez de Castro, A"	==8
+first_author_facet_hier:"0/Anderson, D"	==8
+first_author_facet_hier:"0/Cembranos, J"	==8
+first_author_facet_hier:"0/Binzel, R"	==8
+first_author_facet_hier:"0/Giovannelli, F"	==8
+first_author_facet_hier:"0/Clifton, T"	==8
+first_author_facet_hier:"0/Collier, M"	==8
+first_author_facet_hier:"0/Dal, H"	==8
+first_author_facet_hier:"0/Amendola, L"	==8
+first_author_facet_hier:"0/Belikov, A"	==8
+first_author_facet_hier:"0/Buxner, S"	==8
+first_author_facet_hier:"0/Cui, J"	==8
+first_author_facet_hier:"0/Ferreras, I"	==8
+first_author_facet_hier:"0/Arcavi, I"	==8
+first_author_facet_hier:"0/Bezerra de Mello, E"	==8
+first_author_facet_hier:"0/Fan, Y"	==8
+first_author_facet_hier:"0/Enqvist, K"	==8
+first_author_facet_hier:"0/Forgan, D"	==8
+first_author_facet_hier:"0/Chen, G"	==8
+first_author_facet_hier:"0/Ferra, E"	==8
+first_author_facet_hier:"0/Feast, M"	==8
+first_author_facet_hier:"0/Faghei, K"	==8
+first_author_facet_hier:"0/Deason, A"	==8
+first_author_facet_hier:"0/Aliu, E"	==8
+first_author_facet_hier:"0/Bosch-Ramon, V"	==8
+first_author_facet_hier:"0/Gedalin, M"	==8
+first_author_facet_hier:"0/Benson, A"	==8
+first_author_facet_hier:"0/Agudo, I"	==8
+first_author_facet_hier:"0/Bland, M"	==8
+first_author_facet_hier:"0/Fabris, J"	==8
+first_author_facet_hier:"0/An, H"	==8
+first_author_facet_hier:"0/Anglada-Escude, G"	==8
+first_author_facet_hier:"0/Christophe, B"	==8
+first_author_facet_hier:"0/Greeley, R"	==8
+first_author_facet_hier:"0/Fraser, B"	==8
+first_author_facet_hier:"0/Cosgrove, R"	==8
+first_author_facet_hier:"0/Galli, P"	==8
+first_author_facet_hier:"0/Aloisio, R"	==8
+first_author_facet_hier:"0/Cho, J"	==8
+first_author_facet_hier:"0/Bekki, K"	==8
+first_author_facet_hier:"0/Eastwood, J"	==8
+first_author_facet_hier:"0/Farihi, J"	==8
+first_author_facet_hier:"0/Bottke, W"	==8
+first_author_facet_hier:"0/Calcagni, G"	==8
+first_author_facet_hier:"0/Galloway, D"	==8
+first_author_facet_hier:"0/El-Labany, S"	==8
+first_author_facet_hier:"0/Corsico, A"	==8
+first_author_facet_hier:"0/Cheng, Y"	==8
+first_author_facet_hier:"0/Choi, Y"	==8
+first_author_facet_hier:"0/Cartwright, J"	==8
+first_author_facet_hier:"0/Damour, T"	==8
+first_author_facet_hier:"0/Capuzzo-Dolcetta, R"	==8
+first_author_facet_hier:"0/Dubinin, E"	==8
+first_author_facet_hier:"0/Cheng, J"	==8
+first_author_facet_hier:"0/Brasser, R"	==8
+first_author_facet_hier:"0/Chojnacki, M"	==8
+first_author_facet_hier:"0/Climent, T"	==8
+first_author_facet_hier:"0/Cotsakis, S"	==8
+first_author_facet_hier:"0/Forget, F"	==8
+first_author_facet_hier:"0/Bianchi, E"	==8
+first_author_facet_hier:"0/Andreon, S"	==8
+first_author_facet_hier:"0/Bandfield, J"	==8
+first_author_facet_hier:"0/Alonso-Herrero, A"	==8
+first_author_facet_hier:"0/Cabrol, N"	==8
+first_author_facet_hier:"0/Crossfield, I"	==8
+first_author_facet_hier:"0/Chan, M"	==8
+first_author_facet_hier:"0/Blasi, P"	==8
+first_author_facet_hier:"0/Banks, M"	==8
+first_author_facet_hier:"0/Gai, M"	==8
+first_author_facet_hier:"0/Chung, J"	==8
+first_author_facet_hier:"0/Artemieva, N"	==8
+first_author_facet_hier:"0/Gu, Y"	==8
+first_author_facet_hier:"0/Gerard, J"	==8
+first_author_facet_hier:"0/Abdu, M"	==8
+first_author_facet_hier:"0/Gray, M"	==8
+first_author_facet_hier:"0/Galand, M"	==8
+author_surname:"ito"	==55
+author_surname:"fukui"	==55
+author_surname:"boer"	==55
+author_surname:"melosh"	==57
+author_surname:"isaacson"	==55
+author_surname:"dalton"	==56
+author_surname:"hess"	==57
+author_surname:"richmond"	==55
+author_surname:"hao"	==57
+author_surname:"negoro"	==55
+author_surname:"macdonald"	==55
+author_surname:"sennik"	==57
+author_surname:"ahn"	==54
+author_surname:"matsuda"	==56
+author_surname:"arai"	==57
+author_surname:"stanford"	==55
+author_surname:"gendre"	==56
+author_surname:"coustenis"	==56
+author_surname:"girard"	==55
+author_surname:"eriksen"	==57
+author_surname:"maurice"	==57
+author_surname:"parakhin"	==55
+author_surname:"molina"	==55
+author_surname:"et"	==55
+author_surname:"schinnerer"	==55
+author_surname:"best"	==57
+author_surname:"still"	==55
+author_surname:"wijnands"	==55
+author_surname:"gerke"	==56
+author_surname:"kuo"	==55
+author_surname:"zurbuchen"	==55
+author_surname:"hadasch"	==57
+author_surname:"yamashita"	==55
+author_surname:"schuster"	==55
+author_surname:"biswas"	==57
+author_surname:"lei"	==56
+author_surname:"herrera"	==55
+author_surname:"kocevski"	==56
+author_surname:"ohtani"	==55
+author_surname:"franx"	==57
+author_surname:"bode"	==55
+author_surname:"kaufmann"	==56
+author_surname:"banday"	==56
+author_surname:"malanushenko"	==56
+author_surname:"aguilar"	==54
+author_surname:"novikov"	==55
+author_surname:"kromer"	==57
+author_surname:"gordon"	==57
+author_surname:"paxton"	==57
+author_surname:"della"	==57
+author_surname:"bizyaev"	==56
+author_surname:"winkler"	==57
+author_surname:"lien"	==57
+author_surname:"morganti"	==57
+author_surname:"sakai"	==56
+author_surname:"shiokawa"	==57
+author_surname:"nysewander"	==56
+author_surname:"barreiro"	==55
+author_surname:"kataoka"	==55
+author_surname:"mandel"	==55
+author_surname:"kaneda"	==55
+author_surname:"paneque"	==57
+author_surname:"elvis"	==57
+author_surname:"lucey"	==57
+author_surname:"durig"	==56
+author_surname:"koff"	==56
+author_surname:"bouchet"	==57
+author_surname:"levin"	==55
+author_surname:"lisse"	==55
+author_surname:"moutou"	==56
+author_surname:"elsworth"	==56
+author_surname:"batista"	==57
+author_surname:"diepvens"	==57
+author_surname:"barbiellini"	==57
+author_surname:"chambers"	==57
+author_surname:"miyamoto"	==57
+author_surname:"ni"	==55
+author_surname:"blanco"	==56
+author_surname:"liguori"	==57
+author_surname:"zhong"	==56
+author_surname:"fender"	==57
+author_surname:"sollerman"	==56
+author_surname:"bacci"	==57
+author_surname:"pierpaoli"	==55
+author_surname:"rubin"	==56
+author_surname:"reyes"	==55
+author_surname:"lamy"	==55
+author_surname:"santiago"	==55
+author_surname:"medina"	==57
+author_surname:"matarrese"	==57
+author_surname:"bianco"	==56
+author_surname:"altieri"	==56
+author_surname:"doi"	==55
+author_surname:"tanner"	==56
+author_surname:"maier"	==55
+author_surname:"bulik"	==55
+author_surname:"lundgren"	==57
+author_surname:"pickett"	==56
+author_surname:"poutanen"	==57
+author_surname:"bolton"	==57
+title:"four"	==239
+title:"shape"	==238
+title:"magellanic"	==247
+title:"morphology"	==246
+title:"decay"	==226
+title:"α"	==225
+title:"meteorite"	==232
+title:"program"	==226
+title:"exoplanet"	==236
+title:"resolved"	==236
+title:"loss"	==237
+title:"far"	==243
+title:"scaling"	==228
+title:"solution"	==245
+title:"discs"	==227
+title:"chandra"	==235
+title:"methods"	==222
+title:"oscillation"	==229
+title:"sensitivity"	==236
+title:"hard"	==237
+title:"turbulent"	==238
+title:"society"	==238
+title:"air"	==242
+title:"substorm"	==224
+title:"dense"	==221
+title:"interacting"	==234
+title:"crust"	==222
+title:"eso"	==223
+title:"component"	==229
+title:"meteorites"	==233
+title:"host"	==247
+title:"nebulae"	==226
+title:"hubble"	==239
+title:"g"	==233
+title:"outflows"	==233
+title:"fault"	==224
+title:"30"	==223
+title:"range"	==230
+title:"periodic"	==240
+title:"transients"	==230
+title:"comment"	==247
+title:"magnetospheric"	==231
+title:"einstein"	==247
+title:"total"	==228
+title:"classical"	==228
+title:"thermosphere"	==231
+title:"magnetized"	==227
+title:"camera"	==241
+title:"precision"	==219
+title:"heat"	==237
+title:"stratospheric"	==244
+title:"groundbased"	==229
+title:"plasmas"	==228
+title:"11"	==224
+title:"distance"	==245
+title:"13"	==232
+title:"erratum"	==235
+title:"eclipse"	==230
+title:"theories"	==233
+title:"toward"	==233
+title:"site"	==235
+title:"minimum"	==221
+title:"functions"	==227
+title:"internal"	==238
+title:"modulation"	==235
+title:"object"	==225
+title:"neutrinos"	==246
+title:"plane"	==243
+title:"lat"	==225
+title:"measured"	==221
+title:"remote"	==240
+title:"effective"	==244
+title:"corona"	==229
+title:"fundamental"	==228
+title:"cores"	==227
+author_facet:"Fernandez, Y"	==42
+author_facet:"Halpern, M"	==42
+author_facet:"Abdu, M"	==41
+author_facet:"Zdziarski, A"	==42
+author_facet:"Bragaglia, A"	==41
+author_facet:"Bonaldi, A"	==41
+author_facet:"Lilje, P"	==42
+author_facet:"Boggs, S"	==42
+author_facet:"Hinton, J"	==42
+author_facet:"Bedding, T"	==42
+author_facet:"Zonca, A"	==42
+author_facet:"Carbognani, A"	==41
+author_facet:"Camilo, F"	==41
+author_facet:"Bortnik, J"	==41
+author_facet:"Forster, F"	==42
+author_facet:"Pu, Z"	==42
+author_facet:"Atteia, J"	==41
+author_facet:"Jordan, A"	==42
+author_facet:"Savchenko, V"	==42
+author_facet:"Yamada, T"	==42
+author_facet:"Del Monte, E"	==41
+author_facet:"Kurki-Suonio, H"	==42
+author_facet:"Newell, P"	==42
+author_facet:"Shearer, C"	==42
+author_facet:"Mellier, Y"	==42
+author_facet:"Feng, L"	==42
+author_facet:"Feng, X"	==42
+author_facet:"Gibson, B"	==41
+author_facet:"Parks, G"	==42
+author_facet:"Daddi, E"	==42
+author_facet:"Saunders, C"	==42
+author_facet:"Cimatti, A"	==42
+author_facet:"Greenhagen, B"	==42
+author_facet:"Hivon, E"	==42
+author_facet:"Dyar, M"	==41
+author_facet:"Fang, X"	==41
+author_facet:"Tauber, J"	==42
+author_facet:"Goodman, J"	==42
+author_facet:"Tristram, M"	==42
+author_facet:"Mumma, M"	==42
+author_facet:"Simmons, A"	==42
+author_facet:"Berger, T"	==42
+author_facet:"Fornasier, S"	==41
+author_facet:"Malkan, M"	==42
+author_facet:"Crill, B"	==41
+author_facet:"Battaner, E"	==41
+author_facet:"Ponthieu, N"	==42
+author_facet:"Franchi, I"	==42
+author_facet:"Yoshida, N"	==42
+author_facet:"Fuschino, F"	==42
+author_facet:"Nelson, T"	==42
+author_facet:"Clark, D"	==42
+author_facet:"Simon, J"	==42
+author_facet:"Margot, J"	==42
+author_facet:"Diaz, M"	==42
+author_facet:"Portegies Zwart, S"	==42
+author_facet:"Schlickeiser, R"	==42
+author_facet:"Stubbs, C"	==42
+author_facet:"Peacock, J"	==42
+author_facet:"Croom, S"	==41
+author_facet:"Pecontal, E"	==42
+author_facet:"Bendo, G"	==41
+author_facet:"Forshay, P"	==41
+author_facet:"Fitzsimmons, A"	==41
+author_facet:"Cappellari, M"	==42
+author_facet:"Camarasa, J"	==41
+author_facet:"Leonardi, R"	==42
+author_facet:"Cumming, A"	==41
+author_facet:"Rosset, C"	==42
+author_facet:"De Rosa, R"	==41
+author_facet:"Buson, S"	==42
+author_facet:"Sudiwala, R"	==42
+author_facet:"Kataoka, J"	==42
+author_facet:"Toth, G"	==42
+author_facet:"Knoche, J"	==42
+author_facet:"Forti, G"	==42
+author_facet:"Burchell, M"	==41
+author_facet:"Esposito, P"	==41
+author_facet:"Ohtake, M"	==42
+author_facet:"Kasper, J"	==42
+author_facet:"Chornock, R"	==42
+author_facet:"Abe, S"	==42
+author_facet:"Popa, L"	==42
+author_facet:"Ganga, K"	==42
+author_facet:"Zalozhnich, I"	==42
+author_facet:"Ho, L"	==42
+author_facet:"Zhao, B"	==42
+author_facet:"Horesh, A"	==42
+author_facet:"Bottke, W"	==41
+author_facet:"Westphal, A"	==42
+author_facet:"Myers, A"	==42
+author_facet:"Dubus, G"	==41
+author_facet:"Zolensky, M"	==42
+author_facet:"Kann, D"	==42
+author_facet:"Bode, M"	==41
+author_facet:"Brown, J"	==41
+author_facet:"Gary, S"	==42
+author_facet:"Hu, L"	==42
+author_facet:"Halekas, J"	==42
+author_facet:"Colombi, S"	==41
+keyword_facet:"sun faculae"	==13
+keyword_facet:"ejecta"	==15
+keyword_facet:"germanium"	==5
+keyword_facet:"experiments"	==6
+keyword_facet:"pulses"	==8
+keyword_facet:"nitrogen"	==13
+keyword_facet:"galaxy globular clusters"	==9
+keyword_facet:"magnetospheres"	==8
+keyword_facet:"tables"	==9
+keyword_facet:"imf"	==13
+keyword_facet:"absorption"	==15
+keyword_facet:"parametrization"	==6
+keyword_facet:"protostars"	==7
+keyword_facet:"source"	==7
+keyword_facet:"olivine"	==11
+keyword_facet:"electromagnetic radiation"	==12
+keyword_facet:"sulfur"	==8
+keyword_facet:"balloons"	==9
+keyword_facet:"astronomy visible"	==5
+keyword_facet:"saturation"	==9
+keyword_facet:"field aligned currents"	==17
+keyword_facet:"spatial distribution"	==11
+keyword_facet:"parent bodies"	==8
+keyword_facet:"mixing"	==7
+keyword_facet:"brightness"	==6
+keyword_facet:"isotropy"	==11
+keyword_facet:"activity"	==7
+keyword_facet:"intermittency"	==6
+keyword_facet:"cosmic plasma"	==11
+keyword_facet:"chronology"	==7
+keyword_facet:"scaling laws"	==8
+keyword_facet:"potential theory"	==12
+keyword_facet:"electrical resistivity"	==6
+keyword_facet:"density distribution"	==7
+keyword_facet:"cross correlation"	==6
+keyword_facet:"astronomy microwave"	==9
+keyword_facet:"whistlers"	==6
+keyword_facet:"parallax"	==14
+keyword_facet:"instrumentation photometers"	==16
+keyword_facet:"solar system formation"	==13
+keyword_facet:"variability"	==10
+keyword_facet:"interactions"	==8
+keyword_facet:"relaxation"	==7
+keyword_facet:"filaments"	==6
+keyword_facet:"magnetically trapped particles"	==6
+keyword_facet:"isotopes"	==6
+keyword_facet:"nonlinear systems"	==8
+keyword_facet:"geometry"	==11
+keyword_facet:"universe"	==8
+keyword_facet:"trace elements"	==8
+keyword_facet:"propagation"	==16
+keyword_facet:"fundamental parameters"	==6
+keyword_facet:"magnetospheric instability"	==12
+keyword_facet:"active"	==12
+keyword_facet:"size"	==6
+keyword_facet:"temperature"	==10
+keyword_facet:"methods n body"	==17
+keyword_facet:"vortices"	==7
+keyword_facet:"radioactive processes"	==11
+keyword_facet:"blazars"	==6
+keyword_facet:"lightcurve"	==6
+keyword_facet:"pyroxenes"	==6
+keyword_facet:"cosmic dust"	==15
+keyword_facet:"instrumentation antennas"	==9
+keyword_facet:"deformation"	==5
+keyword_facet:"calcium"	==5
+keyword_facet:"plages"	==15
+keyword_facet:"amplitude"	==15
+keyword_facet:"string theory"	==11
+keyword_facet:"zodiac"	==16
+keyword_facet:"procedure"	==6
+keyword_facet:"sun infrared"	==8
+keyword_facet:"mirrors"	==7
+keyword_facet:"torque"	==15
+keyword_facet:"clusters individual"	==6
+keyword_facet:"constellations"	==10
+keyword_facet:"general"	==12
+keyword_facet:"positrons"	==9
+keyword_facet:"cluster"	==14
+keyword_facet:"perturbation theory"	==17
+keyword_facet:"crystals"	==16
+keyword_facet:"helium"	==14
+keyword_facet:"methods miscellaneous"	==16
+keyword_facet:"galaxies cosmic rays"	==16
+keyword_facet:"incident radiation"	==7
+keyword_facet:"lithium"	==9
+keyword_facet:"silicates"	==9
+keyword_facet:"angular distribution"	==6
+keyword_facet:"ray tracing"	==11
+keyword_facet:"tides"	==13
+keyword_facet:"miscellaneous"	==13
+keyword_facet:"radiant flux density"	==12
+keyword_facet:"seismology"	==16
+keyword_facet:"nitric oxide"	==12
+keyword_facet:"luminescence"	==10
+keyword_facet:"coupling"	==8
+keyword_facet:"recombination"	==6
+keyword_facet:"depth"	==8
+keyword_facet:"inhomogeneity"	==6
+keyword_facet:"azimuth"	==5

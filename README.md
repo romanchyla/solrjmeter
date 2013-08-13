@@ -81,11 +81,11 @@ but different Java parameters.
 3. now we can generate comparison view of 'g1' vs 'cms'
   
   ```
-  $ python solrjmeter.py -C g1,cms -c hour
+  $ python solrjmeter.py -C 'g1,cms' -c hour
   ```
   
   The -c parameter will 'cluster' measurements by hour, so that you can see tests aligned even if they
-  ran at slightly different times. Clustering can be by: sec, minute, hour, day, week, or <int>.
+  ran at slightly different times. Clustering can be by: sec, minute, hour, day, week, or int.
   So, if one measurement takes 1.5 hours to complete, you can still cluster both tests together by '-c 10800'
   (3x60x60 seconds)
 
@@ -157,8 +157,8 @@ These are examples of the funny prefixes:
 
 ```
   ==50   numFound must be exactly 50
-  >=     numFound must be higher or equal to 50
-  <=     (.... further explanations would insult your intellect...)
+  >=50   numFound must be higher or equal to 50
+  <=50   (.... further explanations would insult your intellect...)
   >50
   <50
 ```

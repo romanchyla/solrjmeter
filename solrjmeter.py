@@ -178,6 +178,7 @@ def check_options(options, args):
         options.generate_comparison = options.generate_comparison.split(',')
         if len(options.generate_comparison) < 1:
             error("When generating comparison, we need at least two result folders")
+            
         for rf in range(len(options.generate_comparison)):
             tfolder = options.workdir + "/" + options.generate_comparison[rf] 
             if options.generate_comparison[rf] == options.results_folder or os.path.exists(tfolder):
@@ -424,62 +425,6 @@ def generate_queries(options):
     
     gq.main(options)
     
-    print 'Getting perf queries from solr'
-    data = None
-    #data = simplejson.load(open('/var/lib/montysolr/solrjmeter/results/perf.json', 'r'))
-    if not data:
-        if options.generate_queries:
-            args = options.generate_queries.split('&')
-            kwargs = {}.update(args.split('='))
-            data = req('%s/perf' % options.query_endpoint, **kwargs)
-        else:
-            data = req('%s/perf' % options.query_endpoint, numQueries=20)
-        
-    fields = data.keys()
-    query_types = {}
-    unfielded_query_types = {}
-    
-    to_skip = ['responseHeader']
-    
-    for f in fields:
-        if 'error' in data[f]:
-            print 'Field %s generated error' % f
-            print data[f]['error']
-            del data[f]
-        elif f == 'error':
-            print 'Other unspecified error'
-            print data[f]
-            del data[f]
-        elif f in to_skip:
-            del data[f]
-        else:
-            for k in data[f].keys():
-                query_types[k] = []
-                unfielded_query_types[k] = []
-                
-    for field, values in data.items():
-        for qtype, lines in values.items():
-            lines = lines.split('\n')
-            
-            for l in lines:
-                is_resolved = 'numFound=' in l 
-                parts = l.split('\t')
-                if is_resolved and len(parts) > 2:
-                    query_types[qtype].append('%s:(%s)\t=%s' % (field, parts[0], parts[3].replace('#numFound=', '')))
-                    unfielded_query_types[qtype].append('%s:(%s)\t=%s' % (field, parts[0], parts[3].replace('#numFound=', '')))
-                elif len(parts) == 2:
-                    query_types[qtype].append('%s:(%s)\t>=%s' % (field, parts[0], 0))
-                    unfielded_query_types[qtype].append('%s:(%s)\t>=%s' % (field, parts[0], 0))
-    
-    for k,v in query_types.items():
-        with open(k + '.aq', 'w') as qfile:
-            qfile.write('\n'.join(v))
-            print 'Generated %s.aq with %s queries' % (k, len(v))
-    for k,v in unfielded_query_types.items():
-        with open(k + 'Unfielded.aq', 'w') as qfile:
-            qfile.write('\n'.join(v))
-            print 'Generated %sUnfielded.aq with %s queries' % (k, len(v))
-    
     
 
 def find_tests(options):
@@ -501,10 +446,27 @@ def find_tests(options):
         return glob.glob(os.path.join(INSTDIR, 'perpetuum/montysolr/contrib/examples/adsabs/jmeter/*.queries'))
     
 
+class ForgivingValue(object):
+    def __init__(self, val):
+        self.val = val
+    def __str__(self):
+        return self.val
+    def __getitem__( self, key ):
+        return ForgivingValue('<NONE>')
+class ForgivingDict( dict ):
+    def __getitem__( self, key ):
+        try:
+            x = super( ForgivingDict,self).__getitem__(key)
+            if isinstance(x, dict):
+                return ForgivingDict(x)
+            return x
+        except KeyError as e:
+            return ForgivingValue('<NONE>')
+        
 def harvest_details_about_montysolr(options):
-    system_data = req('%s/admin/system' % options.query_endpoint)
-    mbeans_data = req('%s/admin/mbeans' % options.query_endpoint, stats='true')
-    cores_data = req('%s/cores' % options.admin_endpoint, stats='true')
+    system_data = ForgivingDict(req('%s/admin/system' % options.query_endpoint))
+    mbeans_data = ForgivingDict(req('%s/admin/mbeans' % options.query_endpoint, stats='true'))
+    cores_data = ForgivingDict(req('%s/cores' % options.admin_endpoint, stats='true'))
     
     cn = options.core_name or cores_data['defaultCoreName']
     ci = mbeans_data['solr-mbeans'].index('CORE')+1
@@ -1005,7 +967,8 @@ def csv_reader(csv_file, generic=False):
     count = -1
     colnames = None
     fi = open(csv_file, 'r')
-    csv_reader = csv.reader(fi, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    csv_reader = csv.reader(fi, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL,
+                            escapechar='\\')
     try:
         for data in csv_reader:
             if len(data) == 0 or len(data) > 0 and data[0][0] == '#':
@@ -1332,13 +1295,15 @@ def main(argv):
             print "============="
         
         
-                    
+        if options.generate_queries is not None:
+            if not os.path.exists('queries'):
+                run_cmd(['mkdir queries'])
+            with changed_dir('queries'):
+                generate_queries(options)
+                
         if options.regenerate_html:
             with changed_dir(options.results_folder):
                 regenerate_html(options)
-        
-        if options.generate_queries is not None:
-            generate_queries(options)
             
         if len(args) > 1:
             tests = args[1:]
