@@ -446,13 +446,7 @@ def find_tests(options):
         return glob.glob(os.path.join(INSTDIR, 'perpetuum/montysolr/contrib/examples/adsabs/jmeter/*.queries'))
     
 
-class ForgivingValue(object):
-    def __init__(self, val):
-        self.val = val
-    def __str__(self):
-        return self.val
-    def __getitem__( self, key ):
-        return ForgivingValue('<NONE>')
+    
 class ForgivingDict( dict ):
     def __getitem__( self, key ):
         try:
@@ -461,7 +455,7 @@ class ForgivingDict( dict ):
                 return ForgivingDict(x)
             return x
         except KeyError as e:
-            return ForgivingValue('<NONE>')
+            return '<MISSING>'
         
 def harvest_details_about_montysolr(options):
     system_data = ForgivingDict(req('%s/admin/system' % options.query_endpoint))
