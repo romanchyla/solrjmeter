@@ -17,22 +17,24 @@ easily, but I didn't care enough ;) get_pidis_running
 is probably the only method that needs to change...
    
 """
-import sys
-import os
-import optparse
-import subprocess
-import re
-import glob
-import csv
-import simplejson
-import datetime
-import time
-import copy
-from six.moves import queue, urllib
-import threading
-import traceback
 from contextlib import contextmanager
-from pprint import pprint,pformat
+import copy
+import csv
+import datetime
+import glob
+import optparse
+import os
+from pprint import pprint, pformat
+import re
+import simplejson
+import subprocess
+import sys
+import threading
+import time
+import traceback
+
+from six.moves import queue, urllib
+
 
 INSTDIR = 'SOLRJMETER_HOME' in os.environ and os.environ['SOLRJMETER_HOME'] or '/var/lib/montysolr'
 
@@ -395,7 +397,7 @@ def setup_jmeter(options):
           rm -fr jmeter
         fi
         
-        wget -nc http://mirrors.gigenet.com/apache/jmeter/binaries/apache-jmeter-2.9.tgz
+        wget -nc https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.9.tgz
         tar -xzf apache-jmeter-2.9.tgz
         mv apache-jmeter-2.9 jmeter
         
