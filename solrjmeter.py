@@ -359,9 +359,9 @@ def check_prerequisities(options):
     
     if options.query_endpoint and options.queries_pattern:
         try:
-            req(options.query_endpoint + "/select")
+            req(options.query_endpoint + "/select", q='*:*')
         except:
-            error('Cannot contact: %s' % options.query_endpoint)
+            error('Cannot contact: %s (maybe you should use -t option?)' % options.query_endpoint)
             
         # try to find the admin endpoint
         try:
