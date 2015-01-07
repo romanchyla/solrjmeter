@@ -17,7 +17,7 @@ def main(options):
     
     # get availalbe defined fiels
     data = req('%s/admin/luke?wt=json&show=schema&indent=true' % options.query_endpoint, **dict(show='schema'))
-    fields = data['schema']['fields'].keys()
+    fields = list(data['schema']['fields'].keys())
     
     if os.path.exists('term-freqs.txt') and EXISTING_TERMS_REPLACE or not os.path.exists('term-freqs.txt'):
         retrieve_term_freqs(options, fields)
@@ -93,7 +93,7 @@ def generate_phrase_queries(options, length=2, input='phrase-freqs.txt'):
 
 def generate_wild_queries(options):
     wild_types = ('high', 'med')
-    print 'Writing: Wildcards'
+    print('Writing: Wildcards')
     
     fo1, wild_right = csv_writer('FieldWildcardRightSide50')
     fo2, wild_middle = csv_writer('FieldWildcardMiddle50')
@@ -148,7 +148,7 @@ def generate_field_queries(options):
     for output_name, output_type in (('HighFreqTerms', 'high'), 
                                      ('MedFreqTerms', 'med'),
                                      ('LowFreqTerms', 'low')):
-        print 'Writing: %s' % output_name
+        print('Writing: %s' % output_name)
         fo1, unfielded_output = csv_writer(output_name)
         fo2, fielded_output = csv_writer(output_name  + 'Field')
         
@@ -168,14 +168,14 @@ def retrieve_term_freqs(options, fields):
     fo, writer = csv_writer('term-freqs.txt', ['field', 'type', 'token', 'freq'])
     for f in fields:
         try:
-            print 'Getting freqs for: %s' % f
+            print('Getting freqs for: %s' % f)
             
             rsp = req('%s/terms' % options.query_endpoint, **{'terms.fl':f, 'terms.limit':RETRIEVE_MAX_TOKENS})
             
-            high_freq =  dict(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2]))
+            high_freq =  dict(list(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2])))
             write_terms(writer, f, 'high', high_freq)
             
-            if len(high_freq.values()) == 0:
+            if len(list(high_freq.values())) == 0:
                 continue
             
             max_count = int(max(0.1, min(high_freq.values())) / 2) - 1
@@ -185,10 +185,10 @@ def retrieve_term_freqs(options, fields):
             
             rsp = req('%s/terms' % options.query_endpoint, **{'terms.fl':f, 'terms.limit':RETRIEVE_MAX_TOKENS, 'terms.maxcount': max_count})
             
-            med_freq =  dict(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2]))
+            med_freq =  dict(list(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2])))
             write_terms(writer, f, 'med', med_freq)
             
-            if len(med_freq.values()) == 0:
+            if len(list(med_freq.values())) == 0:
                 continue
             
             max_count = max(int(max(0.1, min(med_freq.values())) / 2) - 1, 1)
@@ -198,11 +198,11 @@ def retrieve_term_freqs(options, fields):
             
             rsp = req('%s/terms' % options.query_endpoint, **{'terms.fl':f, 'terms.limit':RETRIEVE_MAX_TOKENS, 'terms.maxcount': max_count})
             
-            low_freq =  dict(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2]))
+            low_freq =  dict(list(zip(rsp['terms'][f][0::2],rsp['terms'][f][1::2])))
             write_terms(writer, f, 'low', low_freq)
             
-        except Exception, e:
-            print 'Error getting terms for: %s' % f
+        except Exception as e:
+            print('Error getting terms for: %s' % f)
             traceback.print_exc()
     fo.close()
 
@@ -263,21 +263,21 @@ def retrieve_pseudo_collocations(options, max_time=600,
     while time.time() < some_future:
         if len(jobs) == 0:
             break
-        for k, v in jobs.items():
+        for k, v in list(jobs.items()):
             rsp = req("%s/batch" % options.query_endpoint,
               command="status",
               jobid=v)
             if rsp['job-status'] == 'failed':
                 error("Failed executing: %s - %s" % (k,v))
             elif rsp['job-status'] == 'finished':
-                print 'finished: %s' % k
+                print('finished: %s' % k)
                 del jobs[k]
                 jobs_finished[k] = v
             else:
                 time.sleep(3)
     
     
-    for k,v in jobs_finished.items():
+    for k,v in list(jobs_finished.items()):
         run_cmd(["curl -o %s '%s/batch?command=get-results&jobid=%s'"
                   % ('collocations.%s.freq' % k, options.query_endpoint, v) 
                  ])
@@ -324,7 +324,7 @@ def csv_writer(csv_file, col_names=None, delimiter='\t', quoting=csv.QUOTE_MINIM
     return (fo, writer)
         
 def write_terms(writer, field, type, terms):
-    for k,v in terms.items():
+    for k,v in list(terms.items()):
         if '::' in k and IGNORE_SYNONYMS:
             continue
         writer.writerow([field, type, k, v])

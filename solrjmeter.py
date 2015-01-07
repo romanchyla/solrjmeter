@@ -29,9 +29,9 @@ import simplejson
 import datetime
 import time
 import copy
-import Queue
+import queue
 import threading
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import traceback
 from contextlib import contextmanager
 from pprint import pprint,pformat
@@ -73,7 +73,7 @@ def error(*msgs):
 def run_cmd(args, silent=False, strict=True):
     cmd = SPACE.join(map(str, args))
     if not silent:
-        print('$ %s' % cmd)
+        print(('$ %s' % cmd))
     try:
         if silent:
             code = subprocess.call(cmd, shell=True, stdout=subprocess.PIPE)
@@ -92,19 +92,19 @@ def get_output(args):
 def make_request(q, url, kwargs):
     try:
         kwargs['wt'] = 'json'
-        params = urllib.urlencode(kwargs)
+        params = urllib.parse.urlencode(kwargs)
         page = ''
-        conn = urllib.urlopen(url, params)
+        conn = urllib.request.urlopen(url, params)
         page = conn.read()
         rsp = simplejson.loads(page)
         conn.close()
         q.put(rsp)
-    except Exception, e:
+    except Exception as e:
         q.put(e)
     
         
 def req(url, **kwargs):
-    q = Queue.Queue()
+    q = queue.Queue()
     t = threading.Thread(target=make_request, args = (q, url, kwargs))
     t.start()
     t.join(3.0)
@@ -134,7 +134,7 @@ def check_options(options, args):
                                                     options.serverPath)
     
     jmx_options = []
-    for k, v in options.__dict__.items():
+    for k, v in list(options.__dict__.items()):
         if k.lower() != k and v:
             jmx_options.append('-D%s=%s' % (k, v))
     
@@ -230,13 +230,13 @@ def check_pid_is_running(pid):
 
 @contextmanager
 def changed_dir(new):
-    print('$ cd %s' % new)
+    print(('$ cd %s' % new))
     old = os.getcwd()
     os.chdir(new)
     try:
         yield
     finally:
-        print('$ cd %s' % old)
+        print(('$ cd %s' % old))
         os.chdir(old)
         
 def check_basics():
@@ -343,6 +343,8 @@ def check_prerequisities(options):
     jmeter = None
     try:
         jmeter = get_output(['which', 'jmeter'])
+        if len(jmeter) > 0:
+            jmeter = jmeter.rstrip()
     except subprocess.CalledProcessError:
         pass
     
@@ -624,7 +626,7 @@ def run_test(test, options):
 def tablify(csv_filepath, dygraph_format=False):    
     with open(csv_filepath, 'r') as f:
         data = csv.reader(f)
-        labels = data.next()
+        labels = next(data)
         if dygraph_format:
             labs = [labels[0]]
             for x in labels[1:]:
@@ -889,7 +891,7 @@ def load_tmpl_kwargs(options):
         before_test = simplejson.load(open('before-test.json', 'r'))
         after_test = simplejson.load(open('after-test.json', 'r'))
         
-        for k,v in after_test.items():
+        for k,v in list(after_test.items()):
             if before_test[k] != v:
                 after_test[k] = '<b>%s</b>' % v
         
@@ -932,15 +934,15 @@ def regenerate_html(options):
                 if not os.path.isdir(test_folder):
                     continue 
                 with changed_dir(test_folder):
-                    print 'Regenerating test view'
+                    print('Regenerating test view')
                     generate_one_run_html(test_folder, options_copy)
                     harvest_results(test_folder, results)
             
-            print 'Regenerating day view'
+            print('Regenerating day view')
             generate_today_dashboard(options_copy, results)
             
         
-    print 'Regenerating dashboard view'
+    print('Regenerating dashboard view')
     valid_csvs = sorted([x[0:-4] for x in glob.glob('*.csv')])
     for csv in valid_csvs:
         run_cmd(['rm', csv + '.csv'])
@@ -954,7 +956,7 @@ def regenerate_html(options):
     regenerate_global_dashboard(options_copy)
     
     
-    print 'Regenerating includes'
+    print('Regenerating includes')
     generate_includes(options_copy, force=True)
 
 def csv_reader(csv_file, generic=False):
@@ -1025,7 +1027,7 @@ def generate_top_level_comparison(options):
     
     # remove tests that are not present in all folders
     max_count = max(valid_tests.values())
-    for to_remove in filter(lambda x: x[1] != max_count, valid_tests.items()):
+    for to_remove in [x for x in list(valid_tests.items()) if x[1] != max_count]:
         del valid_tests[to_remove[0]]
     
     roundup_correction = options.roundup_correction
@@ -1033,10 +1035,10 @@ def generate_top_level_comparison(options):
     aggregated = []
     
     # read in data, apply rounding up corrections
-    for test_name in valid_tests.keys():
+    for test_name in list(valid_tests.keys()):
         results = {}
-        print 'reading: %s' % results_folder + "/" + test_name + '.csv'
-        for test_id, results_folder in zip(range(len(options.generate_comparison)), options.generate_comparison):
+        print('reading: %s' % results_folder + "/" + test_name + '.csv')
+        for test_id, results_folder in zip(list(range(len(options.generate_comparison))), options.generate_comparison):
             
             for measurement in csv_reader(results_folder + "/" + test_name + '.csv'):
                 d = list(measurement.get_measurements())[0] # only first one is interesting for us
@@ -1058,7 +1060,7 @@ def generate_top_level_comparison(options):
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(['Date'] + options.generate_comparison)
             
-            for rounded_timestamp, data in sorted(results.items(), key=lambda x: x[0]):
+            for rounded_timestamp, data in sorted(list(results.items()), key=lambda x: x[0]):
                 max_no_of_observations = max([len(x) for x in data])
                 interval = roundup_correction / (max_no_of_observations+1)
                 corrected_timestamp = None
@@ -1112,7 +1114,7 @@ def generate_top_level_comparison(options):
                 
     # sort by date
     # pprint(aggr_data)
-    aggr_data = sorted(aggr_data.items(), key=lambda x: x[0])
+    aggr_data = sorted(list(aggr_data.items()), key=lambda x: x[0])
     offsets = {}
     with csv_writer(top_comparison_name + '.csv', ['Date'] + options.generate_comparison) as writer:
         for date, values in aggr_data:
@@ -1164,7 +1166,7 @@ class JMeterResults(dict):
         
     def get_tests(self):
         tests = []
-        for k, v in self['tests'].items():
+        for k, v in list(self['tests'].items()):
             tests.append((k, v))
         return sorted(tests, key=lambda x: x[0])
     
@@ -1187,7 +1189,7 @@ class Table:
         data = []
         for col in self.columns:
             if col.name == column_name:
-                for val, i in zip(col.data, range(len(col.data))):
+                for val, i in zip(col.data, list(range(len(col.data)))):
                     if val == value:
                         for col in self.columns:
                             data.append(col.data[i])
@@ -1279,14 +1281,14 @@ def main(argv):
         
         
         if options.debug or True: # for now always print them
-            print "============="
-            for k,v in options.__dict__.items():
+            print("=============")
+            for k,v in list(options.__dict__.items()):
                 if 'password' in k:
-                    print '%s=%s' % (k, 'xxx')
+                    print('%s=%s' % (k, 'xxx'))
                 else:
-                    print '%s=%s' % (k, v)
-            print 'args=', args
-            print "============="
+                    print('%s=%s' % (k, v))
+            print('args=', args)
+            print("=============")
         
         
         if options.generate_queries is not None:
@@ -1305,18 +1307,18 @@ def main(argv):
             tests = find_tests(options)
             
         if len(tests) == 0: 
-            print 'WARNING: no test name(s) supplied nor found in: %s' % options.queries_pattern
+            print('WARNING: no test name(s) supplied nor found in: %s' % options.queries_pattern)
         else:    
             with changed_dir(options.results_folder):
                 results = JMeterResults()
                 previous_results = JMeterResults()
                 
-                all_tests = sorted(filter(lambda y: '.' in y, filter(lambda x: os.path.isdir(x), os.listdir('.'))))
+                all_tests = sorted([y for y in [x for x in os.listdir('.') if os.path.isdir(x)] if '.' in y])
                 
                 if len(all_tests) > 0:
-                    print 'Reading results of the previous test'
+                    print('Reading results of the previous test')
                     with changed_dir(all_tests[-1]):
-                        for prev_dir in filter(lambda x: os.path.isdir(x), os.listdir('.')):
+                        for prev_dir in [x for x in os.listdir('.') if os.path.isdir(x)]:
                             with changed_dir(prev_dir):
                                 harvest_results(prev_dir, previous_results)
                 
@@ -1343,7 +1345,7 @@ def main(argv):
                     i = 0
                     for test in tests:
                         i += 1
-                        print 'Running (%s/%s): %s' % (i, len(tests), test)
+                        print('Running (%s/%s): %s' % (i, len(tests), test))
                         
                         test_name = os.path.basename(test)
                         test_dir = test_name
