@@ -17,7 +17,6 @@ easily, but I didn't care enough ;) get_pidis_running
 is probably the only method that needs to change...
    
 """
-
 import sys
 import os
 import optparse
@@ -29,9 +28,8 @@ import simplejson
 import datetime
 import time
 import copy
-import queue
+from six.moves import queue, urllib
 import threading
-import urllib.request, urllib.parse, urllib.error
 import traceback
 from contextlib import contextmanager
 from pprint import pprint,pformat
