@@ -14,12 +14,13 @@ To run a performance test, do:
 $ git clone https://github.com/romanchyla/solrjmeter.git
 $ mkdir /some/other/folder
 $ export SOLRJMETER_HOME=/some/other/folder
-$ python solrjmeter.py -a -x ./jmx/SolrQueryTest.jmx -q ./queries/demo/demo.queries -s localhost -p 8983  -a --durationInSecs 60 -R test
+$ python solrjmeter.py -a -x ./jmx/SolrQueryTest.jmx -q ./queries/demo/demo.queries -s localhost -p 8983  -a --durationInSecs 60 -R test -t "/solr/collection1"
 ```
 
 
 This command will start jmeter and collect performance statistics:
-  - against SOLR instance at http://localhost:8983/solr
+  - against SOLR instance at http://localhost:8983
+  - using /solr/collection1 as the main server path
   - using example queries from: ./demo/queries/demo.queries
   - using jmeter configuration from ./jmx/SolrQueryTest.jmx
   - running for 60s per each query file (default is to run 6 threads)
