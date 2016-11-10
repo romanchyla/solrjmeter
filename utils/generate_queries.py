@@ -7,6 +7,8 @@ import tempfile
 import time
 
 from solrjmeter import req, error, run_cmd, Measurement
+import urllib
+from _collections import defaultdict
 
 RETRIEVE_MAX_TOKENS = 'SOLRJMETER_RETRIEVE_MAX_TOKENS' in os.environ and int(os.environ['SOLRJMETER_RETRIEVE_MAX_TOKENS']) or 100
 EXISTING_TERMS_REPLACE = 'SOLRJMETER_EXISTING_TERMS_REPLACE' in os.environ and os.environ['SOLRJMETER_EXISTING_TERMS_REPLACE'] or False
@@ -30,7 +32,7 @@ def main(options):
     
     if os.path.exists('phrase5-freqs.txt') and EXISTING_TERMS_REPLACE \
         or not os.path.exists('phrase5-freqs.txt'):
-        retrieve_pseudo_collocations(options, maxlen=5, stop_after_reaching=100000,
+        retrieve_pseudo_collocations(options, maxlen=5, stop_after_reaching=100,
                                      output_name='phrase5-freqs.txt')
 
 
@@ -207,7 +209,109 @@ def retrieve_term_freqs(options, fields):
     fo.close()
 
 
-def retrieve_pseudo_collocations(options, max_time=600, 
+def retrieve_pseudo_collocations(options,  
+                                 maxlen=3, 
+                                 stop_after_reaching=100000,
+                                 max_clauses=2,
+                                 output_name='collocations-freqs.txt'):
+    
+    
+    
+    terms = {}
+    for fn in DISCOVER_PHRASES_FIELDS:
+        terms[fn] = []
+        
+    for term in csv_reader('term-freqs.txt', generic=True):
+        if len(term) != 4:
+            continue
+        if term[1] == 'high' and term[0] in DISCOVER_PHRASES_FIELDS:
+            terms[term[0]].append(term[2])
+    
+    tally = 0
+    freqs = {}
+    for field, terms in terms.items():
+        freqs[field] = defaultdict(lambda: 0)
+        for term in terms:
+            rsp = req('%s/query' % options.query_endpoint, **{
+                    'q' : '{}:"{}"'.format(field, term),
+                    'wt': 'json',
+                    'hl': 'true',
+                    'hl.fl': field,
+                    'hl.requireFieldMatch': 'true',
+                    'hl.simple.re': '<em>',
+                    'hl.simple.post': '</em>',
+                    })
+            if rsp['response'].get('numFound', 0) > 0:
+                hls = extract_highlights(term, rsp['highlighting'])
+                for left in hls.get_all_left(maxlen):
+                    freqs[field][left] += 1
+                for right in hls.get_all_right(maxlen):
+                    freqs[field][right] += 1
+                    
+                if tally + len(freqs[field]) >= stop_after_reaching:
+                    break
+        
+        tally += len(freqs[field])
+        if tally >= stop_after_reaching:
+            break
+                    
+    fo, writer = csv_writer(output_name, ['field', 'type', 'token', 'freq'])
+    for field, vals in freqs.items():
+        vs = sorted(vals.items(), key=lambda x: x[1], reverse=True)
+        for v, freq in vs:
+            writer.writerow([field, 'high', v, freq])
+    fo.close()
+
+
+def extract_highlights(term, hls):
+    out = HighlightRetriever(term)
+    for _recid, hl in hls.items():
+        for _field, vals in hl.items():
+            for v in vals:
+                out.insert(v)
+    return out
+
+
+class HighlightRetriever(object):
+    """Worker that receives strings and allows easy retrieval
+    of the surrounding context."""
+    def __init__(self, term):
+        self.term = term
+        self._data = []
+        
+    def insert(self, sentence):
+        start, end, term = self._get_term(sentence)
+        ltokens = self._tokenize(sentence[0:start-1])
+        rtokens = self._tokenize(sentence[end+1:])
+        self._data.append((ltokens, term, rtokens)) 
+        
+    def get_term(self):
+        return self.term
+    
+    def _get_term(self, v):
+        s = v.index('<em>')
+        e = v.index('</em>')
+        return s, e, v[s+4:e]
+    
+    def _tokenize(self, v):
+        return filter(lambda x: len(x) > 1 and x[-3:] != 'em>', v.split())
+    
+            
+    def get_all_left(self, dist):
+        out = []
+        for left, term, right in self._data:
+            if len(left) > dist:
+                out.append(u'{}|{}'.format(left[-dist], term))
+        return out
+    
+    def get_all_right(self, dist):
+        out = []
+        for left, term, right in self._data:
+            if len(right) >= dist:
+                out.append(u'{}|{}'.format(term, right[dist-1]))
+        return out
+        
+def retrieve_pseudo_collocations_batch_handler(options, max_time=600, 
                                  maxlen=3, stop_after_reaching=100000,
                                  max_clauses=2,
                                  upper_limit='1.0',

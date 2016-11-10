@@ -110,6 +110,7 @@ def req(url, **kwargs):
     t.join(3.0)
     r = q.get()
     if isinstance(r, Exception):
+        print 'Error during http request: ', url, kwargs
         raise r
     elif r is None:
         raise Exception("Timeout getting url=%s & %s" % (url, kwargs))
@@ -395,7 +396,7 @@ def setup_jmeter(options):
           rm -fr jmeter
         fi
         
-        wget -nc http://mirrors.gigenet.com/apache/jmeter/binaries/apache-jmeter-2.9.tgz
+        wget -nc https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.9.tgz
         tar -xzf apache-jmeter-2.9.tgz
         mv apache-jmeter-2.9 jmeter
         
