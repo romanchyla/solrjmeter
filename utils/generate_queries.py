@@ -14,6 +14,7 @@ RETRIEVE_MAX_TOKENS = 'SOLRJMETER_RETRIEVE_MAX_TOKENS' in os.environ and int(os.
 EXISTING_TERMS_REPLACE = 'SOLRJMETER_EXISTING_TERMS_REPLACE' in os.environ and os.environ['SOLRJMETER_EXISTING_TERMS_REPLACE'] or False
 DISCOVER_PHRASES_FIELDS = 'SOLRJMETER_DISCOVER_PHRASES_FIELDS' in os.environ and os.environ['SOLRJMETER_DISCOVER_PHRASES_FIELDS'].split(',') or ['abstract', 'aff', 'full', 'ack', 'title'] 
 IGNORE_SYNONYMS = 'SOLRJMETER_IGNORE_SYNONYMS' in os.environ and bool(os.environ['SOLRJMETER_IGNORE_SYNONYMS']) or True
+STOPWORDS = set('a|an|and|are|as|at|be|but|by|for|if|in|into|is|it|no|not|of|on|or|s|such|t|that|the|their|then|there|these|they|this|to|was|will|with'.split('|'))
 
 def main(options):
     
@@ -25,34 +26,29 @@ def main(options):
         retrieve_term_freqs(options, fields)
     
     
-    if os.path.exists('phrase-freqs.txt') and EXISTING_TERMS_REPLACE \
-        or not os.path.exists('phrase-freqs.txt'):
-        retrieve_pseudo_collocations(options, maxlen=2, stop_after_reaching=100000,
+    if os.path.exists('phrase-freqs.txt.2') and EXISTING_TERMS_REPLACE \
+        or not os.path.exists('phrase-freqs.txt.2'):
+        retrieve_pseudo_collocations(options, maxlen=[2, 5], stop_after_reaching=10000,
                                      output_name='phrase-freqs.txt') 
     
-    if os.path.exists('phrase5-freqs.txt') and EXISTING_TERMS_REPLACE \
-        or not os.path.exists('phrase5-freqs.txt'):
-        retrieve_pseudo_collocations(options, maxlen=5, stop_after_reaching=100,
-                                     output_name='phrase5-freqs.txt')
-
 
     generate_field_queries(options)
     generate_wild_queries(options)
     
-    generate_phrase_queries(options, length=2, input='phrase-freqs.txt')
-    generate_phrase_queries(options, length=5, input='phrase5-freqs.txt')
+    generate_phrase_queries(options, length=2, input='phrase-freqs.txt.2')
+    generate_phrase_queries(options, length=5, input='phrase-freqs.txt.5')
     
-    generate_fuzzy_queries(options, length=1, input='phrase-freqs.txt')
-    generate_fuzzy_queries(options, length=2, input='phrase-freqs.txt')
+    generate_fuzzy_queries(options, length=1, input='phrase-freqs.txt.2')
+    generate_fuzzy_queries(options, length=2, input='phrase-freqs.txt.2')
     
-    generate_near_queries(options, length=2, input='phrase5-freqs.txt')
-    generate_near_queries(options, length=4, input='phrase5-freqs.txt')
+    generate_near_queries(options, length=2, input='phrase-freqs.txt.5')
+    generate_near_queries(options, length=4, input='phrase-freqs.txt.5')
     
-    generate_boolean_queries(options, 'AND', length=5, input='phrase5-freqs.txt')
-    generate_boolean_queries(options, 'AND', length=2, input='phrase5-freqs.txt')
+    generate_boolean_queries(options, 'AND', length=5, input='phrase-freqs.txt.2')
+    generate_boolean_queries(options, 'AND', length=2, input='phrase-freqs.txt.2')
     
-    generate_boolean_queries(options, 'OR', length=5, input='phrase5-freqs.txt')
-    generate_boolean_queries(options, 'OR', length=2, input='phrase5-freqs.txt')
+    generate_boolean_queries(options, 'OR', length=5, input='phrase-freqs.txt.2')
+    generate_boolean_queries(options, 'OR', length=2, input='phrase-freqs.txt.2')
     
 
 
@@ -210,27 +206,36 @@ def retrieve_term_freqs(options, fields):
 
 
 def retrieve_pseudo_collocations(options,  
-                                 maxlen=3, 
+                                 maxlen=[3], 
                                  stop_after_reaching=100000,
                                  max_clauses=2,
                                  output_name='collocations-freqs.txt'):
     
     
-    
+    maxlen = maxlen[:]
     terms = {}
     for fn in DISCOVER_PHRASES_FIELDS:
         terms[fn] = []
-        
+    
+    fields = set()
     for term in csv_reader('term-freqs.txt', generic=True):
         if len(term) != 4:
             continue
         if term[1] == 'high' and term[0] in DISCOVER_PHRASES_FIELDS:
             terms[term[0]].append(term[2])
+            fields.add(term[0])
     
-    tally = 0
+    tally = {}
     freqs = {}
+    for x in maxlen:
+        tally[x] = 0
+        freqs[x] = {}
+        for f in fields:
+            freqs[x][f] = defaultdict(lambda: 0)
+            
     for field, terms in terms.items():
-        freqs[field] = defaultdict(lambda: 0)
+        if len(maxlen) == 0:
+            break
         for term in terms:
             rsp = req('%s/query' % options.query_endpoint, **{
                     'q' : '{}:"{}"'.format(field, term),
@@ -243,24 +248,32 @@ def retrieve_pseudo_collocations(options,
                     })
             if rsp['response'].get('numFound', 0) > 0:
                 hls = extract_highlights(term, rsp['highlighting'])
-                for left in hls.get_all_left(maxlen):
-                    freqs[field][left] += 1
-                for right in hls.get_all_right(maxlen):
-                    freqs[field][right] += 1
-                    
-                if tally + len(freqs[field]) >= stop_after_reaching:
-                    break
+                for f in maxlen:
+                    for left in hls.get_all_left(f):
+                        freqs[f][field][left] += 1
+                        tally[f] += 1
+                    for right in hls.get_all_right(f):
+                        freqs[f][field][right] += 1
+                        tally[f] += 1
+                        
+                    if tally[f] >= stop_after_reaching:
+                        maxlen.pop(maxlen.index(f))
         
-        tally += len(freqs[field])
-        if tally >= stop_after_reaching:
-            break
-                    
-    fo, writer = csv_writer(output_name, ['field', 'type', 'token', 'freq'])
-    for field, vals in freqs.items():
-        vs = sorted(vals.items(), key=lambda x: x[1], reverse=True)
-        for v, freq in vs:
-            writer.writerow([field, 'high', v, freq])
-    fo.close()
+        
+    
+    for maxlen, freqx in freqs.items():
+        fo, writer = csv_writer('{}.{}'.format(output_name, maxlen), ['field', 'type', 'token', 'freq'])
+        for field, vals in freqx.items():
+            vs = sorted(vals.items(), key=lambda x: x[1], reverse=True)
+            for v, freq in vs:
+                try:
+                    writer.writerow([field, 'high', v, freq])
+                except UnicodeEncodeError:
+                    try:
+                        writer.writerow([field, 'high', v.encode('utf8'), freq])
+                    except UnicodeEncodeError:
+                        pass
+        fo.close()
 
 
 def extract_highlights(term, hls):
@@ -294,7 +307,7 @@ class HighlightRetriever(object):
         return s, e, v[s+4:e]
     
     def _tokenize(self, v):
-        return filter(lambda x: len(x) > 1 and x[-3:] != 'em>', v.split())
+        return filter(lambda x: len(x) > 1 and x[-3:] != 'em>' and x not in STOPWORDS, v.split())
     
             
     def get_all_left(self, dist):
