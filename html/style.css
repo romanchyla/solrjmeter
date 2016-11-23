@@ -27,8 +27,9 @@ div.dygraph-block  {
 div.dygraph-container {
   border: 1px solid black;
   float:left;
-  width: 40%;
-  padding: 5px;
+  width: 49%;
+  padding: 0px;
+  margin-top: 15px;
 }
 
 div.test-block {

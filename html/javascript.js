@@ -22,9 +22,25 @@ function zp(num,count) {
   return ret;
 }
 
+function doSingleColumn() {
+  var myElements = document.querySelectorAll("div.dygraph-container");
+   
+  for (var i = 0; i < myElements.length; i++) {
+      var oldWidth = myElements[i].style.width;
+      var newWidth = '100%';
+      if (myElements[i].getAttribute('oldWidth')) {
+        newWidth = myElements[i].getAttribute('oldWidth');
+      }
+
+      myElements[i].style.width = newWidth;
+      myElements[i].setAttribute('oldWidth', oldWidth);
+      console.log(oldWidth, newWidth);
+  }
+}
+
 function doClick(graphId, ev, msec, pts) {
   d = new Date(msec);
-  top.location = d.getFullYear() + "." + zp(1+d.getMonth(), 2) + "." + zp(d.getDate(), 2) + "." + zp(d.getHours(), 2) + "." + zp(d.getMinutes(), 2) + "." + zp(d.getSeconds(), 2) + "/" + graphId + "/test-view.html";
+  document.location = d.getFullYear() + "." + zp(1+d.getMonth(), 2) + "." + zp(d.getDate(), 2) + "." + zp(d.getHours(), 2) + "." + zp(d.getMinutes(), 2) + "." + zp(d.getSeconds(), 2) + "/" + graphId + "/test-view.html";
 }
 
 function doGraph(graphId) {
@@ -59,7 +75,7 @@ function doComparisonGraph(graphId, testName, data) {
      pointClickCallback: function(event, p) {
         real_milli = Dygraph.dateParser(data[p.name][p.idx]);
         d = new Date(real_milli);
-        top.location = p.name + "/" + d.getFullYear() + "." + zp(1+d.getMonth(), 2) + "." + zp(d.getDate(), 2) + "." + zp(d.getHours(), 2) + "." + zp(d.getMinutes(), 2) + "." + zp(d.getSeconds(), 2) + "/" + testName + "/test-view.html";
+        document.location = p.name + "/" + d.getFullYear() + "." + zp(1+d.getMonth(), 2) + "." + zp(d.getDate(), 2) + "." + zp(d.getHours(), 2) + "." + zp(d.getMinutes(), 2) + "." + zp(d.getSeconds(), 2) + "/" + testName + "/test-view.html";
      },
      labelsDivStyles: {'background-color': 'transparent'}, 
      errorBars: true, 

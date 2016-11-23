@@ -468,6 +468,7 @@ def harvest_details_about_montysolr(options):
     ch = mbeans_data['solr-mbeans'].index('QUERYHANDLER')+1
     cc = mbeans_data['solr-mbeans'].index('CACHE')+1
     
+    print cn 
     
     out = dict(
         host = system_data['core']['host'],

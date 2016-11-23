@@ -17,6 +17,15 @@ $ export SOLRJMETER_HOME=/some/other/folder
 $ python solrjmeter.py -a -x ./jmx/SolrQueryTest.jmx -q ./queries/demo/demo.queries -s localhost -p 8983  -a --durationInSecs 60 -R test
 ```
 
+Or if you want to run the same, but with the JMeter GUI:
+
+```
+$ export SOLRJMETER_HOME=/some/other/folder
+$ python solrjmeter.py -a
+$ export JVM_ARGS='-DdurationInSecs=60 -DserverPort=8987 -DserverName=localhost -DserverPath=/solr
+$ ./new-solr/solrjmeter/jmeter/bin/jmeter.sh
+```
+
 
 This command will start jmeter and collect performance statistics:
   - against SOLR instance at http://localhost:8983/solr
