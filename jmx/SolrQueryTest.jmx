@@ -29,17 +29,17 @@
           </elementProp>
           <elementProp name="serverName" elementType="Argument">
             <stringProp name="Argument.name">serverName</stringProp>
-            <stringProp name="Argument.value">${__P(serverName,adswhy)}</stringProp>
+            <stringProp name="Argument.value">${__P(serverName,localhost)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="serverPort" elementType="Argument">
             <stringProp name="Argument.name">serverPort</stringProp>
-            <stringProp name="Argument.value">${__P(serverPort,9000)}</stringProp>
+            <stringProp name="Argument.value">${__P(serverPort,9983)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="queryFile" elementType="Argument">
             <stringProp name="Argument.name">queryFile</stringProp>
-            <stringProp name="Argument.value">${__P(queryFile,/dvt/workspace/montysolr/contrib/examples/adsabs/jmeter/field.queries)}</stringProp>
+            <stringProp name="Argument.value">${__P(queryFile,../queries/adsabs/Boolean2AND)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="additionalSolrParams" elementType="Argument">
