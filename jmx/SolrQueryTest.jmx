@@ -262,7 +262,7 @@
             </objProp>
             <stringProp name="TestPlan.comments">Use this only for debugging</stringProp>
             <stringProp name="filename"></stringProp>
-            <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+            <boolProp name="ResultCollector.success_only_logging">false</boolProp>
           </ResultCollector>
           <hashTree/>
           <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor" enabled="true">

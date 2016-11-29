@@ -1319,8 +1319,11 @@ def main(argv):
                     print 'Reading results of the previous test'
                     with changed_dir(all_tests[-1]):
                         for prev_dir in filter(lambda x: os.path.isdir(x), os.listdir('.')):
-                            with changed_dir(prev_dir):
-                                harvest_results(prev_dir, previous_results)
+                            try:
+                                with changed_dir(prev_dir):
+                                    harvest_results(prev_dir, previous_results)
+                            except IOError:
+                                print 'Error reading: ' + prev_dir
                 
                 if options.save:
                     generate_includes(options)
