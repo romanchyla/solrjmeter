@@ -71,7 +71,11 @@ def compare(solr1, solr2, input_file):
         queries[k] = r
         
         if r[0] != r[1]:
-            print 'diff', r[0], r[1], k
+            if r[0] is not None and r[1] is not None:
+                if r[0] - r[1] > 10 or r[0] - r[1] < -10:
+                    print 'diff', r[0], r[1], k
+            else:
+                print 'diff', r[0], r[1], k
             different += 1
         else:
             the_same += 1
