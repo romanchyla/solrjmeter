@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DURATION=${DURATION:-150}
-TARGET_URL=${TARGET_URL:-/solr/collection1}
-COLLECTION=${COLLECTION:-collection1}
-SERVER=${SERVER:localhost}
-PORT=${PORT:9983}
+export DURATION=${PERF_DURATION:-150}
+export TARGET_URL=${PERF_TARGET_URL:-/solr/collection1}
+export COLLECTION=${PERF_COLLECTION:-collection1}
+export SERVER=${PERF_SERVER:-localhost}
+export PORT=${PERF_PORT:-9983}
