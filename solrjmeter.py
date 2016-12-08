@@ -638,7 +638,7 @@ def tablify(csv_filepath, dygraph_format=False):
         return Table(*[Table.Column(x[0], tuple(x[1:])) for x in zip(labels, *list(data))])
 
 def run_cmd_thread(*args):
-    if os.environ.get('RUN_SEQUENTIALLY', False):
+    if str(os.environ.get('RUN_SEQUENTIALLY', 'false')).lower() == 'false':
         t = threading.Thread(target=run_cmd, args=args)
         #t.daemon = True
         t.start()
