@@ -130,7 +130,7 @@ def compare_values(fo, v, w, ignored_keys=set(['indexstamp', '_version_'])):
         for k in allkeys:
             ratio, diffs = _compare_vals(vvals.get(k), wvals.get(k))
             if ratio != 1.0:
-                fo.write('{bibcode}:{key}\nratio of difference: {ratio}\n{diffs}'.format(bibcode=b, key=k, ratio=ratio, diffs='\n'.join(list(diffs))))
+                fo.write(u'{bibcode}:{key}\nratio of difference: {ratio}\n{diffs}'.format(bibcode=b, key=k, ratio=ratio, diffs=u'\n'.join(list(diffs))).encode('utf-8'))
 
 def _bibcodify(response):
     out = {}
