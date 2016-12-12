@@ -108,7 +108,7 @@ def compare(solr1, solr2, input_file):
     print 'Number of differing queries', different, 'The sames:', the_same
 
 
-def compare_values(fo, v, w, ignored_keys=set(['indexstamp', '_version_'])):
+def compare_values(fo, v, w, ignored_keys=set(['indexstamp', '_version_', 'body'])):
     """Purpose of this funciton is to compare results from two solr responses, value by value
     and print differences into the log file."""
     
