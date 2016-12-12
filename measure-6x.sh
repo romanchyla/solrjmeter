@@ -3,7 +3,7 @@
 
 homedir=`pwd`
 source ./common.sh
-target=6x
+target=${1:-6x}
 mkdir -p $SOLRJMETER_HOME/$target
 
 pushd $homedir/queries/adsabs/full
