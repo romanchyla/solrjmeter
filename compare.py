@@ -10,7 +10,7 @@ import os
 import sys
 from difflib import Differ, SequenceMatcher
 
-MAX_ROWS=100
+MAX_ROWS=10
 
 def get_response(url, **kwargs): 
     try:
@@ -18,11 +18,11 @@ def get_response(url, **kwargs):
             url += '&wt=json'
             url = url.replace('wt=xml', 'wt=json')
         if 'rows=' in url:
-            url += '&rows=' + MAX_ROWS
+            url += '&rows=' + str(MAX_ROWS)
         if 'fl=' in url:
             url += '&fl=*'
         kwargs['wt'] = 'json'
-        kwargs['rows'] = MAX_ROWS
+        kwargs['rows'] = str(MAX_ROWS)
         if 'fl' in kwargs:
             del kwargs['fl']
         r = requests.get(url, params=kwargs)
