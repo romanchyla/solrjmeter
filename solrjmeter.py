@@ -358,7 +358,7 @@ def check_prerequisities(options):
 
     if options.query_endpoint and options.queries_pattern:
         try:
-            req(options.query_endpoint + "/select")
+            req(options.query_endpoint + "/select?q=star")
         except:
             error('Cannot contact: %s' % options.query_endpoint)
 
