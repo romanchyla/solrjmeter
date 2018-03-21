@@ -344,6 +344,8 @@ def check_prerequisities(options):
     jmeter = None
     try:
         jmeter = get_output(['which', 'jmeter'])
+        if jmeter:
+            jmeter = jmeter.strip()
     except subprocess.CalledProcessError:
         pass
 
@@ -785,6 +787,7 @@ def update_global_dashboard(options, results, previous_results=None):
                 w.write('Date,Avg,Prev\n')
             else:
                 w.write('Date,Avg\n')
+                #w.write(options.today + '0.0,0.0\n')
         else:
             w = open(csv_file, 'a')
 
@@ -1381,7 +1384,7 @@ def main(argv):
                     regenerate_global_dashboard(options)
 
                 if options.upload:
-                        upload_results(options, results)
+                    upload_results(options, results)
 
         if options.generate_comparison:
             generate_top_level_comparison(options)
