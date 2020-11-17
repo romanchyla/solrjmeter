@@ -464,13 +464,162 @@ def harvest_details_about_montysolr(options):
     system_data = ForgivingDict(req('%s/admin/system' % options.query_endpoint))
     mbeans_data = ForgivingDict(req('%s/admin/mbeans' % options.query_endpoint, stats='true'))
     cores_data = ForgivingDict(req('%s/cores' % options.admin_endpoint, stats='true'))
+    
+    if 'QUERYHANDLER' in mbeans_data['solr-mbeans']:
+        return _get_solr4x6x_data(options, system_data, mbeans_data, cores_data)
+    else:
+        return _get_solr7x_data(options, system_data, mbeans_data, cores_data)
 
+def _get_solr7x_data(options, system_data, mbeans_data, cores_data):
+    cn = options.core_name or cores_data['defaultCoreName']
+    ci = mbeans_data['solr-mbeans'].index('CORE')+1
+    ch = mbeans_data['solr-mbeans'].index('QUERY')+1
+    cc = mbeans_data['solr-mbeans'].index('CACHE')+1
+    
+    out = dict(
+        host = system_data['core']['host'],
+        now = system_data['core']['now'],
+        start = system_data['core']['start'],
+
+        jvmVersion = system_data['jvm']['version'],
+        jvmName = system_data['jvm']['name'],
+        jvmProcessors = system_data['jvm']['processors'],
+        jvmFree = system_data['jvm']['memory']['free'],
+        jvmTotal = system_data['jvm']['memory']['total'],
+        jvmMax = system_data['jvm']['memory']['max'],
+        jvmUsed = system_data['jvm']['memory']['used'],
+        jvmUsedRaw = system_data['jvm']['memory']['raw']['used'],
+        jvmCommandLineArgs = ' '.join(system_data['jvm']['jmx']['commandLineArgs']),
+
+        systemName = system_data['system']['name'],
+        systemVersion = system_data['system']['version'],
+        systemArch = system_data['system']['arch'],
+        systemLoadAverage = system_data['system']['systemLoadAverage'],
+        systemCommittedVirtualMemorySize = system_data['system']['committedVirtualMemorySize'],
+        systemFreePhysicalMemorySize = system_data['system']['freePhysicalMemorySize'],
+        systemFreeSwapSpaceSize = system_data['system']['freeSwapSpaceSize'],
+        systemProcessCpuTime = system_data['system']['processCpuTime'],
+        systemTotalPhysicalMemorySize = system_data['system']['totalPhysicalMemorySize'],
+        systemTotalSwapSpaceSize = system_data['system']['totalSwapSpaceSize'],
+        systemOpenFileDescriptorCount = system_data['system']['openFileDescriptorCount'],
+        systemMaxFileDescriptorCount = system_data['system']['maxFileDescriptorCount'],
+        systemUname = system_data['system']['uname'],
+        systemUptime = system_data['system']['uptime'],
+
+
+        solrSpecVersion = system_data['lucene']['solr-spec-version'],
+        solrImplVersion = system_data['lucene']['solr-impl-version'],
+        luceneSpecVersion = system_data['lucene']['lucene-spec-version'],
+        luceneImplVersion = system_data['lucene']['lucene-impl-version'],
+
+        instanceDir=cores_data['status'][cn]['instanceDir'],
+        dataDir=cores_data['status'][cn]['dataDir'],
+        startTime = cores_data['status'][cn]['startTime'],
+        uptime = cores_data['status'][cn]['uptime'],
+        indexNumDocs = cores_data['status'][cn]['index']['numDocs'],
+        indexMaxDoc = cores_data['status'][cn]['index']['maxDoc'],
+        indexVersion = cores_data['status'][cn]['index']['version'],
+        indexSegmentCount = cores_data['status'][cn]['index']['segmentCount'],
+        indexCurrent = cores_data['status'][cn]['index']['current'],
+        indexHasDeletions = cores_data['status'][cn]['index']['hasDeletions'],
+        indexDirectory = cores_data['status'][cn]['index']['directory'],
+        indexLstModified = cores_data['status'][cn]['index']['lastModified'],
+        indexSizeInBytes = cores_data['status'][cn]['index']['sizeInBytes'],
+        indexSize = cores_data['status'][cn]['index']['size'],
+
+        coreRefCount = mbeans_data['solr-mbeans'][ci]['core']['stats']['CORE.refCount'],
+
+        searcherClass = mbeans_data['solr-mbeans'][ci]['searcher']['class'],
+        searcherCaching = mbeans_data['solr-mbeans'][ci]['searcher']['stats']['SEARCHER.searcher.caching'],
+        searcherReader = mbeans_data['solr-mbeans'][ci]['searcher']['stats']['SEARCHER.searcher.reader'],
+        searcherOpenedAt = mbeans_data['solr-mbeans'][ci]['searcher']['stats']['SEARCHER.searcher.openedAt'],
+        searcherRegisteredAt = mbeans_data['solr-mbeans'][ci]['searcher']['stats']['SEARCHER.searcher.registeredAt'],
+        searcherWarmupTime = mbeans_data['solr-mbeans'][ci]['searcher']['stats']['SEARCHER.searcher.warmupTime'],
+
+        selectClass = mbeans_data['solr-mbeans'][ch]['/select']['class'],
+        #selectVersion = mbeans_data['solr-mbeans'][ch]['/select']['version'],
+        selectDescription = mbeans_data['solr-mbeans'][ch]['/select']['description'],
+        selectRequests = mbeans_data['solr-mbeans'][ch]['/select']['stats']['QUERY./select.requests'],
+        selectErrors = mbeans_data['solr-mbeans'][ch]['/select']['stats']['QUERY./select.errors.count'],
+        selectTimeouts = mbeans_data['solr-mbeans'][ch]['/select']['stats']['QUERY./select.timeouts.count'],
+        selectTotalTime = mbeans_data['solr-mbeans'][ch]['/select']['stats']['QUERY./select.totalTime'],
+        #selectAvgTimePerRequest = mbeans_data['solr-mbeans'][ch]['/select']['stats']['avgTimePerRequest'],
+        selectAvgRequestsPerSecond = mbeans_data['solr-mbeans'][ch]['/select']['stats']['QUERY./select.requestTimes.meanRate'],
+
+        cacheQueryClass = mbeans_data['solr-mbeans'][cc]['queryResultCache']['class'],
+        #cacheQueryVersion = mbeans_data['solr-mbeans'][cc]['queryResultCache']['version'],
+        cacheQueryDescription = mbeans_data['solr-mbeans'][cc]['queryResultCache']['description'],
+        cacheQueryLookups = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.lookups'],
+        cacheQueryHits = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.hits'],
+        cacheQueryHitRatio = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.hitratio'],
+        cacheQueryEvictions = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.evictions'],
+        cacheQuerySize = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.size'],
+        cacheQueryWarmupTime = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.warmupTime'],
+        cacheQueryCumulativeLookups = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.cumulative_lookups'],
+        cacheQueryCumulativeHits = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.cumulative_hits'],
+        cacheQueryCumulativeHitRatio = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.cumulative_hitratio'],
+        cacheQueryCumulativeInserts = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.cumulative_inserts'],
+        cacheQueryCumulativeEvictions = mbeans_data['solr-mbeans'][cc]['queryResultCache']['stats']['CACHE.searcher.queryResultCache.cumulative_evictions'],
+
+        cacheFieldClass = mbeans_data['solr-mbeans'][cc]['fieldCache']['class'],
+        #cacheFieldVersion = mbeans_data['solr-mbeans'][cc]['fieldCache']['version'],
+        cacheFieldDescription = mbeans_data['solr-mbeans'][cc]['fieldCache']['description'],
+        cacheFieldEntriesCount = mbeans_data['solr-mbeans'][cc]['fieldCache']['stats']['CACHE.core.fieldCache.entries_count'],
+
+        cacheDocumentClass = mbeans_data['solr-mbeans'][cc]['documentCache']['class'],
+        #cacheDocumentVersion = mbeans_data['solr-mbeans'][cc]['documentCache']['version'],
+        cacheDocumentDescription = mbeans_data['solr-mbeans'][cc]['documentCache']['description'],
+        cacheDocumentLookups = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.lookups'],
+        cacheDocumentHits = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.hits'],
+        cacheDocumentHitRatio = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.hitratio'],
+        cacheDocumentEvictions = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.evictions'],
+        cacheDocumentSize = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.size'],
+        cacheDocumentWarmupTime = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.warmupTime'],
+        cacheDocumentCumulativeLookups = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.cumulative_lookups'],
+        cacheDocumentCumulativeHits = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.cumulative_hits'],
+        cacheDocumentCumulativeHitRatio = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.cumulative_hitratio'],
+        cacheDocumentCumulativeInserts = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.cumulative_inserts'],
+        cacheDocumentCumulativeEvictions = mbeans_data['solr-mbeans'][cc]['documentCache']['stats']['CACHE.searcher.documentCache.cumulative_evictions'],
+
+        cacheFieldValueClass = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['class'],
+        #cacheFieldValueVersion = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['version'],
+        cacheFieldValueDescription = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['description'],
+        cacheFieldValueLookups = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.lookups'],
+        cacheFieldValueHits = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.hits'],
+        cacheFieldValueHitRatio = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.hitratio'],
+        cacheFieldValueEvictions = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.evictions'],
+        cacheFieldValueSize = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.size'],
+        cacheFieldValueWarmupTime = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.warmupTime'],
+        cacheFieldValueCumulativeLookups = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.cumulative_lookups'],
+        cacheFieldValueCumulativeHits = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.cumulative_hits'],
+        cacheFieldValueCumulativeHitRatio = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.cumulative_hitratio'],
+        cacheFieldValueCumulativeInserts = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.cumulative_inserts'],
+        cacheFieldValueCumulativeEvictions = mbeans_data['solr-mbeans'][cc]['fieldValueCache']['stats']['CACHE.searcher.fieldValueCache.cumulative_evictions'],
+
+        cacheFilterClass = mbeans_data['solr-mbeans'][cc]['filterCache']['class'],
+        #cacheFilterVersion = mbeans_data['solr-mbeans'][cc]['filterCache']['version'],
+        cacheFilterDescription = mbeans_data['solr-mbeans'][cc]['filterCache']['description'],
+        cacheFilterLookups = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.lookups'],
+        cacheFilterHits = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.hits'],
+        cacheFilterHitRatio = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.hitratio'],
+        cacheFilterEvictions = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.evictions'],
+        cacheFilterSize = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.size'],
+        cacheFilterWarmupTime = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.warmupTime'],
+        cacheFilterCumulativeLookups = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.cumulative_lookups'],
+        cacheFilterCumulativeHits = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.cumulative_hits'],
+        cacheFilterCumulativeHitRatio = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.cumulative_hitratio'],
+        cacheFilterCumulativeInserts = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.cumulative_inserts'],
+        cacheFilterCumulativeEvictions = mbeans_data['solr-mbeans'][cc]['filterCache']['stats']['CACHE.searcher.filterCache.cumulative_evictions'],
+        )
+    return out
+
+
+def _get_solr4x6x_data(options, system_data, mbeans_data, cores_data):
     cn = options.core_name or cores_data['defaultCoreName']
     ci = mbeans_data['solr-mbeans'].index('CORE')+1
     ch = mbeans_data['solr-mbeans'].index('QUERYHANDLER')+1
     cc = mbeans_data['solr-mbeans'].index('CACHE')+1
 
-    print cn
 
     out = dict(
         host = system_data['core']['host'],
